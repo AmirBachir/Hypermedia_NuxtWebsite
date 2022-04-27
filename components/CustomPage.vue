@@ -6,6 +6,40 @@
       <hr class="my-4" />
       <p class="lead">{{ description }}</p>
     </div>
+    <topic-card />
+    <br />
+    <table>
+      <tr>
+        <td>
+          <event-card />
+        </td>
+        <td>
+          <event-card />
+        </td>
+        <td>
+          <event-card />
+        </td>
+        <td>
+          <event-card />
+        </td>
+      </tr>
+      <tr>
+        <td>
+          <event-card />
+        </td>
+        <td>
+          <event-card />
+        </td>
+        <td>
+          <event-card />
+        </td>
+        <td>
+          <event-card />
+        </td>
+      </tr>
+    </table>
+    <br />
+    <br />
   </div>
 </template>
 
