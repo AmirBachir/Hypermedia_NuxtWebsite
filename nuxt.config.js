@@ -8,7 +8,7 @@ export default {
     }
   ],
   head: {
-    title: 'lesson15',
+    title: 'Art Town',
     htmlAttrs: {
       lang: 'en',
     },
@@ -40,7 +40,14 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
+    '@nuxtjs/google-fonts'
   ],
+
+  googleFonts: {
+    families: {
+      Inter: [300, 500, 700],
+    }
+  },
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
