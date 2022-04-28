@@ -1,17 +1,65 @@
 <template>
   <div class="card" style="width: 15rem; background: #103749; margin: 0.2rem">
-    <p class="date-day">5</p>
-    <p class="date-month-year">May 2022</p>
-    <img src="../assets/brescia_eve.jpg" class="card-img-top" alt="image" />
+    <p class="date-day">{{ day }}</p>
+    <p class="date-month-year">{{ month }} {{ year }}</p>
+    <img :src="imgPath" class="card-img-top" alt="image" />
     <div class="card-body" style="margin: 0.5rem">
-      <p class="card-subtitle">H 9.30</p>
-      <p class="card-text point-of-interest">Point of Interest</p>
-      <h5 class="card-title">Event</h5>
-      <p class="card-subtitle">TYPE OF EVENT</p>
-      <p class="card-text description">Description of the event that convinces people.</p>
+      <p class="card-subtitle">{{ time }}</p>
+      <p class="card-text point-of-interest">{{ poi }}</p>
+      <h5 class="card-title">{{ name }}</h5>
+      <p class="card-subtitle">{{ type }}</p>
+      <p class="card-text description">{{ description }}</p>
     </div>
   </div>
 </template>
+
+<script>
+export default {
+  name: 'EventCard',
+  props: {
+    date: {
+      type: String,
+      required: true,
+    },
+    imgPath: {
+      type: String,
+      required: true,
+    },
+    time: {
+      type: String,
+      required: true,
+    },
+    poi: {
+      type: String,
+      required: true,
+    },
+    name: {
+      type: String,
+      required: true,
+    },
+    type: {
+      type: String,
+      required:true,
+    },
+    description: {
+      type: String,
+      required: true,
+    },
+  },
+
+  computed: {
+    day() {
+      return this.date.split("-")[0]
+    },
+    month() {
+      return this.date.split("-")[1]
+    },
+    year() {
+      return this.date.split("-")[2]
+    }
+  },
+}
+</script>
 
 <style scoped>
 h5 {
