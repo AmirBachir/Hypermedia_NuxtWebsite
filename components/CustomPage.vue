@@ -6,23 +6,18 @@
       <hr class="my-4" />
       <p class="lead">{{ description }}</p>
     </div>
+    <br />
+    <event-card
+      date="5-May-2022"
+      img-path="brescia_poi"
+      time="H 9.30"
+      poi="Duomo"
+      name="Giga party"
+      type="Music and entertainment"
+      description="The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!"
+    />
   </div>
 </template>
-
-<style scoped>
-img {
-  height: 300px;
-  margin: 20px 0;
-}
-.page {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-p {
-  text-align: left;
-}
-</style>
 
 <script>
 export default {
@@ -43,3 +38,18 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+img {
+  height: 300px;
+  margin: 20px 0;
+}
+.page {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+p {
+  text-align: left;
+}
+</style>

@@ -72,7 +72,7 @@ async function runMainApi() {
         return res.json(filtered)
     })
 
-    // HTTP POST apio that will push (and therefore create) a new element in 
+    // HTTP POST api that will push (and therefore create) a new element in 
     // our fake database 
     app.post("/cats", (req, res) => {
         const { body } = req
