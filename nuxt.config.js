@@ -8,7 +8,7 @@ export default {
     }
   ],
   head: {
-    title: 'lesson15',
+    title: 'Brescia',
     htmlAttrs: {
       lang: 'en',
     },
