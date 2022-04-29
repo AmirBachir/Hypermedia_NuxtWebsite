@@ -33,16 +33,28 @@
     <table class="what-to-do">
       <tr>
         <td>
-          <topic-card/>
+          <topic-card
+            title="Points of Interest"
+            img-path="brescia_poi"
+            description="Discover all of the magical spots that Brescia has to offer to the curious traveler."/>
         </td>
         <td>
-          <topic-card/>
+          <topic-card
+            title="Itineraries"
+            img-path="brescia_iti"
+            description="Plan your visit with our custom recommendations on tours, walks and what to see."/>
         </td>
         <td>
-          <topic-card/>
+          <topic-card
+            title="Events"
+            img-path="brescia_eve"
+            description="Enjoy the city with some of the most exciting events on sight."/>
         </td>
         <td>
-          <topic-card/>
+          <topic-card
+            title="Services"
+            img-path="brescia_ser"
+            description="Some key services you can access from the city center."/>
         </td>
       </tr>
     </table>
@@ -111,7 +123,7 @@ button {
 }
 
 button:hover {
-  background: #3a80a3;
+  background: #103749;
 }
 
 a {

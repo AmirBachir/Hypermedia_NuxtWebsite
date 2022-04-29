@@ -6,11 +6,10 @@
       <hr class="my-4" />
       <p class="lead">{{ description }}</p>
     </div>
-    <topic-card />
     <br />
     <event-card
       date="5-May-2022"
-      img-path="~/assets/brescia_poi.jpg"
+      img-path="brescia_poi"
       time="H 9.30"
       poi="Duomo"
       name="Giga party"

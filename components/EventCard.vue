@@ -2,7 +2,7 @@
   <div class="card">
     <p class="date-day">{{ day }}</p>
     <p class="date-month-year">{{ month }} {{ year }}</p>
-    <img :src="imgPath" class="card-img-top" alt="image" />
+    <img :src="require(`@/assets/${imgName}.jpg`)" class="card-img-top" alt="image" />
     <div class="card-body" style="margin: 0.5rem">
       <p class="card-subtitle">{{ time }}</p>
       <p class="card-text point-of-interest">{{ poi }}</p>
@@ -21,7 +21,7 @@ export default {
       type: String,
       required: true,
     },
-    imgPath: {
+    imgName: {
       type: String,
       required: true,
     },
@@ -63,7 +63,7 @@ export default {
 
 <style scoped>
 h5 {
-  font-family: 'Inter';
+  font-family: 'Inter',serif;
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
@@ -74,7 +74,7 @@ h5 {
 }
 
 p {
-  font-family: 'Inter';
+  font-family: 'Inter',serif;
   font-style: normal;
   font-weight: 300;
   font-size: small;
