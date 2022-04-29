@@ -10,7 +10,7 @@
     <br />
     <event-card
       date="5-May-2022"
-      imgPath="../_nuxt/assets/brescia_poi.jpg"
+      img-path="~/assets/brescia_poi.jpg"
       time="H 9.30"
       poi="Duomo"
       name="Giga party"
@@ -19,21 +19,6 @@
     />
   </div>
 </template>
-
-<style scoped>
-img {
-  height: 300px;
-  margin: 20px 0;
-}
-.page {
-  text-align: center;
-  max-width: 800px;
-  margin: 0 auto;
-}
-p {
-  text-align: left;
-}
-</style>
 
 <script>
 export default {
@@ -54,3 +39,18 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+img {
+  height: 300px;
+  margin: 20px 0;
+}
+.page {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+p {
+  text-align: left;
+}
+</style>

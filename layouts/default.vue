@@ -2,7 +2,7 @@
   <div class="main-page">
     <the-header />
     <nuxt />
-    <the-footer class="footer"/>
+    <the-footer class="footer" />
   </div>
 </template>
 
@@ -17,3 +17,14 @@ export default {
   },
 }
 </script>
+
+<style scoped>
+* {
+  background: #234C60;
+  color: #D8EFF5;
+}
+
+.footer {
+  margin-top: 150px;
+}
+</style>

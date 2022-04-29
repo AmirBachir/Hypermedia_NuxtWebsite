@@ -1,5 +1,5 @@
 <template>
-  <div class="card" style="width: 15rem; background: #103749; margin: 0.2rem">
+  <div class="card">
     <p class="date-day">{{ day }}</p>
     <p class="date-month-year">{{ month }} {{ year }}</p>
     <img :src="imgPath" class="card-img-top" alt="image" />
@@ -39,7 +39,7 @@ export default {
     },
     type: {
       type: String,
-      required:true,
+      required: true,
     },
     description: {
       type: String,
@@ -49,14 +49,14 @@ export default {
 
   computed: {
     day() {
-      return this.date.split("-")[0]
+      return this.date.split('-')[0]
     },
     month() {
-      return this.date.split("-")[1]
+      return this.date.split('-')[1]
     },
     year() {
-      return this.date.split("-")[2]
-    }
+      return this.date.split('-')[2]
+    },
   },
 }
 </script>
@@ -86,6 +86,12 @@ p {
 img {
   object-fit: cover;
   max-height: 20vh;
+}
+
+.card {
+  width: 15rem;
+  background: #103749;
+  margin: 0.2rem;
 }
 
 .date-day {
