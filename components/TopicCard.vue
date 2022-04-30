@@ -88,12 +88,13 @@ p {
   margin: 0.2rem;
 }
 
-/* .card:hover {
-  background: #103749;
+.card:hover > .circular-border{
+  border-color: #59FFF5;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s ;
   -o-transition: all 0.5s ;
   -ms-transition: all 0.5s ;
   transition: all 0.5s ;
-} */
+}
+
 </style>
