@@ -1,5 +1,5 @@
 <template>
-  <div class="card">
+  <div class="card" @click="doThis">
     <img
       :src="require(`@/assets/${imgPath}.jpg`)"
       class="card-img-top circular-border"
@@ -29,7 +29,11 @@ export default {
       required: true,
     },
   },
-
+  methods:{
+    doThis(){
+      console.log("done")
+    }
+  },
   computed: {
 
   },
@@ -42,6 +46,14 @@ export default {
   border-radius: 50%;
   border: 20px solid #d8fff5;
   width: 70%;
+}
+.card:hover > .circular-border{
+  border-color: #59FFF5;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s ;
+  -o-transition: all 0.5s ;
+  -ms-transition: all 0.5s ;
+  transition: all 0.5s ;
 }
 
 h5 {
@@ -76,12 +88,12 @@ p {
   margin: 0.2rem;
 }
 
-.card:hover {
+/* .card:hover {
   background: #103749;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s ;
   -o-transition: all 0.5s ;
   -ms-transition: all 0.5s ;
   transition: all 0.5s ;
-}
+} */
 </style>
