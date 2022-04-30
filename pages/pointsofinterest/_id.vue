@@ -37,7 +37,7 @@ export default {
   name: 'DetailsPage',
   async asyncData({ route, $axios }) {
     const { id } = route.params
-    const { data } = await $axios.get('/api/cats/' + id)
+    const { data } = await $axios.get('/api/pointsofinterest/' + id)
     return {
       name: data.name,
       breed: data.breed,

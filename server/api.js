@@ -10,15 +10,16 @@ const database = new Sequelize("postgres://postgres:postgres@localhost:5432/hyp"
 // Function that will initialize the connection to the database
 async function initializeDatabaseConnection() {
     await database.authenticate()
-    const Cat = database.define("cat", {
+    const PointOfInterest = database.define("pointOfInterest", {
         name: DataTypes.STRING,
         description: DataTypes.STRING,
-        breed: DataTypes.STRING,
+        cover_img: DataTypes.STRING,
         img: DataTypes.STRING,
+        img_caption: DataTypes.STRING,
     })
     await database.sync({ force: true })
     return {
-        Cat
+        PointOfInterest
     }
 }
 
@@ -51,21 +52,20 @@ async function runMainApi() {
         return res.json(result)
     })
 
-    app.get('/cats/:id', async (req, res) => {
+    app.get('/pointsofinterest/:id', async (req, res) => {
         const id = +req.params.id
-        const result = await models.Cat.findOne({ where: { id } })
+        const result = await models.PointOfInterest.findOne({ where: { id } })
         return res.json(result)
     })
 
     // HTTP GET api that returns all the cats in our fake database
-    app.get("/cats", async (req, res) => {
-        const result = await models.Cat.findAll()
+    app.get("/pointsofinterest", async (req, res) => {
+        const result = await models.PointOfInterest.findAll()
         const filtered = []
         for (const element of result) {
             filtered.push({
                 name: element.name,
                 img: element.img,
-                breed: element.breed,
                 id: element.id,
             })
         }
