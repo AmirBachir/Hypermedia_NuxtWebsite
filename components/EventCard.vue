@@ -2,7 +2,7 @@
   <div class="card">
     <p class="date-day">{{ day }}</p>
     <p class="date-month-year">{{ month }} {{ year }}</p>
-    <img :src="require(`@/assets/${imgName}.jpg`)" class="card-img-top" alt="image" />
+    <img :src="require(`@/assets/${imgName}.jpg`)" class="card-img-top" alt="image"/>
     <div class="card-body" style="margin: 0.5rem">
       <p class="card-subtitle">{{ time }}</p>
       <p class="card-text point-of-interest">{{ poi }}</p>
@@ -49,13 +49,40 @@ export default {
 
   computed: {
     day() {
-      return this.date.split('-')[0]
+      return this.date.split('-')[2].replace("0", "")
     },
     month() {
-      return this.date.split('-')[1]
+      switch (this.date.split('-')[1]) {
+        case '01':
+          return 'Jan'
+        case '02':
+          return 'Feb'
+        case '03':
+          return 'Mar'
+        case '04':
+          return 'Apr'
+        case '05':
+          return 'May'
+        case '06':
+          return 'Jun'
+        case '07':
+          return 'Jul'
+        case '08':
+          return 'Aug'
+        case '09':
+          return 'Sep'
+        case '10':
+          return 'Oct'
+        case '11':
+          return 'Nov'
+        case '12':
+          return 'Dec'
+        default:
+          return 'Month'
+      }
     },
     year() {
-      return this.date.split('-')[2]
+      return this.date.split('-')[0]
     },
   },
 }
@@ -63,7 +90,7 @@ export default {
 
 <style scoped>
 h5 {
-  font-family: 'Inter',serif;
+  font-family: 'Inter', serif;
   font-style: normal;
   font-weight: 500;
   font-size: 28px;
@@ -74,7 +101,7 @@ h5 {
 }
 
 p {
-  font-family: 'Inter',serif;
+  font-family: 'Inter', serif;
   font-style: normal;
   font-weight: 300;
   font-size: small;
@@ -90,6 +117,7 @@ img {
 
 .card {
   width: 15rem;
+  height: 35rem;
   background: transparent;
   margin: 0 0 0.6rem 0.6rem;
   border-width: 1px;
@@ -99,10 +127,10 @@ img {
 .card:hover {
   background: #103749;
   -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s ;
-  -o-transition: all 0.5s ;
-  -ms-transition: all 0.5s ;
-  transition: all 0.5s ;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 
 }
 

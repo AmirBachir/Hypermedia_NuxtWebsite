@@ -19,49 +19,9 @@
     </svg>
     <table class="events-table">
       <tr>
-        <td>
-          <event-card
-            date="5-May-2022"
-            img-name="brescia_poi"
-            time="H 9.30"
-            poi="Duomo"
-            name="Giga party"
-            type="Music and entertainment"
-            description="The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!"
-          />
-        </td>
-        <td>
-          <event-card
-            date="5-May-2022"
-            img-name="brescia_poi"
-            time="H 9.30"
-            poi="Duomo"
-            name="Giga party"
-            type="Music and entertainment"
-            description="The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!"
-          />
-        </td>
-        <td>
-          <event-card
-            date="5-May-2022"
-            img-name="brescia_poi"
-            time="H 9.30"
-            poi="Duomo"
-            name="Giga party"
-            type="Music and entertainment"
-            description="The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!"
-          />
-        </td>
-        <td>
-          <event-card
-            date="5-May-2022"
-            img-name="brescia_poi"
-            time="H 9.30"
-            poi="Duomo"
-            name="Giga party"
-            type="Music and entertainment"
-            description="The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!"
-          />
+        <td v-for="(event) of eventList" :key="event.id">
+          <event-card :description="event.description" :type="event.type" :name="event.title" :poi="event.poi"
+                      :time="'H ' + event.time.slice(0, -3)" :img-name="event.cover_img" :date="event.date"/>
         </td>
       </tr>
     </table>
@@ -78,7 +38,22 @@ export default {
     EventCard
     //    CustomPage,
   },
+  data() {
+    return {
+      eventList: []
+    }
+  },
+
+  // Note: This happens on backend (server) side
+  async asyncData({$axios}) {
+    // const { data } = await $axios.get('http://localhost:3000/api/cats')
+    const {data} = await $axios.get('/api/events/all')
+    return {
+      eventList: data,
+    }
+  },
 }
+
 </script>
 
 <style scoped>
@@ -95,7 +70,6 @@ img {
 
 h1 {
   font-family: "Casual", serif;
-  margin-top: 50px;
 }
 
 p {
