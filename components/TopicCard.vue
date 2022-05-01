@@ -1,5 +1,5 @@
 <template>
-  <div class="card" @click="doThis">
+  <div class="card" @click="goToEvent">
     <img
       :src="require(`@/assets/${imgPath}.jpg`)"
       class="card-img-top circular-border"
@@ -14,7 +14,7 @@
 
 <script>
 export default {
-  name: 'EventCard',
+  name: 'TopicCard',
   props: {
     title: {
       type: String,
@@ -30,7 +30,7 @@ export default {
     },
   },
   methods:{
-    doThis(){
+    goToEvent(){
       console.log("done")
     }
   },

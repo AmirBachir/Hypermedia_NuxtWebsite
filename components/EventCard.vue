@@ -90,8 +90,20 @@ img {
 
 .card {
   width: 15rem;
+  background: transparent;
+  margin: 0 0 0.6rem 0.6rem;
+  border-width: 1px;
+  border-color: #d8fff5;
+}
+
+.card:hover {
   background: #103749;
-  margin: 0.2rem;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s ;
+  -o-transition: all 0.5s ;
+  -ms-transition: all 0.5s ;
+  transition: all 0.5s ;
+
 }
 
 .date-day {
