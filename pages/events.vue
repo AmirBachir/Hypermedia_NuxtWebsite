@@ -5,9 +5,9 @@
     </div>
     <h1>Events</h1>
     <p>&lt; Back</p>
-    <button>All events</button>
-    <button>Winter events</button>
-    <button>Summer events</button>
+    <button @click="setFilter('all')">All events</button>
+    <button @click="setFilter('winter')">Winter events</button>
+    <button @click="setFilter('summer')">Summer events</button>
     <svg
       class="arrow-down"
       width="79"
@@ -19,10 +19,12 @@
     </svg>
     <table class="events-table">
       <tr>
-        <td v-for="(event) of eventList" :key="event.id">
-          <event-card :description="event.description" :type="event.type" :name="event.title" :poi="event.poi"
-                      :time="'H ' + event.time.slice(0, -3)" :img-name="event.cover_img" :date="event.date"/>
-        </td>
+        <transition-group name="fade">
+          <td v-for="(event) of filteredEvents" :key="event.id">
+            <event-card :description="event.description" :type="event.type" :name="event.title" :poi="event.poi"
+                        :time="'H ' + event.time.slice(0, -3)" :img-name="event.cover_img" :date="event.date"/>
+          </td>
+        </transition-group>
       </tr>
     </table>
   </div>
@@ -36,20 +38,35 @@ export default {
   name: 'IndexPage',
   components: {
     EventCard
-    //    CustomPage,
   },
-  data() {
-    return {
-      eventList: []
-    }
-  },
-
   // Note: This happens on backend (server) side
   async asyncData({$axios}) {
-    // const { data } = await $axios.get('http://localhost:3000/api/cats')
+    // const { data } = await $axios.get('http://localhost:3000/api/events/all')
     const {data} = await $axios.get('/api/events/all')
     return {
       eventList: data,
+    }
+  },
+  data() {
+    return {
+      filter: 'all',
+      eventList: []
+    }
+  },
+  computed: {
+    filteredEvents() {
+      let result
+      if (this.filter !== 'all') {
+        result = this.eventList.filter(event => event.season === this.filter)
+      } else {
+        result = this.eventList
+      }
+      return result
+    },
+  },
+  methods: {
+    setFilter(filter) {
+      this.filter = filter
     }
   },
 }
@@ -79,6 +96,7 @@ p {
 
 button {
   display: inline-block;
+  min-width: 20%;
   margin: auto 2% auto auto;
   padding: 10px;
   border-style: solid;
@@ -90,7 +108,13 @@ button {
 }
 
 button:hover {
-  background: #103749;
+  background: #d8fff5;
+  color: #234c60;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s ;
+  -o-transition: all 0.5s ;
+  -ms-transition: all 0.5s ;
+  transition: all 0.5s ;
 }
 
 a {
@@ -121,4 +145,12 @@ a {
   display: inline-block;
 }
 
+/* ANIMATIONS AND TRANSITIONS */
+
+.fade-enter-active, .fade-leave-active {
+  transition: opacity .6s;
+}
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+  opacity: 0;
+}
 </style>
