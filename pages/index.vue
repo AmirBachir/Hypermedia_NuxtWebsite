@@ -123,7 +123,13 @@ button {
 }
 
 button:hover {
-  background: #103749;
+  background: #d8fff5;
+  color: #234c60;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s ;
+  -o-transition: all 0.5s ;
+  -ms-transition: all 0.5s ;
+  transition: all 0.5s ;
 }
 
 a {
