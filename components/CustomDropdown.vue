@@ -101,15 +101,15 @@ export default {
 }
 .dropdown-menu{
 right: auto;
-/* left: 50%;
+left: 50%;
 -webkit-transform: translate(50%, 0);
 -o-transform: translate(50%, 0);
-transform: translate(50%, 0); */
+transform: translate(50%, 0);
 text-align: center;
 background-color: #D8EFF5;
 font-size: 0.77rem;
 font-family: 'Inter';
-font-style: no rmal;
+font-style: normal;
 font-weight: 700;
 color: #234C60;
 }

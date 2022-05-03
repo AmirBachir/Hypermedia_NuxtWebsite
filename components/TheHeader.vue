@@ -1,7 +1,7 @@
 <template>
-  <nav class="navbar navbar-expand-lg" >
-    <div class="container-fluid">
-      <a class="navbar-brand" href="/">Brescia</a>
+  <nav class="navbar navbar-expand-lg">
+    <div class="container-fluid align-middle">
+      <nuxt-link class="navbar-brand" to="/">Brescia</nuxt-link>
       <button 
       class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" 
       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
@@ -11,11 +11,47 @@
         <span class="toggler-icon bottom-bar"></span>
       </button>
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
-        <ul class="navbar-nav mx-auto mb-2 mb-lg-0 w-100 align-items-center">
-            <li  v-for="(navItem, navItemIndex) of headerList" :key="`navItem${navItemIndex}`" :class="['nav-item']">
-              <custom-dropdown v-if="navItem.name==='Events' || navItem.name==='Points of Interest'" :navItem="navItem" class="dropdown"/>
-              <nuxt-link v-else class="nav-link" :to="navItem.path">{{navItem.name}}</nuxt-link>
-            </li>
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <nuxt-link class="nav-link active" aria-current="page" to="/">Home</nuxt-link>
+          </li>
+          <li class="nav-item"><nuxt-link class="nav-link" to="/thecityofbrescia">The City of Brescia</nuxt-link></li>
+          <li class="nav-item"><nuxt-link class="nav-link" to="/itineraries">Itineraries</nuxt-link></li>
+          <li class="nav-item dropdown">
+            <nuxt-link id="navbarDropdownPointsofInterest" class="nav-link" to="/pointsofinterest"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">Points of Interest</nuxt-link>
+            <ul class="dropdown-menu start-50 translate-middle-x" aria-labelledby="navbarDropdownPointsofInterest">
+              <div class="square"></div>
+              <li><nuxt-link class="dropdown-item" to="/pointsofinterest/historicalsitesandmonuments">Historical Sites & Monuments</nuxt-link></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><nuxt-link class="dropdown-item" to="/pointsofinterest/piazzeandleisure">Piazze and Leisure</nuxt-link></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><nuxt-link class="dropdown-item" to="/pointsofinterest/nature">Nature</nuxt-link></li>
+            </ul>
+          </li>
+          <li class="nav-item dropdown">
+            <nuxt-link
+              id="navbarDropdownEvents"
+              class="nav-link"
+              to="/events"
+              role="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Events
+            </nuxt-link>
+            <ul class="dropdown-menu start-50 translate-middle-x" aria-labelledby="navbarDropdownEvents">
+              <div class="square"></div>
+              <li><nuxt-link class="dropdown-item" to="/events/allevents">All events</nuxt-link></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><nuxt-link class="dropdown-item" to="/events/summerevents">Summer events</nuxt-link></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><nuxt-link class="dropdown-item" to="events/winterevents">Winter Events</nuxt-link></li>
+            </ul>
+          </li>
+          <li class="nav-item">
+            <nuxt-link class="nav-link" aria-current="page" to="/services">Services</nuxt-link>
+          </li>
         </ul>
       </div>
     </div>
@@ -23,112 +59,91 @@
 </template>
 
 <script>
-import CustomDropdown from '~/components/CustomDropdown.vue'
 export default {
-  name: 'TheHeader',
-  components: { CustomDropdown },
-  data() {
-    return {
-      headerList: [
-        {
-          name: 'Home',
-          path: '/',
-        },
-        {
-          name: 'The City of Brescia',
-          path: '/thecityofbrescia',
-        },
-        {
-          name: 'Itineraries',
-          path: '/itineraries',
-        },
-        {
-          name: 'Points of Interest',
-          path: '/pointsofinterest',
-          groups:[
-            {name: 'Historical Sites & Monuments',
-             path: '/pointsofinterest/historicalsitesandmonuments'
-            },
-            {name:'Piazze and Leisure',
-             path:'/pointsofinterest/piazzeandleisure'
-            },
-            {name:'Nature',
-             path:'/pointsofinterest/nature'
-            },
-          ]
-        },
-        {
-          name: 'Events',
-          path: '/events',
-          groups:[
-            {name: 'All events',
-             path: '/events/allevents'
-            },
-            {name:'Piazze and Leisure',
-             path:'/events/summerevents'
-            },
-            {name:'Nature',
-             path:'/events/winterevents'
-            },
-          ]
-        },
-        {
-          name: 'Services',
-          path: '/services',
-        },
-      ],
-    }
-  },
-  // computed: {
-  //   alignment(){
-  //     if (this.currentIndex<this.headerList.length)
-  //       return 'ms-auto'
-  //     else if (this.currentIndex>this.headerList.length)
-  //       return 'me-auto'
-  //     else
-  //       return 'mx-auto'
-  //   }
-  // }
-  methods:{
-    alignment(i){
-       if (i<this.headerList.length/2-1){
-        console.log(i)
-         return 'me-auto'}
-       else if (i>this.headerList.length/2)
-         return 'ms-auto'
-       else
-         return 'mx-auto'
-     }
-  }
+  name: 'TheHeader'
 }
 </script>
 
-
 <style scoped>
-.navbar {
-  background-color: #234C60;
-
-}
-/* .nav-item{
-  margin-left: 20px;
-  margin-right: 20px;
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@701&display=swap');
+/* @font-face {
+  font-family: "Casual";
+  src: local("~/assets/Casual-Regular.ttf");
 } */
-.navbar-nav .nav-link {
-  font-family: 'Inter';
-  font-style: normal;
-  color:#D8EFF5;
-
+.navbar {
+  background-color: #234c60;
+  color:rgb(216, 239, 245); 
+  font-family: 'Inter', sans-serif;
+}
+.nav-link, .navbar-brand{
+  color: inherit;
 }
 .nav-item{
-  margin:0rem 1.5rem;
+  width:fit-content;
+  font-size: 1.05em;
+  margin-left:1.3em;
+  margin-right:1.3em;
 }
-.navbar-brand {
-  margin:0px 4rem;
-  font-family: 'Casual';
-  font-style: normal;
-  font-size: 3rem;
-  color:#D8EFF5;
+.dropdown:hover > .dropdown-menu{
+  display: block;
 }
+.dropdown-menu{
+  color:#234C60;
+  background-color:#D8EFF5 ;
+  padding:0;
+  text-align:center;
+  width: fit-content;
+}
+.dropdown-item{
+  padding: 0.6rem 0.4rem;
+  opacity:0.7;
+}
+.dropdown-item:hover{
+  opacity: 1;
+  background-color: inherit;
+}
+.dropdown-divider{
+  margin:0;
+}
+@media only screen and (max-width: 992px) {
+  .translate-middle-x {
+    transform: translateX(-0%)!important;
+  }
+
+}
+
+
+.navbar-collapse{
+  flex-grow: 0;
+}
+
+.navbar-brand{
+  font-family: "Casual", serif;
+  font-size: 2.5em;
+  margin-left:3rem;
+  margin-right:3rem;
+}
+
+
+
+.square {
+  position: relative;
+  top:-6px;
+  left: 50%;
+  transform: translate(-50%, 0);
+  width: 12px;
+  height: 12px;
+  background-color: #D8EFF5;
+  transform: rotate(45deg);
+  margin-bottom: -8px;
+}
+
+
+
+
+
+
+/*Button collapse toggle*/
 .navbar-toggler {
     width: 20px;
     height: 20px;
@@ -206,5 +221,8 @@ export default {
 .navbar-toggler.collapsed .toggler-icon {
   background-color: #D8EFF5; 
 }
+
+
+
 
 </style>
