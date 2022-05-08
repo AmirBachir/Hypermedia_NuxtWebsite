@@ -1,7 +1,7 @@
 <template>
   <div class="card" @click="goToEvent">
     <img
-      :src="require(`@/assets/${imgPath}.jpg`)"
+      :src="require(`@/assets/${imgPath}`)"
       class="card-img-top circular-border"
       alt="image"
     />
@@ -44,7 +44,7 @@ export default {
 .circular-border {
   margin: 0.5rem auto auto;
   border-radius: 50%;
-  border: 20px solid #d8fff5;
+  border: 20px solid #d8eff5;
   width: 70%;
 }
 .card:hover > .circular-border{
@@ -65,7 +65,7 @@ h5 {
   text-align: center;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
-  color: #d8fff5;
+  color: #d8eff5;
 }
 
 p {
@@ -76,7 +76,7 @@ p {
   font-size: small;
   line-height: 22px;
   text-align: center;
-  color: #d8fff5;
+  color: #d8eff5;
 }
 
 .card {

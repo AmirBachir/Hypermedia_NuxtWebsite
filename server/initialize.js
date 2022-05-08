@@ -42,7 +42,7 @@ export default async (models) => {
   const events = [
     {
       date: '2022-12-05',
-      cover_img: 'brescia_eve',
+      cover_img: 'brescia_eve.jpg',
       time: ' 09:00:00',
       poi: 'Duomo',
       title: 'Giga party',
@@ -52,7 +52,7 @@ export default async (models) => {
     },
     {
       date: '2022-07-06',
-      cover_img: 'brescia_poi',
+      cover_img: 'brescia_poi.jpg',
       time: '12:30:00',
       poi: 'Town hall',
       title: 'Brescia is reggae',
@@ -62,7 +62,7 @@ export default async (models) => {
     },
     {
       date: '2022-12-05',
-      cover_img: 'brescia_ser',
+      cover_img: 'brescia_ser.jpg',
       time: ' 09:00:00',
       poi: 'Duomo',
       title: 'Giga party',
@@ -72,7 +72,7 @@ export default async (models) => {
     },
     {
       date: '2022-07-06',
-      cover_img: 'brescia_iti',
+      cover_img: 'brescia_iti.jpg',
       time: '12:30:00',
       poi: 'Town hall',
       title: 'Brescia is reggae',
@@ -82,7 +82,7 @@ export default async (models) => {
     },
     {
       date: '2022-12-05',
-      cover_img: 'brescia_eve',
+      cover_img: 'brescia_eve.jpg',
       time: ' 09:00:00',
       poi: 'Duomo',
       title: 'Giga party',
@@ -92,7 +92,7 @@ export default async (models) => {
     },
     {
       date: '2022-07-06',
-      cover_img: 'brescia_poi',
+      cover_img: 'brescia_poi.jpg',
       time: '12:30:00',
       poi: 'Town hall',
       title: 'Brescia is reggae',

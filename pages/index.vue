@@ -35,25 +35,25 @@
         <td>
           <topic-card
             title="Points of Interest"
-            img-path="brescia_poi"
+            img-path="brescia_poi.jpg"
             description="Discover all of the magical spots that Brescia has to offer to the curious traveler."/>
         </td>
         <td>
           <topic-card
             title="Itineraries"
-            img-path="brescia_iti"
+            img-path="brescia_iti.jpg"
             description="Plan your visit with our custom recommendations on tours, walks and what to see."/>
         </td>
         <td>
           <topic-card
             title="Events"
-            img-path="brescia_eve"
+            img-path="brescia_eve.jpg"
             description="Enjoy the city with some of the most exciting events on sight."/>
         </td>
         <td>
           <topic-card
             title="Services"
-            img-path="brescia_ser"
+            img-path="brescia_ser.jpg"
             description="Some key services you can access from the city center."/>
         </td>
       </tr>
@@ -118,12 +118,12 @@ button {
   border-width: 1px;
   border-radius: 50%;
   background: #234c60;
-  color: #d8fff5;
-  border-color: #d8fff5;
+  color: #d8eff5;
+  border-color: #d8eff5;
 }
 
 button:hover {
-  background: #d8fff5;
+  background: #d8eff5;
   color: #234c60;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s ;
@@ -133,7 +133,7 @@ button:hover {
 }
 
 a {
-  color: #d8fff5;
+  color: #d8eff5;
 }
 
 .arrow-down {

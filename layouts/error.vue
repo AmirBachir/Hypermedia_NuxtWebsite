@@ -39,8 +39,8 @@ a {
   border-width: 1px;
   border-radius: 20px;
   background: #234c60;
-  color: #d8fff5;
-  border-color: #d8fff5;
+  color: #d8eff5;
+  border-color: #d8eff5;
   text-decoration: none;
 }
 a:hover {
