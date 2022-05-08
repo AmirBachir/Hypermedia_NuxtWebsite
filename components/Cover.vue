@@ -1,6 +1,6 @@
 <template>
   <div class="cover">
-    <img class="bg" :src="image" :alt="title" />
+    <img class="bg" :src="require(`@/assets/${image}`)" :alt="title" />
     <h1 class="display-1 name">{{ title }}</h1>
   </div>
 </template>
@@ -22,6 +22,11 @@ export default {
 </script>
 
 <style>
+@font-face {
+  font-family: "Casual";
+  src: local("~/assets/Casual-Regular.ttf");
+}
+
 .cover {
   position: relative;
   text-align: center;
@@ -37,7 +42,7 @@ export default {
   bottom: 6rem;
   left: 3rem;
   color: #d8eff5;
-  font-family: 'Casual';
+  font-family: 'Casual', serif;
   font-style: normal;
   /* font-weight: 400;
   font-size: 54px;

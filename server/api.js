@@ -63,14 +63,14 @@ async function runMainApi() {
     return res.json(result)
   })
 
-  app.get('/pointsofinterest/:id', async (req, res) => {
+  app.get('/points-of-interest/:id', async (req, res) => {
     const id = +req.params.id
     const result = await models.PointOfInterest.findOne({where: {id}})
     return res.json(result)
   })
 
   // HTTP GET api that returns all the cats in our fake database
-  app.get("/pointsofinterest", async (req, res) => {
+  app.get("/points-of-interest", async (req, res) => {
     const result = await models.PointOfInterest.findAll()
     const filtered = []
     for (const element of result) {
@@ -91,19 +91,16 @@ async function runMainApi() {
     return res.sendStatus(200)
   })
 
-  // Returns only the events held in that specific season
-  app.get('/events/:season', async (req, res) => {
-    const season = req.params.season
-    let result
-    if (season === "all") {
-      result = await models.Event.findAll()
-    } else {
-      result = await models.Event.findAll({
-        where: {
-          season
-        }
-      });
-    }
+  app.get('/events', async (req, res) => {
+    const result = await models.Event.findAll();
+
+    return res.json(result)
+  })
+
+  // Returns only the data about a specific event
+  app.get('/event/:id', async (req, res) => {
+    const id = req.params.id
+    const result = await models.Event.findOne({where: {id}});
     return res.json(result)
   })
 }

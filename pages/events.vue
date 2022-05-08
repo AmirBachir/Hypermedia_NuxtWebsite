@@ -21,7 +21,7 @@
       <tr>
         <transition-group name="fade">
           <td v-for="(event) of filteredEvents" :key="event.id">
-            <event-card :description="event.description" :type="event.type" :name="event.title" :poi="event.poi"
+            <event-card :id="event.id" :description="event.description" :type="event.type" :name="event.title" :poi="event.poi"
                         :time="'H ' + event.time.slice(0, -3)" :img-name="event.cover_img" :date="event.date"/>
           </td>
         </transition-group>
@@ -35,14 +35,14 @@
 import EventCard from "~/components/EventCard";
 
 export default {
-  name: 'IndexPage',
+  name: 'EventsPage',
   components: {
     EventCard
   },
   // Note: This happens on backend (server) side
   async asyncData({$axios}) {
     // const { data } = await $axios.get('http://localhost:3000/api/events/all')
-    const {data} = await $axios.get('/api/events/all')
+    const {data} = await $axios.get('/api/events')
     return {
       eventList: data,
     }
@@ -103,22 +103,22 @@ button {
   border-width: 1px;
   border-radius: 30px;
   background: #234c60;
-  color: #d8fff5;
-  border-color: #d8fff5;
+  color: #d8eff5;
+  border-color: #d8eff5;
 }
 
 button:hover {
-  background: #d8fff5;
+  background: #d8eff5;
   color: #234c60;
   -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s ;
-  -o-transition: all 0.5s ;
-  -ms-transition: all 0.5s ;
-  transition: all 0.5s ;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 a {
-  color: #d8fff5;
+  color: #d8eff5;
 }
 
 .intro-img {
@@ -150,7 +150,9 @@ a {
 .fade-enter-active, .fade-leave-active {
   transition: opacity .6s;
 }
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
   opacity: 0;
 }
 </style>

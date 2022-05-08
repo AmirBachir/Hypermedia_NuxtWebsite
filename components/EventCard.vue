@@ -1,8 +1,8 @@
 <template>
-  <div class="card">
+  <div class="card" @click="$router.push('/event/' + id)">
     <p class="date-day">{{ day }}</p>
     <p class="date-month-year">{{ month }} {{ year }}</p>
-    <img :src="require(`@/assets/${imgName}.jpg`)" class="card-img-top" alt="image"/>
+    <img :src="require(`@/assets/${imgName}`)" class="card-img-top" alt="image"/>
     <div class="card-body" style="margin: 0.5rem">
       <p class="card-subtitle">{{ time }}</p>
       <p class="card-text point-of-interest">{{ poi }}</p>
@@ -17,6 +17,10 @@
 export default {
   name: 'EventCard',
   props: {
+    id: {
+      type: Number,
+      required: true,
+    },
     date: {
       type: String,
       required: true,
@@ -97,7 +101,7 @@ h5 {
   line-height: 29px;
   text-align: left;
   margin-top: 0.3rem;
-  color: #d8fff5;
+  color: #d8eff5;
 }
 
 p {
@@ -107,7 +111,7 @@ p {
   font-size: small;
   line-height: 22px;
   text-align: left;
-  color: #d8fff5;
+  color: #d8eff5;
 }
 
 img {
@@ -121,10 +125,11 @@ img {
   background: transparent;
   margin: 0 0 0.6rem 0.6rem;
   border-width: 1px;
-  border-color: #d8fff5;
+  border-color: #d8eff5;
 }
 
 .card:hover {
+  cursor: pointer;
   background: #103749;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
