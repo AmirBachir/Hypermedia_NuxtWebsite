@@ -3,10 +3,10 @@ import {DataTypes} from "sequelize";
 export default async (models) => {
   const pointsOfInterest = [
     {
-      name: "Cat 1",
+      name: "Cattedrale di Santa Maria Assunta",
       description: "Details about cat 1",
       img: "https://fs.i3lab.group/hypermedia/cats/siberian.jpg",
-      cover_img: "https://fs.i3lab.group/hypermedia/cats/siberian.jpg",
+      cover_img: 'Duomo_vecchio_e_duomo_nuovo_notturna_Brescia',
       img_caption: "img caption",
     },
     {

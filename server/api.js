@@ -63,14 +63,14 @@ async function runMainApi() {
     return res.json(result)
   })
 
-  app.get('/points-of-interest/:id', async (req, res) => {
+  app.get('/pointsofinterest/:id', async (req, res) => {
     const id = +req.params.id
     const result = await models.PointOfInterest.findOne({where: {id}})
     return res.json(result)
   })
 
   // HTTP GET api that returns all the cats in our fake database
-  app.get("/points-of-interest", async (req, res) => {
+  app.get("/pointsofinterest", async (req, res) => {
     const result = await models.PointOfInterest.findAll()
     const filtered = []
     for (const element of result) {
