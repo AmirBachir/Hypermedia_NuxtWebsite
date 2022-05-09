@@ -35,6 +35,7 @@ export default {
 .bg {
   width: 100%;
   height: 40rem;
+  filter: brightness(60%);
 }
 
 .name{
@@ -44,6 +45,7 @@ export default {
   color: #d8eff5;
   font-family: 'Casual', serif;
   font-style: normal;
+  text-shadow: 0 0 50px black;
   /* font-weight: 400;
   font-size: 54px;
   line-height: 65px; */

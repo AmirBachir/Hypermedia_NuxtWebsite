@@ -42,7 +42,7 @@ export default async (models) => {
   const events = [
     {
       date: '2022-12-05',
-      cover_img: 'brescia_eve.jpg',
+      cover_img: 'homepage-img.jpeg',
       time: ' 09:00:00',
       poi: 'Duomo',
       title: 'Giga party',

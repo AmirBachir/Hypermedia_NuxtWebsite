@@ -2,7 +2,7 @@
   <div>
     <cover-component :title="title" :image="cover_img"/>
     <div class="container">
-      <table>
+      <table class="info">
         <tr>
           <td>
             <p>{{ description }}</p>
@@ -10,14 +10,40 @@
           <td>
             <div class="info-box">
               <b>Information about the event</b>
+              <p>{{ type }}</p>
+              <br />
               <p>Date: {{ date }}</p>
               <p>Time: {{ time }}</p>
+              <br />
               <p>Venue: {{ poi }}</p>
-              <p>{{ type }}</p>
             </div>
           </td>
         </tr>
       </table>
+    </div>
+    <table class="image-carousel">
+      <tr>
+        <td>
+          <img src="~/assets/concert-1.jpeg" alt="">
+        </td>
+        <td>
+          <img src="~/assets/concert-2.jpeg" alt="">
+        </td>
+        <td>
+          <img src="~/assets/concert-3.jpeg" alt="">
+        </td>
+        <td>
+          <img src="~/assets/brescia_ser.jpg" alt="">
+        </td>
+        <td>
+          <img src="~/assets/brescia_poi.jpg" alt="">
+        </td>
+        <td>
+          <img src="~/assets/brescia_poi.jpg" alt="">
+        </td>
+      </tr>
+    </table>
+    <div class="container">
       <button @click="backToEvents">All events</button>
     </div>
   </div>
@@ -25,6 +51,7 @@
 
 <script>
 import CoverComponent from "~/components/Cover";
+
 export default {
   name: "EventPage",
   components: {CoverComponent},
@@ -56,7 +83,7 @@ export default {
   margin-top: 70px;
 }
 
-td {
+.info td {
   width: 50%;
   padding: 40px;
 }
@@ -66,11 +93,33 @@ td {
   background: #d8eff5;
   color: #234c60;
   border-radius: 20px;
-  padding: 10%;
+  padding: 8%;
+  min-width: 60vh;
 }
 
 .info-box p {
   text-align: left;
+}
+
+.image-carousel {
+  margin-top: 50px;
+  display: block;
+  overflow-x: auto;
+  white-space: nowrap;
+}
+
+.image-carousel tr {
+  width: 100%;
+}
+
+.image-carousel td {
+  display: inline-block;
+  overflow: auto;
+}
+
+.image-carousel img {
+  height: 40vh;
+  overflow: auto
 }
 
 </style>
