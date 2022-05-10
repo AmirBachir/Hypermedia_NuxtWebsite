@@ -21,7 +21,7 @@
       <tr>
         <transition-group name="fade">
           <td v-for="(event) of filteredEvents" :key="event.id">
-            <event-card :id="event.id" :description="event.description" :type="event.type" :name="event.title" :poi="event.poi"
+            <event-card :id="event.id" :description="event.description" :type="event.type" :name="event.title" :poi="event.pointOfInterest.name"
                         :time="'H ' + event.time.slice(0, -3)" :img-name="event.cover_img" :date="event.date"/>
           </td>
         </transition-group>

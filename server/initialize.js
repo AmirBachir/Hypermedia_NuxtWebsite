@@ -5,8 +5,8 @@ export default async (models) => {
     {
       name: "Cattedrale di Santa Maria Assunta",
       description: "Details about cat 1",
-      img: "https://fs.i3lab.group/hypermedia/cats/siberian.jpg",
       cover_img: 'Duomo_vecchio_e_duomo_nuovo_notturna_Brescia',
+      img: "https://fs.i3lab.group/hypermedia/cats/siberian.jpg",
       img_caption: "img caption",
     },
     {
@@ -49,6 +49,7 @@ export default async (models) => {
       type: 'Music and entertainment',
       description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
       season: 'winter',
+      pointOfInterestId: 1
     },
     {
       date: '2022-07-06',
@@ -57,8 +58,9 @@ export default async (models) => {
       poi: 'Town hall',
       title: 'Brescia is reggae',
       type: 'Music and entertainment',
-      description: 'Bob Marley will always live on in this cultural town',
+      description: 'Bob Marley will always live on in this cultural town.',
       season: 'summer',
+      pointOfInterestId: 1
     },
     {
       date: '2022-12-05',
@@ -69,6 +71,7 @@ export default async (models) => {
       type: 'Music and entertainment',
       description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
       season: 'winter',
+      pointOfInterestId: 1
     },
     {
       date: '2022-07-06',
@@ -77,8 +80,9 @@ export default async (models) => {
       poi: 'Town hall',
       title: 'Brescia is reggae',
       type: 'Music and entertainment',
-      description: 'Bob Marley will always live on in this cultural town',
+      description: 'Bob Marley will always live on in this cultural town.',
       season: 'summer',
+      pointOfInterestId: 1
     },
     {
       date: '2022-12-05',
@@ -89,6 +93,7 @@ export default async (models) => {
       type: 'Music and entertainment',
       description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
       season: 'winter',
+      pointOfInterestId: 1
     },
     {
       date: '2022-07-06',
@@ -97,11 +102,41 @@ export default async (models) => {
       poi: 'Town hall',
       title: 'Brescia is reggae',
       type: 'Music and entertainment',
-      description: 'Bob Marley will always live on in this cultural town',
+      description: 'Bob Marley will always live on in this cultural town.',
       season: 'summer',
+      pointOfInterestId: 1
     },
+  ]
+
+  const itineraries = [
+    {
+      name: 'Brescia Romana',
+      description: 'Discover over 800 years of history preserved up until the contemporary era.',
+      cover_img: 'brescia_poi.jpg',
+      duration: 90
+    },
+    {
+      name: 'Naturalistic tour',
+      description: 'Brescia il full of monkeys and other weird animals.',
+      cover_img: 'brescia_poi.jpg',
+      duration: 90
+    }
+  ]
+
+  const images = [
+    {
+      path: '~/assets/intro_brescia.png',
+      pointOfInterestId: 1,
+      eventId: 1
+    },
+    {
+      path: '~/assets/brescia_poi.jpg',
+      eventId: 1
+    }
   ]
 
   await models.PointOfInterest.bulkCreate(pointsOfInterest)
   await models.Event.bulkCreate(events)
+  await models.Itinerary.bulkCreate(itineraries)
+  await models.Image.bulkCreate(images)
 }

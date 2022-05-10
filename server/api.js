@@ -27,10 +27,31 @@ async function initializeDatabaseConnection() {
     description: DataTypes.STRING,
     season: DataTypes.STRING,
   })
+  const Itinerary = database.define("itinerary", {
+    name: DataTypes.STRING,
+    description: DataTypes.STRING,
+    cover_img: DataTypes.STRING,
+    duration: DataTypes.INTEGER
+  })
+  const Image = database.define("image", {
+    path: DataTypes.STRING,
+  })
+
+  PointOfInterest.hasMany(Event)
+  Event.belongsTo(PointOfInterest)
+  Itinerary.belongsToMany(PointOfInterest, {through: 'ItineraryPoi'})
+  PointOfInterest.belongsToMany(Itinerary, {through: 'ItineraryPoi'})
+  Event.hasMany(Image)
+  Image.belongsTo(Event)
+  PointOfInterest.hasMany(Image)
+  Image.belongsTo(PointOfInterest)
+
   await database.sync({force: true})
   return {
     PointOfInterest,
-    Event
+    Event,
+    Itinerary,
+    Image
   }
 }
 
@@ -92,7 +113,9 @@ async function runMainApi() {
   })
 
   app.get('/events', async (req, res) => {
-    const result = await models.Event.findAll();
+    const result = await models.Event.findAll({
+      include: models.PointOfInterest
+    });
 
     return res.json(result)
   })
@@ -100,7 +123,17 @@ async function runMainApi() {
   // Returns only the data about a specific event
   app.get('/event/:id', async (req, res) => {
     const id = req.params.id
-    const result = await models.Event.findOne({where: {id}});
+    const result = await models.Event.findOne({
+      where: {
+        id
+      },
+      include:
+        [
+          models.PointOfInterest,
+          models.Image
+        ]
+    });
+    
     return res.json(result)
   })
 }

@@ -11,11 +11,11 @@
             <div class="info-box">
               <b>Information about the event</b>
               <p>{{ type }}</p>
-              <br />
+              <br/>
               <p>Date: {{ date }}</p>
               <p>Time: {{ time }}</p>
-              <br />
-              <p>Venue: {{ poi }}</p>
+              <br/>
+              <p>Venue: {{ poi.name }}</p>
             </div>
           </td>
         </tr>
@@ -44,7 +44,11 @@
       </tr>
     </table>
     <div class="container">
-      <button @click="backToEvents">All events</button>
+      <br/><br/><br/><br/>
+      <h3>Discover more about this venue:</h3>
+      <br/><br/>
+      <img :src="poi.img" alt="">
+      <p>{{ poi.name }}</p>
     </div>
   </div>
 </template>
@@ -58,11 +62,12 @@ export default {
   async asyncData({route, $axios}) {
     const id = route.params.event
     const {data} = await $axios.get('/api/event/' + id)
+    console.log(data)
     return {
       date: data.date,
       cover_img: data.cover_img,
       time: data.time,
-      poi: data.poi,
+      poi: data.pointOfInterest,
       title: data.title,
       type: data.type,
       description: data.description,
@@ -70,7 +75,7 @@ export default {
     }
   },
   methods: {
-    backToEvents() {
+    goToEvents() {
       this.$router.push('/events')
     },
   },
@@ -118,7 +123,7 @@ export default {
 }
 
 .image-carousel img {
-  height: 40vh;
+  height: 45vh;
   overflow: auto
 }
 
