@@ -12,7 +12,8 @@ async function initializeDatabaseConnection() {
   await database.authenticate()
   const PointOfInterest = database.define("pointOfInterest", {
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
+    intro: DataTypes.TEXT,
+    details: DataTypes.TEXT,
     cover_img: DataTypes.STRING,
     img: DataTypes.STRING,
     img_caption: DataTypes.STRING,
