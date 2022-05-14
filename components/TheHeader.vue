@@ -18,15 +18,15 @@
           <li class="nav-item"><nuxt-link class="nav-link" to="/thecityofbrescia">The City of Brescia</nuxt-link></li>
           <li class="nav-item"><nuxt-link class="nav-link" to="/itineraries">Itineraries</nuxt-link></li>
           <li class="nav-item dropdown">
-            <nuxt-link id="navbarDropdownPointsofInterest" class="nav-link" to="/pointsofinterest"
+            <nuxt-link id="navbarDropdownPointsofInterest" class="nav-link" to="/points-of-interest"
               role="button" data-bs="dropdown" aria-expanded="false">Points of Interest</nuxt-link>
             <ul class="dropdown-menu start-50 translate-middle-x" aria-labelledby="navbarDropdownPointsofInterest">
               <div class="square"></div>
-              <li><nuxt-link class="dropdown-item" to="/pointsofinterest/historicalsitesandmonuments">Historical Sites & Monuments</nuxt-link></li>
+              <li><nuxt-link class="dropdown-item" to="/points-of-interest/historicalsitesandmonuments">Historical Sites & Monuments</nuxt-link></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><nuxt-link class="dropdown-item" to="/pointsofinterest/piazzeandleisure">Piazze and Leisure</nuxt-link></li>
+              <li><nuxt-link class="dropdown-item" to="/points-of-interest/piazzeandleisure">Piazze and Leisure</nuxt-link></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><nuxt-link class="dropdown-item" to="/pointsofinterest/nature">Nature</nuxt-link></li>
+              <li><nuxt-link class="dropdown-item" to="/points-of-interest/nature">Nature</nuxt-link></li>
             </ul>
           </li>
           <li class="nav-item dropdown">
