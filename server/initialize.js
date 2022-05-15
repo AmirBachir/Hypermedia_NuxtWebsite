@@ -54,7 +54,7 @@ export default async (models) => {
       type: 'Music and entertainment',
       description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
       season: 'winter',
-      pointOfInterestId: 1
+      pointOfInterestId: 2
     },
     {
       date: '2022-07-06',
@@ -111,6 +111,73 @@ export default async (models) => {
       season: 'summer',
       pointOfInterestId: 1
     },
+    {
+      date: '2022-07-06',
+      cover_img: 'brescia_poi.jpg',
+      time: '12:30:00',
+      poi: 'Town hall',
+      title: 'Brescia is reggae',
+      type: 'Music and entertainment',
+      description: 'Bob Marley will always live on in this cultural town.',
+      season: 'summer',
+      pointOfInterestId: 2
+    },
+    {
+      date: '2022-07-06',
+      cover_img: 'brescia_poi.jpg',
+      time: '12:30:00',
+      poi: 'Town hall',
+      title: 'Brescia is reggae',
+      type: 'Music and entertainment',
+      description: 'Bob Marley will always live on in this cultural town.',
+      season: 'summer',
+      pointOfInterestId: 2
+    },
+    {
+      date: '2022-07-06',
+      cover_img: 'brescia_poi.jpg',
+      time: '12:30:00',
+      poi: 'Town hall',
+      title: 'Brescia is reggae',
+      type: 'Music and entertainment',
+      description: 'Bob Marley will always live on in this cultural town.',
+      season: 'summer',
+      pointOfInterestId: 2
+    },
+    {
+      date: '2022-07-06',
+      cover_img: 'brescia_poi.jpg',
+      time: '12:30:00',
+      poi: 'Town hall',
+      title: 'Brescia is reggae',
+      type: 'Music and entertainment',
+      description: 'Bob Marley will always live on in this cultural town.',
+      season: 'summer',
+      pointOfInterestId: 2
+    },
+    {
+      date: '2022-07-06',
+      cover_img: 'brescia_poi.jpg',
+      time: '12:30:00',
+      poi: 'Town hall',
+      title: 'Brescia is reggae',
+      type: 'Music and entertainment',
+      description: 'Bob Marley will always live on in this cultural town.',
+      season: 'summer',
+      pointOfInterestId: 2
+    },
+    {
+      date: '2022-07-06',
+      cover_img: 'brescia_poi.jpg',
+      time: '12:30:00',
+      poi: 'Town hall',
+      title: 'Brescia is reggae',
+      type: 'Music and entertainment',
+      description: 'Bob Marley will always live on in this cultural town.',
+      season: 'summer',
+      pointOfInterestId: 2
+    },
+    
   ]
 
   const itineraries = [
