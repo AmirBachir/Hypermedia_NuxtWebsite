@@ -183,15 +183,24 @@ export default async (models) => {
   const itineraries = [
     {
       name: 'Brescia Romana',
-      description: 'Discover over 800 years of history preserved up until the contemporary era.',
+      short_description: 'Discover over 800 years of history preserved up until the contemporary era.',
+      thumbnail: "brescia_romana_mini.png",
       cover_img: 'brescia_poi.jpg',
       duration: 90
     },
     {
       name: 'Naturalistic tour',
-      description: 'Brescia il full of monkeys and other weird animals.',
+      short_description: 'Brescia il full of monkeys and other weird animals.',
+      thumbnail: "brescia_romana_mini.png",
       cover_img: 'brescia_poi.jpg',
       duration: 90
+    }
+  ]
+
+  const itinerarypoi = [
+    {
+      poi_id: 1,
+      itinerary_id: 1
     }
   ]
 
@@ -211,4 +220,5 @@ export default async (models) => {
   await models.Event.bulkCreate(events)
   await models.Itinerary.bulkCreate(itineraries)
   await models.Image.bulkCreate(images)
+  await models.ItineraryPoi.bulkCreate(itinerarypoi)
 }
