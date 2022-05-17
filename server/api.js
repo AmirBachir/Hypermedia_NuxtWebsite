@@ -15,7 +15,6 @@ async function initializeDatabaseConnection() {
     intro: DataTypes.TEXT,
     details: DataTypes.TEXT,
     cover_img: DataTypes.STRING,
-    category: DataTypes.STRING,
     img: DataTypes.STRING,
     img_caption: DataTypes.STRING,
   })

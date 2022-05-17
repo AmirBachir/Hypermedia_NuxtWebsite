@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div @click="$router.push('/points-of-interest/' + poi.id)">
     <img :src="require(`@/assets/` + poi.cover_img)" :alt="poi.name" />
     <p>{{ poi.name }}</p>
   </div>
@@ -14,9 +14,7 @@ export default {
       required: true,
     },
   },
-  mounted() {
-    console.log(this.poi)
-  },
+  
 }
 </script>
 
