@@ -12,8 +12,9 @@ async function initializeDatabaseConnection() {
   await database.authenticate()
   const PointOfInterest = database.define("pointOfInterest", {
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
+    description: DataTypes.TEXT,
     cover_img: DataTypes.STRING,
+    category: DataTypes.STRING,
     img: DataTypes.STRING,
     img_caption: DataTypes.STRING,
   })
@@ -90,27 +91,15 @@ async function runMainApi() {
     return res.json(result)
   })
 
-  // HTTP GET api that returns all the cats in our fake database
+  // HTTP GET api that returns all the points of interest in our database
   app.get("/points-of-interest", async (req, res) => {
     const result = await models.PointOfInterest.findAll()
-    const filtered = []
-    for (const element of result) {
-      filtered.push({
-        name: element.name,
-        img: element.img,
-        id: element.id,
-      })
-    }
-    return res.json(filtered)
+    return res.json(result)
   })
 
   // HTTP POST api that will push (and therefore create) a new element in
   // our fake database
-  app.post("/cats", (req, res) => {
-    const {body} = req
-    catList.push(body)
-    return res.sendStatus(200)
-  })
+
 
   app.get('/events', async (req, res) => {
     const result = await models.Event.findAll({

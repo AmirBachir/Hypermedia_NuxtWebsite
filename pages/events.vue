@@ -1,7 +1,8 @@
 <template>
   <div class="container">
+    <!-- di tutta questa parte si potrebbe fare un component (si ripete anche nella introductory page di points of interest) -->
     <div style="text-align:end">
-      <img class="intro-img" src="~/assets/events-intro.png" alt="events image"/>
+      <img class="intro-img" src="~/assets/events-intro.png" alt="Events introductory image"/>
     </div>
     <h1>Events</h1>
     <p>&lt; Back</p>
@@ -17,6 +18,7 @@
     >
       <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5"/>
     </svg>
+    <!-- fino a qui -->
     <table class="events-table">
       <tr>
         <transition-group name="fade">
