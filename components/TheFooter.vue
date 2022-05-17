@@ -10,16 +10,16 @@
             <!-- Links -->
             <h6 class="fs-5 mb-4 columnTitle">Useful links</h6>
             <p>
-              <a href="#!" class="text">Point of interests</a>
+              <nuxt-link to="/points-of-interest-intro" class="text">Points of interest</nuxt-link>
             </p>
             <p>
-              <a href="#!" class="text">Events</a>
+              <nuxt-link to="/events" class="text">Events</nuxt-link>
             </p>
             <p>
-              <a href="#!" class="text">Itineraries</a>
+              <nuxt-link to="itineraries" class="text">Itineraries</nuxt-link>
             </p>
             <p>
-              <a href="#!" class="text">Services</a>
+              <nuxt-link to="/service-types" class="text">Service types</nuxt-link>
             </p>
           </div>
           <!-- Grid column -->

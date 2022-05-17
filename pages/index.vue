@@ -36,25 +36,25 @@
           <topic-card
             title="Points of Interest"
             img-path="brescia_poi.jpg"
-            description="Discover all of the magical spots that Brescia has to offer to the curious traveler."/>
+            description="Discover all of the magical spots that Brescia has to offer to the curious traveler." url="/points-of-interest-intro"/>
         </td>
         <td>
           <topic-card
             title="Itineraries"
             img-path="brescia_iti.jpg"
-            description="Plan your visit with our custom recommendations on tours, walks and what to see."/>
+            description="Plan your visit with our custom recommendations on tours, walks and what to see." url="/itineraries"/>
         </td>
         <td>
           <topic-card
             title="Events"
             img-path="brescia_eve.jpg"
-            description="Enjoy the city with some of the most exciting events on sight."/>
+            description="Enjoy the city with some of the most exciting events on sight." url="/events"/>
         </td>
         <td>
           <topic-card
-            title="Services"
+            title="Service types"
             img-path="brescia_ser.jpg"
-            description="Some key services you can access from the city center."/>
+            description="Some key services you can access from the city center." url="/service-types"/>
         </td>
       </tr>
     </table>

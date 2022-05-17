@@ -1,5 +1,5 @@
 <template>
-  <div class="card" @click="goToEvent">
+  <div class="card" @click="$router.push(url)">
     <img
       :src="require(`@/assets/${imgPath}`)"
       class="card-img-top circular-border"
@@ -28,15 +28,12 @@ export default {
       type: String,
       required: true,
     },
-  },
-  methods:{
-    goToEvent(){
-      console.log("done")
+    url: {
+      type:String,
+      required: true,
     }
   },
-  computed: {
-
-  },
+  
 }
 </script>
 
@@ -47,6 +44,9 @@ export default {
   border: 20px solid #d8eff5;
   width: 70%;
 }
+.card:hover {
+  cursor: pointer;
+}
 .card:hover > .circular-border{
   border-color: #59FFF5;
   -webkit-transition: all 0.5s;
@@ -55,7 +55,6 @@ export default {
   -ms-transition: all 0.5s ;
   transition: all 0.5s ;
 }
-
 h5 {
   font-family: 'Inter', serif;
   font-style: normal;
@@ -88,13 +87,5 @@ p {
   margin: 0.2rem;
 }
 
-.card:hover > .circular-border{
-  border-color: #59FFF5;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s ;
-  -o-transition: all 0.5s ;
-  -ms-transition: all 0.5s ;
-  transition: all 0.5s ;
-}
 
 </style>
