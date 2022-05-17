@@ -12,7 +12,8 @@ async function initializeDatabaseConnection() {
   await database.authenticate()
   const PointOfInterest = database.define("pointOfInterest", {
     name: DataTypes.STRING,
-    description: DataTypes.TEXT,
+    intro: DataTypes.TEXT,
+    details: DataTypes.TEXT,
     cover_img: DataTypes.STRING,
     category: DataTypes.STRING,
     img: DataTypes.STRING,
@@ -30,7 +31,8 @@ async function initializeDatabaseConnection() {
   })
   const Itinerary = database.define("itinerary", {
     name: DataTypes.STRING,
-    description: DataTypes.STRING,
+    short_description: DataTypes.TEXT,
+    thumbnail: DataTypes.STRING,
     cover_img: DataTypes.STRING,
     duration: DataTypes.INTEGER
   })
@@ -38,10 +40,14 @@ async function initializeDatabaseConnection() {
     path: DataTypes.STRING,
   })
 
+  const ItineraryPoi = database.define('ItineraryPoi')
+
   PointOfInterest.hasMany(Event)
   Event.belongsTo(PointOfInterest)
-  Itinerary.belongsToMany(PointOfInterest, {through: 'ItineraryPoi'})
-  PointOfInterest.belongsToMany(Itinerary, {through: 'ItineraryPoi'})
+  Itinerary.belongsToMany(PointOfInterest, {through: 'ItineraryPoi',
+  foreignKey: "itinerary_id"})
+  PointOfInterest.belongsToMany(Itinerary, {through: 'ItineraryPoi',
+  foreignKey: "poi_id"})
   Event.hasMany(Image)
   Image.belongsTo(Event)
   PointOfInterest.hasMany(Image)
@@ -52,7 +58,8 @@ async function initializeDatabaseConnection() {
     PointOfInterest,
     Event,
     Itinerary,
-    Image
+    Image,
+    ItineraryPoi
   }
 }
 
@@ -87,7 +94,13 @@ async function runMainApi() {
 
   app.get('/points-of-interest/:id', async (req, res) => {
     const id = +req.params.id
-    const result = await models.PointOfInterest.findOne({where: {id}})
+    const result = await models.PointOfInterest.findOne({
+      where: {id},
+      include: [
+        models.Event,
+        models.Itinerary
+      ]
+    })
     return res.json(result)
   })
 
