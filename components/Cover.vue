@@ -21,7 +21,7 @@ export default {
 }
 </script>
 
-<style>
+<style scoped>
 @font-face {
   font-family: "Casual";
   src: local("~/assets/Casual-Regular.ttf");

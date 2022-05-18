@@ -1,16 +1,15 @@
 <template>
   <div class="container">
     <!-- di tutta questa parte si potrebbe fare un component (si ripete anche nella introductory page di events) -->
-    <div style="text-align: end">
+    <div style="text-align: end" >
       <img
         class="intro-img"
         src="~/assets/poi-intro.png"
-        alt="Points of Interest introductory image"
-      />
+        alt="Points of Interest introductory image">
     </div>
-    <h1>Points of Interest</h1>
-    <p>&lt; Back</p>
+    <h1 style="margin-bottom:3rem">Points of Interest</h1>
     <!-- inserire qui una piccola OVERVIEW -->
+    <div style="text-align: center">
     <svg
       class="arrow-down"
       width="79"
@@ -20,6 +19,7 @@
     >
       <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5" />
     </svg>
+    </div>
     <!-- fino a qui -->
     <div class="grid-container">
       <poi-card
@@ -63,5 +63,11 @@ h1 {
   display: grid;
   grid-template-columns: auto auto auto;
   padding: 1rem;
+}
+</style>
+<style>
+.intro-img{
+  height:23rem;
+  max-width:100%
 }
 </style>
