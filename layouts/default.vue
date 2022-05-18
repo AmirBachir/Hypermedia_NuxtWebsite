@@ -1,7 +1,7 @@
 <template>
   <div class="main-page">
     <the-header />
-    <nuxt />
+    <nuxt class="page"/>
     <the-footer class="footer" />
   </div>
 </template>
@@ -23,7 +23,9 @@ export default {
   background: #234C60;
   color: #D8EFF5;
 }
-
+.page{
+  padding-top: 6.7em;
+}
 .footer {
   margin-top: 150px;
 }

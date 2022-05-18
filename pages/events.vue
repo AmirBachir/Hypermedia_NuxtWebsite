@@ -1,11 +1,15 @@
 <template>
   <div class="container">
     <!-- di tutta questa parte si potrebbe fare un component (si ripete anche nella introductory page di points of interest) -->
-    <div style="text-align:end">
-      <img class="intro-img" src="~/assets/events-intro.png" alt="Events introductory image"/>
+    <div style="text-align: end">
+      <img
+        class="intro-img"
+        src="~/assets/events-intro.png"
+        alt="Events introductory image"
+      />
     </div>
     <h1>Events</h1>
-    <p>&lt; Back</p>
+    <!-- fino a qui -->
     <button @click="setFilter('all')">All events</button>
     <button @click="setFilter('winter')">Winter events</button>
     <button @click="setFilter('summer')">Summer events</button>
@@ -16,15 +20,23 @@
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5"/>
+      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5" />
     </svg>
-    <!-- fino a qui -->
+    
     <table class="events-table">
       <tr>
         <transition-group name="fade">
-          <td v-for="(event) of filteredEvents" :key="event.id">
-            <event-card :id="event.id" :description="event.description" :type="event.type" :name="event.title" :poi="event.pointOfInterest.name"
-                        :time="'H ' + event.time.slice(0, -3)" :img-name="event.cover_img" :date="event.date"/>
+          <td v-for="event of filteredEvents" :key="event.id">
+            <event-card
+              :id="event.id"
+              :description="event.description"
+              :type="event.type"
+              :name="event.title"
+              :poi="event.pointOfInterest.name"
+              :time="'H ' + event.time.slice(0, -3)"
+              :img-name="event.cover_img"
+              :date="event.date"
+            />
           </td>
         </transition-group>
       </tr>
@@ -34,52 +46,53 @@
 
 <script>
 // import CustomPage from '~/components/CustomPage.vue'
-import EventCard from "~/components/EventCard";
+import EventCard from '~/components/EventCard'
 
 export default {
   name: 'EventsPage',
   components: {
-    EventCard
+    EventCard,
   },
   // Note: This happens on backend (server) side
-  async asyncData({$axios}) {
+  async asyncData({ $axios }) {
     // const { data } = await $axios.get('http://localhost:3000/api/events/all')
-    const {data} = await $axios.get('/api/events')
+    const { data } = await $axios.get('/api/events')
     return {
       eventList: data,
     }
   },
   data() {
     return {
-      filter: 'all',
-      eventList: []
+      param: this.$route.query.filter,
+      eventList: [],
     }
   },
   computed: {
     filteredEvents() {
       let result
-      if (this.filter !== 'all') {
-        result = this.eventList.filter(event => event.season === this.filter)
+      if (this.filter !== 'all' && this.filter !== undefined) {
+        result = this.eventList.filter((event) => event.season === this.filter)
       } else {
         result = this.eventList
       }
       return result
     },
-  },
-  methods: {
-    setFilter(filter) {
-      this.filter = filter
+    filter(){
+      return this.$route.query.filter
     }
   },
+  methods:{
+    setFilter(f){
+      this.$router.push({ path: '/events', query: { filter: f } })
+    }
+  }
 }
-
 </script>
 
 <style scoped>
-
 @font-face {
-  font-family: "Casual";
-  src: local("~/assets/Casual-Regular.ttf");
+  font-family: 'Casual';
+  src: local('~/assets/Casual-Regular.ttf');
 }
 
 img {
@@ -88,7 +101,7 @@ img {
 }
 
 h1 {
-  font-family: "Casual", serif;
+  font-family: 'Casual', serif;
 }
 
 p {
@@ -149,12 +162,12 @@ a {
 
 /* ANIMATIONS AND TRANSITIONS */
 
-.fade-enter-active, .fade-leave-active {
-  transition: opacity .6s;
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.6s;
 }
 
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
-{
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
   opacity: 0;
 }
 </style>

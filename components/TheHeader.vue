@@ -1,5 +1,5 @@
 <template>
-  <nav class="navbar navbar-expand-lg">
+  <nav class="navbar fixed-top navbar-expand-lg" style="margin-top=0px">
     <div class="container-fluid align-middle">
       <nuxt-link class="navbar-brand" to="/">Brescia</nuxt-link>
       <button 
@@ -31,11 +31,12 @@
             </nuxt-link>
             <ul class="dropdown-menu start-50 translate-middle-x" aria-labelledby="navbarDropdownEvents">
               <div class="square"></div>
-              <li><nuxt-link class="dropdown-item" to="/events/allevents">All events</nuxt-link></li>
+              <li><nuxt-link class="dropdown-item" to="/events?filter=all">All events</nuxt-link></li>
               <li><hr class="dropdown-divider" /></li>
-              <li><nuxt-link class="dropdown-item" to="/events/summerevents">Summer events</nuxt-link></li>
+              <li><nuxt-link class="dropdown-item" to="/events?filter=summer">Summer events</nuxt-link></li>
+              <!-- <li><a href="events?filter=summer">Summer events"</a></li> -->
               <li><hr class="dropdown-divider" /></li>
-              <li><nuxt-link class="dropdown-item" to="events/winterevents">Winter Events</nuxt-link></li>
+              <li><nuxt-link class="dropdown-item" to="/events?filter=winter">Winter Events</nuxt-link></li>
             </ul>
           </li>
           <li class="nav-item">
@@ -49,20 +50,22 @@
 
 <script>
 export default {
-  name: 'TheHeader'
+  name: 'TheHeader',
+  
 }
 </script>
 
 <style scoped>
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@701&display=swap');
-/* @font-face {
+/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@701&display=swap'); */
+@font-face {
   font-family: "Casual";
   src: local("~/assets/Casual-Regular.ttf");
-} */
+}
 .navbar {
   background-color: #234c60;
   color:rgb(216, 239, 245); 
-  font-family: 'Inter', sans-serif;
+  font-family: 'Casual', sans-serif;
+  padding: 0;
 }
 .nav-link, .navbar-brand{
   color: inherit;
@@ -108,7 +111,7 @@ export default {
 
 .navbar-brand{
   font-family: "Casual", serif;
-  font-size: 2.5em;
+  font-size: 3em;
   margin-left:3rem;
   margin-right:3rem;
 }
