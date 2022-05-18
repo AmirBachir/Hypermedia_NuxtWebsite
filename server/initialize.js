@@ -207,7 +207,7 @@ export default async (models) => {
       season: 'summer',
       pointOfInterestId: 2
     },
-    
+
   ]
 
   const itineraries = [
@@ -246,9 +246,46 @@ export default async (models) => {
     }
   ]
 
+  const serviceTypes = [
+    {
+      name: 'pharmacies',
+    },
+    {
+      name: 'banks',
+    },
+    {
+      name: 'restaurants',
+    }
+  ]
+
+  const services = [
+    {
+      name: 'Farmacia Bravi',
+      address: 'Via S. Zeno, 95',
+      practicalInfo: 'They are good',
+    },
+    {
+      name: 'Farmacie Comunali Di Brescia Spa',
+      address: 'Via Achille Grandi, 18',
+      practicalInfo: 'Townhall pharmacies',
+    },
+    {
+      name: 'Castle Pharmacy',
+      address: 'Via Galileo Galilei, 85/A',
+      practicalInfo: 'It is in a castle!',
+    },
+    {
+      name: 'Farmacia Austoni',
+      address: 'Via Cremona, 37',
+      practicalInfo: 'Owned by a distinguished gentleman',
+    },
+  ]
+
   await models.PointOfInterest.bulkCreate(pointsOfInterest)
   await models.Event.bulkCreate(events)
   await models.Itinerary.bulkCreate(itineraries)
   await models.Image.bulkCreate(images)
   await models.ItineraryPoi.bulkCreate(itinerarypoi)
+  await models.ServiceType.bulkCreate(serviceTypes)
+  await models.Service.bulkCreate(services)
 }

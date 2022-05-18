@@ -38,19 +38,31 @@ async function initializeDatabaseConnection() {
   const Image = database.define("image", {
     path: DataTypes.STRING,
   })
+  const ServiceType = database.define("serviceType", {
+    name: DataTypes.STRING,
+    cover_img: DataTypes.STRING
+  })
+  const Service = database.define("service", {
+    name: DataTypes.STRING,
+    address: DataTypes.STRING,
+    practical_info: DataTypes.TEXT
+  })
 
   const ItineraryPoi = database.define('ItineraryPoi')
 
   PointOfInterest.hasMany(Event)
   Event.belongsTo(PointOfInterest)
-  Itinerary.belongsToMany(PointOfInterest, {through: 'ItineraryPoi',
-  foreignKey: "itinerary_id"})
-  PointOfInterest.belongsToMany(Itinerary, {through: 'ItineraryPoi',
-  foreignKey: "poi_id"})
+  Itinerary.belongsToMany(PointOfInterest, {through: 'ItineraryPoi', foreignKey: "itinerary_id"})
+  PointOfInterest.belongsToMany(Itinerary, {
+    through: 'ItineraryPoi',
+    foreignKey: "poi_id"
+  })
   Event.hasMany(Image)
   Image.belongsTo(Event)
   PointOfInterest.hasMany(Image)
   Image.belongsTo(PointOfInterest)
+  ServiceType.hasMany(Service)
+  Service.belongsTo(ServiceType)
 
   await database.sync({force: true})
   return {
@@ -58,7 +70,9 @@ async function initializeDatabaseConnection() {
     Event,
     Itinerary,
     Image,
-    ItineraryPoi
+    ItineraryPoi,
+    ServiceType,
+    Service
   }
 }
 
@@ -109,10 +123,9 @@ async function runMainApi() {
     return res.json(result)
   })
 
+
   // HTTP POST api that will push (and therefore create) a new element in
   // our fake database
-
-
   app.get('/events', async (req, res) => {
     const result = await models.Event.findAll({
       include: models.PointOfInterest
@@ -134,7 +147,32 @@ async function runMainApi() {
           models.Image
         ]
     });
-    
+
+    return res.json(result)
+  })
+
+  app.get('/service-types', async (req, res) => {
+    const result = await models.ServiceType.findAll({
+      include: models.Service
+    });
+
+    return res.json(result)
+  })
+
+  // Returns only the data about a specific service type
+  app.get('/service-type/:id', async (req, res) => {
+    const id = req.params.id
+    const result = await models.Event.findOne({
+      where: {
+        id
+      },
+      include:
+        [
+          models.PointOfInterest,
+          models.Image
+        ]
+    });
+
     return res.json(result)
   })
 }
