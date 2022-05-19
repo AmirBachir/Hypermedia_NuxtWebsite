@@ -214,14 +214,14 @@ export default async (models) => {
     {
       name: 'Brescia Romana',
       short_description: 'Discover over 800 years of history preserved up until the contemporary era.',
-      thumbnail: "brescia_romana_mini.png",
+      thumbnail: "Brescia Romana.png",
       cover_img: 'brescia_poi.jpg',
       duration: 90
     },
     {
       name: 'Naturalistic tour',
       short_description: 'Brescia il full of monkeys and other weird animals.',
-      thumbnail: "brescia_romana_mini.png",
+      thumbnail: "Brescia Romana.png",
       cover_img: 'brescia_poi.jpg',
       duration: 90
     }

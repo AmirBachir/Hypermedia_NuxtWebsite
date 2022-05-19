@@ -1,72 +1,86 @@
 <template>
   <div class="pointofinterest">
     <cover :title="name" :image="cover_img" />
-<div class="container">
-    <table class=" poi-intro">
-      <div class="row">
-        <div class="col text">
-          <p>
-            {{ intro }}
+    <div class="container">
+      <table class="poi-intro">
+        <div class="row">
+          <div class="col text">
+            <p>
+              {{ intro }}
+              <br />
+              <br />
+              {{ details }}
+              <br />
+              <br />
+            </p>
+          </div>
+          <div class="col image">
+            <img
+              :src="require(`@/assets/${img}`)"
+              alt="point of interest detail"
+            />
             <br />
             <br />
-            {{ details }}
-            <br />
-            <br />
-          </p>
+            <figcaption>{{ img_caption }}</figcaption>
+          </div>
         </div>
-        <div class="col image">
-          <img
-            :src="require(`@/assets/${img}`)"
-            alt="point of interest detail"
-          />
+      </table>
+
+      <table class="events-table">
+        <tr>
+          <h2>Events related to this point of interest</h2>
           <br />
           <br />
-          <figcaption>{{ img_caption }}</figcaption>
-        </div>
-      </div>
-       </table>
+        </tr>
+        <tr>
+          <transition-group name="fade">
+            <td v-for="event of events" :key="event.id">
+              <event-card
+                :id="event.id"
+                :description="event.description"
+                :type="event.type"
+                :name="event.title"
+                :poi="name"
+                :time="'H ' + event.time.slice(0, -3)"
+                :img-name="event.cover_img"
+                :date="event.date"
+              />
+            </td>
+          </transition-group>
+        </tr>
+      </table>
 
-     <table class="events-table">
-       <tr>
-         <h2>Events related to this point of interest</h2>
-         <br />
+      <table class="itineraries-table">
+        <tr>
+          <h2>Visit through these itineraries</h2>
           <br />
-       </tr>
-      <tr>
-        <transition-group name="fade">
-          <td v-for="(event) of events" :key="event.id">
-            <event-card :id="event.id" :description="event.description" :type="event.type" :name="event.title" :poi="name" :time="'H ' + event.time.slice(0, -3)" :img-name="event.cover_img" :date="event.date"/>
-          </td>
-        </transition-group>
-      </tr>
-    </table>
-
-     <table class="itineraries-table">
-       <tr>
-         <h2>Visit through these itineraries</h2>
-         <br />
           <br />
-       </tr>
-      <tr>
-        <transition-group name="fade">
-          
-        </transition-group>
-      </tr>
-    </table>
-
-
-</div>
+        </tr>
+        <tr>
+          <transition-group name="fade">
+            <td v-for="itinerary of itineraries" :key="itinerary.id">
+              <itinerary-card
+                :name="itinerary.name"
+                :description="itinerary.short_description"
+                :img-name="itinerary.thumbnail"
+              /></td
+          ></transition-group>
+        </tr>
+      </table>
+    </div>
   </div>
 </template>
 
 <script>
 import Cover from '~/components/Cover.vue'
-import EventCard from "~/components/EventCard";
+import EventCard from '~/components/EventCard.vue'
+import ItineraryCard from '~/components/ItineraryCard.vue'
 export default {
   name: 'PointOfInterestPage',
   components: {
     Cover,
     EventCard,
+    ItineraryCard,
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params
@@ -81,6 +95,7 @@ export default {
       details: poI.details,
       id: poI.id,
       events: poI.events,
+      itineraries: poI.itineraries,
     }
   },
 }
