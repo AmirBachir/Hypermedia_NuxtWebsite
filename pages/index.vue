@@ -1,6 +1,6 @@
 <template>
   <div class="homepage">
-    <img src="~/assets/homepage-img.jpeg" alt="homepage image"/>
+    <img src="~/assets/homepage-img.jpeg" alt="homepage image" />
     <svg
       class="arrow-down"
       width="79"
@@ -8,59 +8,73 @@
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5"/>
+      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5" />
     </svg>
-    <br/>
+    <br />
     <table class="brescia-intro">
       <tr>
         <td>
           <h2>Brescia, The Lion Queen of Italy</h2>
-          <p>Lombardy’s second-largest city (Milan is first) is respected for its metallurgy and machine-tooling prowess
-            and for Beretta, its firearms manufacturer. <br/>
-            But the city center is a UNESCO World Heritage site in Italy and a 3,200-year-old history you can
-            experience. Brescia offers tourists everything they might want in the quest for dolce vita – food, wine,
+          <p>
+            Lombardy’s second-largest city (Milan is first) is respected for its
+            metallurgy and machine-tooling prowess and for Beretta, its firearms
+            manufacturer. <br />
+            But the city center is a UNESCO World Heritage site in Italy and a
+            3,200-year-old history you can experience. Brescia offers tourists
+            everything they might want in the quest for dolce vita – food, wine,
             shopping, sites, culture, and antiquity.
           </p>
-          <br/>
+          <br />
           <button>Discover</button>
         </td>
         <td>
-          <img src="~/assets/intro_brescia.png" alt="intro brescia"/>
+          <img src="~/assets/intro_brescia.png" alt="intro brescia" />
         </td>
       </tr>
     </table>
     <h1>What to do in Brescia</h1>
     <table class="what-to-do">
-      <tr>
-        <td>
+      <tr class="container">
+        <td v-for="(e,k) of topics" :key="k">
           <topic-card
-            title="Points of Interest"
-            img-path="brescia_poi.jpg"
-            description="Discover all of the magical spots that Brescia has to offer to the curious traveler." url="/points-of-interest-intro"/>
+            :title="e.title"
+            :img-path="e.img_path"
+            :description="e.description"
+            :url="e.url"
+          />
         </td>
-        <td>
+        <!-- <td>
           <topic-card
             title="Itineraries"
             img-path="brescia_iti.jpg"
-            description="Plan your visit with our custom recommendations on tours, walks and what to see." url="/itineraries"/>
+            description="Plan your visit with our custom recommendations on tours, walks and what to see."
+            url="/itineraries"
+          />
         </td>
         <td>
           <topic-card
             title="Events"
             img-path="brescia_eve.jpg"
-            description="Enjoy the city with some of the most exciting events on sight." url="/events"/>
+            description="Enjoy the city with some of the most exciting events on sight."
+            url="/events"
+          />
         </td>
         <td>
           <topic-card
             title="Service types"
             img-path="brescia_ser.jpg"
-            description="Some key services you can access from the city center." url="/service-types"/>
-        </td>
+            description="Some key services you can access from the city center."
+            url="/service-types"
+          />
+        </td> -->
       </tr>
     </table>
     <h1>Brescia waits for you!</h1>
-    <p>For more information please contact
-      <br/><a href="mailto:hello@brescia.it">hello@brescia.it</a>
+    <p>
+      For more information please contact <br /><a
+        href="mailto:hello@brescia.it"
+        >hello@brescia.it</a
+      >
     </p>
   </div>
 </template>
@@ -69,11 +83,41 @@
 // import CustomPage from '~/components/CustomPage.vue'
 export default {
   name: 'IndexPage',
+  data() {
+    return {
+      topics: [
+        {
+          title: 'Service types',
+          img_path: 'brescia_ser.jpg',
+          description: 'Some key services you can access from the city center.',
+          url: '/service-types',
+        },
+        {
+          title: 'Events',
+          img_path: 'brescia_eve.jpg',
+          description:'Enjoy the city with some of the most exciting events on sight.',
+          url: '/events',
+        },
+        {
+          title: 'Itineraries',
+          img_path: 'brescia_iti.jpg',
+          description:'Plan your visit with our custom recommendations on tours, walks and what to see.',
+          url: '/itineraries',
+        },
+        {
+          title: 'Points of Interest',
+          img_path: 'brescia_poi.jpg',
+          description:'Discover all of the magical spots that Brescia has to offer to the curious traveler.',
+          url: '/points-of-interest-intro',
+        },
+      ],
+    }
+  },
   components: {
     //    CustomPage,
   },
-  async asyncData({$axios}) {
-    const {data} = await $axios.get('/api/page-info/index')
+  async asyncData({ $axios }) {
+    const { data } = await $axios.get('/api/page-info/index')
     const title = data.title
     const image = data.image
     const description = data.description
@@ -87,10 +131,9 @@ export default {
 </script>
 
 <style scoped>
-
 @font-face {
-  font-family: "Casual";
-  src: local("~/assets/Casual-Regular.ttf");
+  font-family: 'Casual';
+  src: local('~/assets/Casual-Regular.ttf');
 }
 
 img {
@@ -98,7 +141,7 @@ img {
 }
 
 h1 {
-  font-family: "Casual", serif;
+  font-family: 'Casual', serif;
   text-align: center;
   margin-top: 100px;
   margin-bottom: 50px;
@@ -126,10 +169,10 @@ button:hover {
   background: #d8eff5;
   color: #234c60;
   -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s ;
-  -o-transition: all 0.5s ;
-  -ms-transition: all 0.5s ;
-  transition: all 0.5s ;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 a {
@@ -147,7 +190,7 @@ a {
 }
 
 .brescia-intro td h2 {
-  font-family: "Casual", serif;
+  font-family: 'Casual', serif;
   text-align: center;
   margin-bottom: 20px;
 }
@@ -167,6 +210,14 @@ a {
   overflow-x: auto;
 }
 
+.container{
+display: flex;
+flex-direction: row-reverse;
+    align-items: top;
+}
+td{
+  width:100%
+}
 .what-to-do tr {
   margin: auto;
   text-align: center;
@@ -175,5 +226,4 @@ a {
 .what-to-do td {
   display: inline-block;
 }
-
 </style>

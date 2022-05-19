@@ -1,10 +1,11 @@
 <template>
   <div class="card" @click="$router.push(url)">
-    <img
+    <div class="container"><img
       :src="require(`@/assets/${imgPath}`)"
       class="card-img-top circular-border"
       alt="image"
     />
+    </div>
     <div class="card-body">
       <h5 class="card-title">{{ title }}</h5>
       <p class="card-text">{{ description }}</p>
@@ -38,6 +39,7 @@ export default {
 </script>
 
 <style scoped>
+
 .circular-border {
   margin: 0.5rem auto auto;
   border-radius: 50%;
@@ -47,7 +49,7 @@ export default {
 .card:hover {
   cursor: pointer;
 }
-.card:hover > .circular-border{
+.card:hover  .circular-border{
   border-color: #59FFF5;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s ;
@@ -86,6 +88,8 @@ p {
   border-width: 0;
   margin: 0.2rem;
 }
-
+.card-title{
+  height:3rem;
+}
 
 </style>

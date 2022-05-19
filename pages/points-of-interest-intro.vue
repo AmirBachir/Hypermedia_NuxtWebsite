@@ -7,7 +7,7 @@
         src="~/assets/poi-intro.png"
         alt="Points of Interest introductory image">
     </div>
-    <h1 style="margin-bottom:3rem">Points of Interest</h1>
+    <h1>Points of Interest</h1>
     <!-- inserire qui una piccola OVERVIEW -->
     <div style="text-align: center">
     <svg
@@ -57,6 +57,7 @@ export default {
 
 h1 {
   font-family: "Casual", serif;
+  margin-bottom:3rem;
 }
 .grid-container {
   margin:0.1rem;

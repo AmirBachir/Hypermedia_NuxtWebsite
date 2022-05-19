@@ -7,7 +7,7 @@
         src="~/assets/thecityofbrescia-coverimage.png"
         alt="The city of Brescia cover image">
     </div>
-    <h1 style="margin-bottom:3rem">The city of Brescia</h1>
+    <h1>The city of Brescia</h1>
     <!-- inserire qui una piccola OVERVIEW -->
     <div style="text-align: center">
       <svg
@@ -61,6 +61,12 @@ export default {
 </script>
 
 <style scoped>
+
+h1 {
+  font-family: "Casual", serif;
+  margin-bottom:3rem;
+  margin-left: 6vw;
+}
 .intro-img{
   width:100%;
   margin-bottom: 2em;
