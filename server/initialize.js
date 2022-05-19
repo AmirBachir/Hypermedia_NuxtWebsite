@@ -229,8 +229,8 @@ export default async (models) => {
 
   const itinerarypoi = [
     {
-      poi_id: 1,
-      itinerary_id: 1
+      pointOfInterestId: 1,
+      itineraryId: 1
     }
   ]
 

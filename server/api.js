@@ -48,15 +48,12 @@ async function initializeDatabaseConnection() {
     practical_info: DataTypes.TEXT
   })
 
-  const ItineraryPoi = database.define('ItineraryPoi')
+  const ItineraryPoi = database.define("itinerary_Poi")
 
   PointOfInterest.hasMany(Event)
   Event.belongsTo(PointOfInterest)
-  Itinerary.belongsToMany(PointOfInterest, {through: 'ItineraryPoi', foreignKey: "itinerary_id"})
-  PointOfInterest.belongsToMany(Itinerary, {
-    through: 'ItineraryPoi',
-    foreignKey: "poi_id"
-  })
+  Itinerary.belongsToMany(PointOfInterest, {through: ItineraryPoi})
+  PointOfInterest.belongsToMany(Itinerary, {through: ItineraryPoi})
   Event.hasMany(Image)
   Image.belongsTo(Event)
   PointOfInterest.hasMany(Image)
