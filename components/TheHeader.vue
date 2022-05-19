@@ -15,7 +15,7 @@
           <li class="nav-item">
             <nuxt-link class="nav-link active" aria-current="page" to="/">Home</nuxt-link>
           </li>
-          <li class="nav-item"><nuxt-link class="nav-link" to="/thecityofbrescia">The City of Brescia</nuxt-link></li>
+          <li class="nav-item"><nuxt-link class="nav-link" to="/the-city-brescia">The City of Brescia</nuxt-link></li>
           <li class="nav-item"><nuxt-link class="nav-link" to="/itineraries">Itineraries</nuxt-link></li>
           <li class="nav-item"><nuxt-link class="nav-link" to="/points-of-interest-intro">Points of Interest</nuxt-link></li>
           <li class="nav-item dropdown">
