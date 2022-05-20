@@ -31,9 +31,11 @@ async function initializeDatabaseConnection() {
   const Itinerary = database.define("itinerary", {
     name: DataTypes.STRING,
     short_description: DataTypes.TEXT,
-    thumbnail: DataTypes.STRING,
     cover_img: DataTypes.STRING,
-    duration: DataTypes.INTEGER
+    thumbnail: DataTypes.STRING,
+    duration: DataTypes.INTEGER,
+    category: DataTypes.STRING,
+    inout: DataTypes.STRING
   })
   const Image = database.define("image", {
     path: DataTypes.STRING,
@@ -170,6 +172,20 @@ async function runMainApi() {
         ]
     });
 
+    return res.json(result)
+  })
+
+  app.get('/itinerary/:id', async(req, res) => {
+    const id = req.params.id
+    const result = await models.Itinerary.findOne({
+      where:{
+        id
+      },
+      include:
+      [
+        models.PointOfInterest
+      ]
+    })
     return res.json(result)
   })
 }

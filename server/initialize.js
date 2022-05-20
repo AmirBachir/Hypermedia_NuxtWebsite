@@ -1,4 +1,5 @@
 export default async (models) => {
+  // most of them are fake/repeated
   const pointsOfInterest = [
     {
       name: "Cattedrale di Santa Maria Assunta",
@@ -23,6 +24,54 @@ export default async (models) => {
       cover_img: 'intro_brescia.png',
       img: "cattedrale_di_santa_maria_assunta.png",
       img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
+    },
+    {
+      name: "Piazza della Loggia",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",      
+      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "img caption",
+    },
+    {
+      name: "Piazza della Loggia",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",      
+      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "img caption",
+    },
+    {
+      name: "Piazza della Loggia",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",      
+      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "img caption",
+    },
+    {
+      name: "Parco dell'Acqua",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "img caption",
+    },
+    {
+      name: "Parco dell'Acqua",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "img caption",
+    },
+    {
+      name: "Parco dell'Acqua",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "img caption",
     },
     {
       name: "Piazza della Loggia",
@@ -209,11 +258,11 @@ export default async (models) => {
     },
 
   ]
-
+  // They are correct, some images from figma are blured
   const itineraries = [
     {
       name: 'Brescia Romana',
-      short_description: 'Brixia was one of the most important Roman cities of the Italic Peninsula, and the Roman heritage of the city is well documented and remains one of the well preserved groups of public and private historical landmarks of Italy. The itinerary is made up of 3 individual modules of about 1 hour each, lasting approximately 3 hours in total. It is possible, of course, to adapt the itinerary to one’s own preferences.',
+      overview: 'Brixia was one of the most important Roman cities of the Italic Peninsula, and the Roman heritage of the city is well documented and remains one of the well preserved groups of public and private historical landmarks of Italy. The itinerary is made up of 3 individual modules of about 1 hour each, lasting approximately 3 hours in total. It is possible, of course, to adapt the itinerary to one’s own preferences.',
       cover_img: 'brescia-romana_coverimg.png',
       thumbnail: "brescia-romana_thumbnail.png",
       duration: 90,
@@ -222,7 +271,7 @@ export default async (models) => {
     },
     {
       name: 'Nature Tour',
-      short_description: 'Brescia, close to Lago di Garda and in one of the most beautiful regions of Lombardía, offers a wide selection of outdoor activities immersed in nature. Don’t miss out!',
+      overview: 'Brescia, close to Lago di Garda and in one of the most beautiful regions of Lombardía, offers a wide selection of outdoor activities immersed in nature. Don’t miss out!',
       cover_img: 'nature-tour_coverimg.png',
       thumbnail: "nature-tour_thumbnail.png",
       duration: 360,
@@ -231,7 +280,7 @@ export default async (models) => {
     },
     {
       name: 'Monuments of Brescia',
-      short_description: 'Our top pick recommendations on the must-see monuments that you cannot miss while you visit Brescia!',
+      overview: 'Our top pick recommendations on the must-see monuments that you cannot miss while you visit Brescia!',
       thumbnail: "monuments-of-brescia_coverimg.png",
       cover_img: 'monuments-of-brescia_thumbnail.png',
       duration: 360,
@@ -240,7 +289,7 @@ export default async (models) => {
     },
     {
       name: 'Walking Tour City Center',
-      short_description: 'Our top pick recommendations on local food, while enjoying the view from our beautiful historical “piazze”. Enjoy!',
+      overview: 'Our top pick recommendations on local food, while enjoying the view from our beautiful historical “piazze”. Enjoy!',
       thumbnail: "walking-tour-city-center_coverimg.png",
       cover_img: 'walking-tour-city-center_thumbnail.png',
       duration: 120,
@@ -248,12 +297,84 @@ export default async (models) => {
       inout:'Outdoors',
     }
   ]
-
+  // Just for testing
   const itinerarypoi = [
     {
-      pointOfInterestId: 1,
-      itineraryId: 1
-    }
+      itineraryId: 1,
+      pointOfInterestId: 1
+    },
+    {
+      itineraryId: 1,
+      pointOfInterestId: 2
+    },
+    {
+      itineraryId: 1,
+      pointOfInterestId: 3
+    },
+    {
+      itineraryId: 1,
+      pointOfInterestId: 4
+    },
+    {
+      itineraryId: 1,
+      pointOfInterestId: 5
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 6
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 7
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 8
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 9
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 10
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 11
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 12
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 13
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 14
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 15
+    },
+    {
+      itineraryId: 4,
+      pointOfInterestId: 4
+    },
+    {
+      itineraryId: 4,
+      pointOfInterestId: 3
+    },
+    {
+      itineraryId: 4,
+      pointOfInterestId: 2
+    },
+    {
+      itineraryId: 4,
+      pointOfInterestId: 1
+    },
   ]
 
   const images = [

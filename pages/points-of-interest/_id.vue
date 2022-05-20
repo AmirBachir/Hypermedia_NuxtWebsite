@@ -1,6 +1,6 @@
 <template>
   <div class="pointofinterest">
-    <cover :title="name" :image="cover_img" />
+    <cover :title="name" :image="cover_img" crumb="Points of Interest" crumbLink="points-of-interest-intro"/>
     <div class="container">
       <table class="poi-intro">
         <div class="row">

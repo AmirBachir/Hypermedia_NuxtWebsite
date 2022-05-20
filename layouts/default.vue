@@ -24,7 +24,7 @@ export default {
   color: #D8EFF5;
 }
 .page{
-  padding-top: 6.7em;
+  padding-top: 5.5em;
 }
 .footer {
   margin-top: 150px;

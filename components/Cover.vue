@@ -1,7 +1,12 @@
 <template>
   <div class="cover">
     <img class="bg" :src="require(`@/assets/${image}`)" :alt="title" />
-    <h1 class="display-1 name">{{ title }}</h1>
+    <div class="name">
+      <h1 class="display-1">{{ title }}</h1>
+      <div v-if="crumb !== ''" class="crumb">
+        <nuxt-link :to="'/' + crumbLink">{{ crumb }}</nuxt-link>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -17,14 +22,35 @@ export default {
       type: String,
       required: true,
     },
+    crumb: {
+      type: String,
+      required: false,
+      default: '',
+    },
+    crumbLink: {
+      type: String,
+      required: false,
+      default: '',
+    },
   },
 }
 </script>
 
 <style scoped>
 @font-face {
-  font-family: "Casual";
-  src: local("~/assets/Casual-Regular.ttf");
+  font-family: 'Casual';
+  src: local('~/assets/Casual-Regular.ttf');
+}
+.crumb{
+  text-align: left;
+}
+.crumb * {
+  text-decoration: none;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  color: #d8eff5;
+  font-size: 30px;
 }
 
 .cover {
@@ -34,13 +60,13 @@ export default {
 
 .bg {
   width: 100%;
-  height: 40rem;
-  filter: brightness(60%);
+  height: 30em;
+  filter: brightness(100%);
 }
 
-.name{
+.name {
   position: absolute;
-  bottom: 6rem;
+  bottom: 2rem;
   left: 3rem;
   color: #d8eff5;
   font-family: 'Casual', serif;
