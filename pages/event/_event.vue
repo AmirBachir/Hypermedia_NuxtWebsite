@@ -61,7 +61,6 @@ export default {
   async asyncData({route, $axios}) {
     const id = route.params.event
     const {data} = await $axios.get('/api/event/' + id)
-    console.log(data)
     return {
       date: data.date,
       cover_img: data.cover_img,

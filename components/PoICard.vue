@@ -44,6 +44,7 @@ p {
   color: white;
   margin: 0.3rem;
   padding-bottom: 0.4rem;
+  border: none;
 }
 
 .card:hover {
