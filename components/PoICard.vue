@@ -1,6 +1,6 @@
 <template>
-  <div @click="$router.push('/points-of-interest/' + poi.id)">
-    <img :src="require(`@/assets/` + poi.cover_img)" :alt="poi.name" />
+  <div class="card" @click="$router.push('/points-of-interest/' + poi.id)">
+    <img :src="require(`@/assets/` + poi.cover_img)" :alt="poi.name"/>
     <p>{{ poi.name }}</p>
   </div>
 </template>
@@ -14,17 +14,21 @@ export default {
       required: true,
     },
   },
-  
+
 }
 </script>
 
 <style scoped>
 img {
+  object-fit: cover;
+  display: inline-block;
   max-width: 500px;
-  width: 95%;
+  width: 100%;
   height: 200px;
-  margin-top: 0.5rem;
+  margin: 0.5rem 0 0 0;
+  padding-bottom: 0.4rem;
 }
+
 p {
   font-family: 'Inter', serif;
   font-style: normal;
@@ -32,18 +36,24 @@ p {
   margin-top: 0.5rem;
   margin-bottom: 0;
 }
-div {
-  text-align: center;
 
+.card {
+  background: transparent;
+  width: 15rem;
+  text-align: center;
   color: white;
   margin: 0.3rem;
   padding-bottom: 0.4rem;
 }
 
-div:hover {
-  background-color: rgb(216, 239, 245, 0.2);
+.card:hover {
   cursor: pointer;
- 
+  background: #103749;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 
 </style>
