@@ -15,7 +15,7 @@
               <p>Date: {{ date }}</p>
               <p>Time: {{ time }}</p>
               <br/>
-              <p>Venue: {{ poi.name }}</p>
+              <p>Venue: <a :href="'/points-of-interest/' +  poi.id">{{ poi.name }}</a></p>
             </div>
           </td>
         </tr>
@@ -47,8 +47,7 @@
       <br/><br/><br/><br/>
       <h3>Discover more about this venue:</h3>
       <br/><br/>
-      <img :src="poi.img" alt="">
-      <p>{{ poi.name }}</p>
+      <po-i-card  :poi="poi"/>
     </div>
   </div>
 </template>
@@ -62,7 +61,6 @@ export default {
   async asyncData({route, $axios}) {
     const id = route.params.event
     const {data} = await $axios.get('/api/event/' + id)
-    console.log(data)
     return {
       date: data.date,
       cover_img: data.cover_img,
@@ -98,7 +96,7 @@ export default {
   background: #d8eff5;
   color: #234c60;
   border-radius: 20px;
-  padding: 8%;
+  padding: 7% 12% 7% 12%;
   min-width: 60vh;
 }
 
@@ -125,6 +123,14 @@ export default {
 .image-carousel img {
   height: 45vh;
   overflow: auto
+}
+
+a {
+  font-family: 'Inter',serif;
+  font-style: normal;
+  font-weight: 600;
+  text-decoration-line: underline;
+  color: #234c60;
 }
 
 </style>

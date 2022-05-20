@@ -2,9 +2,9 @@
   <nav class="navbar fixed-top navbar-expand-lg" style="margin-top=0px">
     <div class="container-fluid align-middle">
       <nuxt-link class="navbar-brand" to="/">Brescia</nuxt-link>
-      <button 
-      class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse" 
-      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" 
+      <button
+      class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse"
+      data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
         <span class="toggler-icon top-bar"></span>
         <span class="toggler-icon middle-bar"></span>
@@ -40,7 +40,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" aria-current="page" to="/services">Services</nuxt-link>
+            <nuxt-link class="nav-link" aria-current="page" to="/service-types">Services</nuxt-link>
           </li>
         </ul>
       </div>
@@ -51,7 +51,7 @@
 <script>
 export default {
   name: 'TheHeader',
-  
+
 }
 </script>
 
@@ -63,8 +63,8 @@ export default {
 }
 .navbar {
   background-color: #234c60;
-  color:rgb(216, 239, 245); 
-  font-family: 'Casual', sans-serif;
+  color:rgb(216, 239, 245);
+  font-family: 'Inter', sans-serif;
   padding: 0;
 }
 .nav-link, .navbar-brand{
@@ -211,7 +211,7 @@ export default {
 /* Color of 3 lines */
 
 .navbar-toggler.collapsed .toggler-icon {
-  background-color: #D8EFF5; 
+  background-color: #D8EFF5;
 }
 
 
