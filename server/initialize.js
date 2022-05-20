@@ -213,17 +213,39 @@ export default async (models) => {
   const itineraries = [
     {
       name: 'Brescia Romana',
-      short_description: 'Discover over 800 years of history preserved up until the contemporary era.',
-      thumbnail: "Brescia Romana.png",
-      cover_img: 'brescia_poi.jpg',
-      duration: 90
+      short_description: 'Brixia was one of the most important Roman cities of the Italic Peninsula, and the Roman heritage of the city is well documented and remains one of the well preserved groups of public and private historical landmarks of Italy. The itinerary is made up of 3 individual modules of about 1 hour each, lasting approximately 3 hours in total. It is possible, of course, to adapt the itinerary to one’s own preferences.',
+      cover_img: 'brescia-romana_coverimg.png',
+      thumbnail: "brescia-romana_thumbnail.png",
+      duration: 90,
+      category:'History & Culture',
+      inout:'Indoors & Outdoors',
     },
     {
-      name: 'Naturalistic tour',
-      short_description: 'Brescia il full of monkeys and other weird animals.',
-      thumbnail: "Brescia Romana.png",
-      cover_img: 'brescia_poi.jpg',
-      duration: 90
+      name: 'Nature Tour',
+      short_description: 'Brescia, close to Lago di Garda and in one of the most beautiful regions of Lombardía, offers a wide selection of outdoor activities immersed in nature. Don’t miss out!',
+      cover_img: 'nature-tour_coverimg.png',
+      thumbnail: "nature-tour_thumbnail.png",
+      duration: 360,
+      category:'Nature',
+      inout:'Outdoors',
+    },
+    {
+      name: 'Monuments of Brescia',
+      short_description: 'Our top pick recommendations on the must-see monuments that you cannot miss while you visit Brescia!',
+      thumbnail: "monuments-of-brescia_coverimg.png",
+      cover_img: 'monuments-of-brescia_thumbnail.png',
+      duration: 360,
+      category:'History & Culture',
+      inout:'Indoors & Outdoors',
+    },
+    {
+      name: 'Walking Tour City Center',
+      short_description: 'Our top pick recommendations on local food, while enjoying the view from our beautiful historical “piazze”. Enjoy!',
+      thumbnail: "walking-tour-city-center_coverimg.png",
+      cover_img: 'walking-tour-city-center_thumbnail.png',
+      duration: 120,
+      category:'History & Culture',
+      inout:'Outdoors',
     }
   ]
 
