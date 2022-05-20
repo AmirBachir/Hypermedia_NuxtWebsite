@@ -40,7 +40,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" aria-current="page" to="/services">Services</nuxt-link>
+            <nuxt-link class="nav-link" aria-current="page" to="/service-types">Services</nuxt-link>
           </li>
         </ul>
       </div>
