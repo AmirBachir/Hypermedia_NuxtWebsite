@@ -64,7 +64,7 @@
             title="Service types"
             img-path="brescia_ser.jpg"
             description="Some key services you can access from the city center."
-            url="/service-types"
+            url="/service-type"
           />
         </td> -->
       </tr>
@@ -83,6 +83,17 @@
 // import CustomPage from '~/components/CustomPage.vue'
 export default {
   name: 'IndexPage',
+  async asyncData({ $axios }) {
+    const { data } = await $axios.get('/api/page-info/index')
+    const title = data.title
+    const image = data.image
+    const description = data.description
+    return {
+      title,
+      description,
+      image,
+    }
+  },
   data() {
     return {
       topics: [
@@ -111,20 +122,6 @@ export default {
           url: '/points-of-interest-intro',
         },
       ],
-    }
-  },
-  components: {
-    //    CustomPage,
-  },
-  async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/page-info/index')
-    const title = data.title
-    const image = data.image
-    const description = data.description
-    return {
-      title,
-      description,
-      image,
     }
   },
 }
