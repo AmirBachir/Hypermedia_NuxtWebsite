@@ -2,7 +2,7 @@
   <div>
     <div class="title"><h1>How to get to Brescia</h1></div>
     <div class="row">
-      <div class="col">
+      <div class="elem">
         <div v-for="(elem, key) in transports" :key="key" class="option">
           <div class="from">
             <p>{{ elem.from }}</p>
@@ -13,7 +13,7 @@
           </div>
         </div>
       </div>
-      <div class="col">
+      <div class="elem">
         <iframe
           class="map"
           frameborder="0"
@@ -106,18 +106,18 @@ export default {
 }
 .row {
   display: flex;
-  align-items: center;
+  justify-content: space-between; 
   margin: 4vw 0;
   padding: 0 1vw 0 3vw;
   max-width: 1300px;
+  /* border: 2px solid red */
+}
+.elem{
+  width:47%;
 }
 
-.col + .col {
-  margin-left: 2rem;
-  flex: 1 3 35%;
-}
 .map {
   width: 100%;
-  height:38rem
+  height:80%;
 }
 </style>

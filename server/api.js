@@ -30,6 +30,7 @@ async function initializeDatabaseConnection() {
   })
   const Itinerary = database.define("itinerary", {
     name: DataTypes.STRING,
+    overview: DataTypes.TEXT,
     short_description: DataTypes.TEXT,
     description: DataTypes.TEXT,
     cover_img: DataTypes.STRING,
