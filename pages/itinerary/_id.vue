@@ -4,7 +4,7 @@
       :title="name"
       :image="cover_img"
       crumb="Itineraries"
-      crumbLink="itineraries"
+      crumb-link="itineraries"
     />
     <div class="add-info">
       <div v-if="duration" class="info">
@@ -13,15 +13,21 @@
       <div v-if="category" class="info">Category: {{ category }}</div>
       <div v-if="inout" class="info">Environment: {{inout}}</div>
     </div>
+    <!-- <div class="container">
     <div class="overview">
       <h4>Overview</h4>
-      <p>{{short_description}}</p>
+      <p>{{overview}}</p>
     </div>
+    <div class="thumbnail"><img :src="require(`@/assets/${thumbnail}`)" alt="itinerary thumbnail"></div>
+    </div> -->
+    <the-paragraph :img="thumbnail" :parag="overview" :title="'Overview'" :imgSize="'overview'"/>
   </div>
 </template>
 
 <script>
+import TheParagraph from '~/components/TheParagraph.vue'
 export default {
+  components: { TheParagraph },
   name: 'ItinerayDetail',
   async asyncData({ route, $axios }) {
     const id = route.params.id
@@ -30,7 +36,7 @@ export default {
     return {
       name: data.name,
       cover_img: data.cover_img,
-      short_description: data.short_description,
+      overview: data.overview,
       thumbnail: data.thumbnail,
       title: data.title,
       inout: data.inout,

@@ -1,4 +1,5 @@
 <template>
+<!-- Evidenziare il bottone corrispondente alla pagina attiva -->
   <nav class="navbar fixed-top navbar-expand-lg" style="margin-top=0px">
     <div class="container-fluid align-middle">
       <nuxt-link class="navbar-brand" to="/">Brescia</nuxt-link>
@@ -114,6 +115,7 @@ export default {
   font-size: 3em;
   margin-left:3rem;
   margin-right:3rem;
+  padding:0;
 }
 
 

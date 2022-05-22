@@ -281,8 +281,8 @@ export default async (models) => {
     {
       name: 'Monuments of Brescia',
       overview: 'Our top pick recommendations on the must-see monuments that you cannot miss while you visit Brescia!',
-      thumbnail: "monuments-of-brescia_coverimg.png",
-      cover_img: 'monuments-of-brescia_thumbnail.png',
+      thumbnail: "monuments-of-brescia_thumbnail.png",
+      cover_img: 'monuments-of-brescia_coverimg.png',
       duration: 360,
       category:'History & Culture',
       inout:'Indoors & Outdoors',
@@ -290,8 +290,8 @@ export default async (models) => {
     {
       name: 'Walking Tour City Center',
       overview: 'Our top pick recommendations on local food, while enjoying the view from our beautiful historical “piazze”. Enjoy!',
-      thumbnail: "walking-tour-city-center_coverimg.png",
-      cover_img: 'walking-tour-city-center_thumbnail.png',
+      cover_img: "walking-tour-city-center_coverimg.png",
+      thumbnail: 'walking-tour-city-center_thumbnail.png',
       duration: 120,
       category:'History & Culture',
       inout:'Outdoors',

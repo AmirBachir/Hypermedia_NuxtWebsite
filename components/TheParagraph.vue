@@ -1,10 +1,10 @@
 <template>
   <div :class="`row ${left?'reverse':''}`">
-      <div class="col">
+      <div class="elem">
           <h3>{{title}}</h3>
           <p>{{parag}}</p>
       </div>
-      <div class="col">
+      <div :class="'elem'">
           <img :src="require(`@/assets/` + img)" :alt="imgName"/>
       </div>
   </div>
@@ -13,6 +13,29 @@
 <script>
 export default {
     name: "TheParagraph",
+    props:{
+        title:{
+            type:String,
+            required: true
+        },
+        parag:{
+            type:String,
+            required: true
+        },
+        img:{
+            type:String,
+            required: true
+        },
+        left:{
+            type: Number,
+            required: true
+        },
+        imgSize:{
+            type: String,
+            required: false,
+            default:''
+        }
+    },
     data(){
         return{
             transports:[
@@ -50,24 +73,6 @@ export default {
             ]
         }
     },
-    props:{
-        title:{
-            type:String,
-            required: true
-        },
-        parag:{
-            type:String,
-            required: true
-        },
-        img:{
-            type:String,
-            required: true
-        },
-        left:{
-            type: Number,
-            required: true
-        }
-    },
     computed: {
         imgName(){
             return this.img.replace('.png','')
@@ -77,26 +82,30 @@ export default {
 </script>
 
 <style scoped>
+*{
+    box-sizing: border-box;
+}
 .row{
     display: flex;
+    justify-content: space-between; 
     align-items: center;
     margin: 4vw 0;
     padding: 0 6vw;
     max-width:1300px;
+    /* border: 1px solid brown */
 }
 .reverse {
     flex-direction: row-reverse;
 }
 
-.col{
-    width:100%;
-    flex: 1 1 0;
+.elem{
+    width:45%;
+    /* border: 3px solid yellow; */
+    padding:0;
+}
 
-}
-.col+.col{
-    margin-left: 2rem;
-}
 img{
-    width:inherit;
+    width:100%;
 }
+
 </style>

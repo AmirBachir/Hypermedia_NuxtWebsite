@@ -1,5 +1,5 @@
 <template>
-  <div class="card" @click="$router.push('/points-of-interest/' + poi.id)">
+  <div class="point-card" @click="$router.push('/points-of-interest/' + poi.id)">
     <img :src="require(`@/assets/` + poi.cover_img)" :alt="poi.name"/>
     <p>{{ poi.name }}</p>
   </div>
@@ -19,14 +19,17 @@ export default {
 </script>
 
 <style scoped>
+*{
+  box-sizing: border-box;
+}
 img {
-  object-fit: cover;
-  display: inline-block;
-  max-width: 500px;
+  /* object-fit: cover; */
+  /* display: inline-block; */
+  /* max-width: 500px; */
   width: 100%;
   height: 200px;
-  margin: 0.5rem 0 0 0;
-  padding-bottom: 0.4rem;
+  /* margin: 0.5rem 0 0 0; */
+  /* padding-bottom: 0.4rem; */
 }
 
 p {
@@ -37,19 +40,22 @@ p {
   margin-bottom: 0;
 }
 
-.card {
-  background: transparent;
-  width: 15rem;
+.point-card {
+  /* background: transparent; */
+  /* width: 15rem; */
   text-align: center;
+  background: #103749;
   color: white;
-  margin: 0.3rem;
-  padding-bottom: 0.4rem;
-  border: none;
+  
+  /* margin: 0.3rem; */
+  padding: 0.6rem;
+  /* border: none; */
 }
 
-.card:hover {
+.point-card:hover {
   cursor: pointer;
-  background: #103749;
+  color: black;
+  background-color: #d8eff5;
   -webkit-transition: all 0.5s;
   -moz-transition: all 0.5s;
   -o-transition: all 0.5s;
