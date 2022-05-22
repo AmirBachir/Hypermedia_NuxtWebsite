@@ -31,6 +31,7 @@ async function initializeDatabaseConnection() {
   const Itinerary = database.define("itinerary", {
     name: DataTypes.STRING,
     short_description: DataTypes.TEXT,
+    description: DataTypes.TEXT,
     cover_img: DataTypes.STRING,
     thumbnail: DataTypes.STRING,
     duration: DataTypes.INTEGER,
@@ -123,13 +124,17 @@ async function runMainApi() {
   })
 
 
-  // HTTP POST api that will push (and therefore create) a new element in
-  // our fake database
+
   app.get('/events', async (req, res) => {
     const result = await models.Event.findAll({
       include: models.PointOfInterest
     });
 
+    return res.json(result)
+  })
+
+  app.get('/itineraries', async (req, res) => {
+    const result = await models.Itinerary.findAll();
     return res.json(result)
   })
 
