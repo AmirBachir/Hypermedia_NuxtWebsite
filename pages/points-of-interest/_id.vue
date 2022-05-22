@@ -61,6 +61,7 @@
             <td v-for="itinerary of itineraries" :key="itinerary.id">
               <itinerary-card
                 :name="itinerary.name"
+                :id="itinerary.id"
                 :description="itinerary.short_description"
                 :img-name="itinerary.thumbnail"
               /></td
