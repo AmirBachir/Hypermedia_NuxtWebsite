@@ -1,8 +1,6 @@
 <template>
   <div class="container">
-    <div style="text-align:end">
-      <img class="intro-img" src="~/assets/service-type-intro.png" alt="service types image"/>
-    </div>
+    <intro-pages-cover img-name="service-type-intro.png" />
     <h1>Service Types</h1>
     <p>&lt; Back</p>
     <svg
@@ -99,10 +97,6 @@ button:hover {
 
 a {
   color: #d8eff5;
-}
-
-.intro-img {
-  margin-right: 0;
 }
 
 .arrow-down {

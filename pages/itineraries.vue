@@ -1,8 +1,6 @@
 <template>
     <div class="container">
-    <div style="text-align:end">
-      <img class="intro-img" src="~/assets/itineraries-intro.png" alt="service types image"/>
-    </div>
+    <intro-pages-cover img-name="itineraries-intro.png" />
     <h1>Itineraries</h1>
     <!-- <p>&lt; Back</p> -->
     <svg
@@ -39,7 +37,7 @@
       >
     </p>
   </div>
-    
+
 </template>
 
 <script>
@@ -129,10 +127,6 @@ a {
   color: #d8eff5;
 }
 
-.intro-img {
-  margin-right: 0;
-}
-
 .arrow-down {
   display: block;
   margin: 50px auto 50px;
@@ -142,13 +136,13 @@ a {
   width: 100%;
   margin: auto;
   overflow-x: auto;
-  
+
 }
 
 .itineraries-table tr {
   margin: auto;
   text-align: center;
-   
+
 }
 
 .itineraries-table td {

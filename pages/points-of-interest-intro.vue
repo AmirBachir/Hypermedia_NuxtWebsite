@@ -1,13 +1,7 @@
 <template>
   <div>
     <!-- di tutta questa parte si potrebbe fare un component (si ripete anche nella introductory page di events) -->
-    <div style="text-align: end; margin-right: 10vw">
-      <img
-        class="intro-img"
-        src="~/assets/poi-intro.png"
-        alt="Points of Interest introductory image"
-      />
-    </div>
+    <intro-pages-cover img-name="poi-intro.png" />
     <h1 style="margin-left: 10vw">Points of Interest</h1>
     <!-- inserire qui una piccola OVERVIEW -->
     <!-- <div style="text-align: center" id="grid"> -->
@@ -64,13 +58,6 @@ export default {
   },
 }
 </script>
-
-<style>
-.intro-img {
-  height: 23rem;
-  max-width: 100%;
-}
-</style>
 
 <style scoped>
 * {

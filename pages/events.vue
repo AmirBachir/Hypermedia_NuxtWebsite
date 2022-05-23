@@ -1,19 +1,11 @@
 <template>
   <div class="container">
-    <!-- di tutta questa parte si potrebbe fare un component (si ripete anche nella introductory page di points of interest) -->
-    <div style="text-align: end">
-      <img
-        class="intro-img"
-        src="~/assets/events-intro.png"
-        alt="Events introductory image"
-      />
-    </div>
+    <intro-pages-cover img-name="events-intro.png"/>
     <h1>Events</h1>
-    <div style="position: sticky; top: 72px; background: #234c60; z-index: 1; padding-bottom: 20px">
-      <!-- fino a qui -->
-      <button @click="setFilter('all')" :class="filter==='all'?'clicked':''">All events</button>
-      <button @click="setFilter('winter')" :class="filter==='winter'?'clicked':''">Winter events</button>
-      <button @click="setFilter('summer')" :class="filter==='summer'?'clicked':''">Summer events</button>
+    <div id="filters">
+      <button @click="setFilter('all')" :class="filter==='all'?'selected':''">All events</button>
+      <button @click="setFilter('winter')" :class="filter==='winter'?'selected':''">Winter events</button>
+      <button @click="setFilter('summer')" :class="filter==='summer'?'selected':''">Summer events</button>
     </div>
     <svg
       class="arrow-down"
@@ -22,7 +14,7 @@
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5" />
+      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5"/>
     </svg>
 
     <table class="events-table">
@@ -56,9 +48,9 @@ export default {
     EventCard,
   },
   // Note: This happens on backend (server) side
-  async asyncData({ $axios }) {
+  async asyncData({$axios}) {
     // const { data } = await $axios.get('http://localhost:3000/api/events/all')
-    const { data } = await $axios.get('/api/events')
+    const {data} = await $axios.get('/api/events')
     return {
       eventList: data,
     }
@@ -79,13 +71,13 @@ export default {
       }
       return result
     },
-    filter(){
+    filter() {
       return this.$route.query.filter
     }
   },
-  methods:{
-    setFilter(f){
-      this.$router.push({ path: '/events', query: { filter: f } })
+  methods: {
+    setFilter(f) {
+      this.$router.push({path: '/events', query: {filter: f}})
     }
   }
 }
@@ -134,7 +126,19 @@ button:hover {
   transition: all 0.5s;
 }
 
-.clicked {
+a {
+  color: #d8eff5;
+}
+
+#filters {
+  position: sticky;
+  top: 72px;
+  background: #234c60;
+  z-index: 1;
+  padding-bottom: 20px
+}
+
+.selected {
   background: #d8eff5;
   color: #234c60;
   -webkit-transition: all 0.5s;
@@ -142,14 +146,6 @@ button:hover {
   -o-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-a {
-  color: #d8eff5;
-}
-
-.intro-img {
-  margin-right: 0;
 }
 
 .arrow-down {
@@ -179,7 +175,8 @@ a {
   transition: opacity 0.6s;
 }
 
-.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */ {
+.fade-enter, .fade-leave-to /* .fade-leave-active below version 2.1.8 */
+{
   opacity: 0;
 }
 </style>
