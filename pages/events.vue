@@ -9,10 +9,12 @@
       />
     </div>
     <h1>Events</h1>
-    <!-- fino a qui -->
-    <button @click="setFilter('all')">All events</button>
-    <button @click="setFilter('winter')">Winter events</button>
-    <button @click="setFilter('summer')">Summer events</button>
+    <div style="position: sticky; top: 72px; background: #234c60; z-index: 1; padding-bottom: 20px">
+      <!-- fino a qui -->
+      <button @click="setFilter('all')" :class="filter==='all'?'clicked':''">All events</button>
+      <button @click="setFilter('winter')" :class="filter==='winter'?'clicked':''">Winter events</button>
+      <button @click="setFilter('summer')" :class="filter==='summer'?'clicked':''">Summer events</button>
+    </div>
     <svg
       class="arrow-down"
       width="79"
@@ -22,7 +24,7 @@
     >
       <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5" />
     </svg>
-    
+
     <table class="events-table">
       <tr>
         <transition-group name="fade">
@@ -123,6 +125,16 @@ button {
 }
 
 button:hover {
+  background: #d8eff5;
+  color: #234c60;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+.clicked {
   background: #d8eff5;
   color: #234c60;
   -webkit-transition: all 0.5s;
