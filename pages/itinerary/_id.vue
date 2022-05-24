@@ -21,18 +21,19 @@
     <div class="thumbnail"><img :src="require(`@/assets/${thumbnail}`)" alt="itinerary thumbnail"></div>
     </div> -->
     <the-paragraph :img="thumbnail" :parag="overview" :title="'Overview'" :imgSize="'overview'"/>
+    <stop :list="pois"/>
   </div>
 </template>
 
 <script>
+import Stop from '~/components/Stop.vue'
 import TheParagraph from '~/components/TheParagraph.vue'
 export default {
-  components: { TheParagraph },
   name: 'ItinerayDetail',
+  components: { TheParagraph, Stop},
   async asyncData({ route, $axios }) {
     const id = route.params.id
     const { data } = await $axios.get('/api/itinerary/' + id)
-    console.log(data)
     return {
       name: data.name,
       cover_img: data.cover_img,

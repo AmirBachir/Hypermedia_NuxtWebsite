@@ -4,7 +4,7 @@
           <h3>{{title}}</h3>
           <p>{{parag}}</p>
       </div>
-      <div :class="'elem'">
+      <div :class="imgSize?imgSize:'elem'">
           <img :src="require(`@/assets/` + img)" :alt="imgName"/>
       </div>
   </div>
@@ -28,7 +28,8 @@ export default {
         },
         left:{
             type: Number,
-            required: true
+            required: false,
+            default:0
         },
         imgSize:{
             type: String,
@@ -87,7 +88,7 @@ export default {
 }
 .row{
     display: flex;
-    justify-content: space-between; 
+    justify-content: space-around; 
     align-items: center;
     margin: 4vw 0;
     padding: 0 6vw;
@@ -100,12 +101,17 @@ export default {
 
 .elem{
     width:45%;
-    /* border: 3px solid yellow; */
     padding:0;
 }
 
 img{
     width:100%;
+    max-height: inherit;
+}
+.overview{
+    width:30%;
+    max-height:400px;
+    padding:0;
 }
 
 </style>
