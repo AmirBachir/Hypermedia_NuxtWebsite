@@ -1,38 +1,44 @@
 <template>
-  <div class="card" @click="$router.push('/service-type/' + id)">
-    <div>
+  <div class="card">
+    <div id="cover-container">
       <div id="outer-circle"></div>
       <div id="inner-circle"></div>
       <img id="service-img" :src="require(`@/assets/${coverImg}`)" alt="image"/>
     </div>
-
-    <div class="card-body">
-      <h5 class="card-title">{{ name }}</h5>
+    <div id="card-body">
+      <h5 id="card-title">{{ title }}</h5>
+      <hr v-if="description !== undefined"/>
+      <p id="card-text">{{ description }}</p>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ServiceTypeCard',
+  name: 'RoundImageCard',
   props: {
     id: {
       type: Number,
       required: true,
     },
-    name: {
+    title: {
       type: String,
       required: true,
     },
     coverImg: {
       type: String,
       required: true,
+    },
+    description: {
+      type: String,
+      required: false
     }
   },
 }
 </script>
 
 <style scoped>
+
 h5 {
   font-family: 'Inter', serif;
   font-style: normal;
@@ -45,33 +51,26 @@ h5 {
   text-transform: capitalize;
 }
 
+hr {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 .card {
   width: 200px;
-  height:24rem;
   background: transparent;
   border: none;
   margin: 20px;
+  text-align: center; /*it propagates to all children elements*/
 }
 
 .card:hover {
   cursor: pointer;
 }
 
-/*.card:hover {
-  cursor: pointer;
-  background: #103749;
-  -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s;
-  -o-transition: all 0.5s;
-  -ms-transition: all 0.5s;
-  transition: all 0.5s
-}*/
-
-.card-body {
-  margin: 2rem 0 2rem 0;
-}
-
-#img-container {
+#cover-container {
+  height: 200px;
   width: 200px;
 }
 
@@ -83,7 +82,7 @@ h5 {
   clip-path: circle();
   background: lightblue;
   margin: 0 auto auto;
-  top:0;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -98,8 +97,8 @@ h5 {
   shape-outside: circle();
   clip-path: circle();
   background: #234c60;
-  margin: 15% auto auto;
-  top:0;
+  margin: 30px auto auto;
+  top: 0;
   bottom: 0;
   left: 0;
   right: 0;
@@ -110,16 +109,31 @@ h5 {
 #service-img {
   position: relative;
   object-fit: contain;
-  max-height: 20vh;
+  width: 180px;
+  height: 180px;
   z-index: 2;
+}
+
+#card-body {
+  min-height: 200px;
+  max-height: 500px;
+  margin: 1rem 0 1rem 0;
+}
+
+#card-title {
+  height: 55px;
+}
+
+#card-text {
+
 }
 
 .card:hover #outer-circle {
   background: #59FFF5;
   -webkit-transition: all 0.5s;
-  -moz-transition: all 0.5s ;
-  -o-transition: all 0.5s ;
-  -ms-transition: all 0.5s ;
-  transition: all 0.5s ;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
 }
 </style>

@@ -59,11 +59,12 @@
         <tr>
           <transition-group name="fade">
             <td v-for="itinerary of itineraries" :key="itinerary.id">
-              <itinerary-card
-                :name="itinerary.name"
+              <round-image-card
+                :title="itinerary.name"
                 :id="itinerary.id"
                 :description="itinerary.short_description"
-                :img-name="itinerary.thumbnail"
+                :cover-img="itinerary.thumbnail"
+                @click.native="$router.push('/itinerary/' + itinerary.id)"
               /></td
           ></transition-group>
         </tr>
@@ -75,13 +76,13 @@
 <script>
 import Cover from '~/components/Cover.vue'
 import EventCard from '~/components/EventCard.vue'
-import ItineraryCard from '~/components/ItineraryCard.vue'
+import RoundImageCard from '~/components/RoundImageCard.vue'
 export default {
   name: 'PointOfInterestPage',
   components: {
     Cover,
     EventCard,
-    ItineraryCard,
+    RoundImageCard,
   },
   async asyncData({ route, $axios }) {
     const { id } = route.params

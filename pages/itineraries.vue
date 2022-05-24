@@ -18,11 +18,12 @@
     <table class="itineraries-table">
       <tr>
         <td v-for="(itinerary) of stList" :key="itinerary.id">
-        <itinerary-card
-                :name="itinerary.name"
+        <round-image-card
+                :title="itinerary.name"
                 :id="itinerary.id"
                 :description="itinerary.short_description"
-                :img-name="itinerary.thumbnail"
+                :cover-img="itinerary.thumbnail"
+                @click.native="$router.push('/itinerary/' + itinerary.id)"
               />
         </td>
       </tr>
@@ -41,12 +42,12 @@
 </template>
 
 <script>
-import ItineraryCard from "~/components/ItineraryCard";
+import RoundImageCard from "~/components/RoundImageCard";
 
 export default {
   name: 'ItinerariesPage',
   components: {
-    ItineraryCard
+    RoundImageCard
   },
   // Note: This happens on backend (server) side
   async asyncData({$axios}) {
@@ -142,6 +143,7 @@ a {
 .itineraries-table tr {
   margin: auto;
   text-align: center;
+  vertical-align: top;
 
 }
 

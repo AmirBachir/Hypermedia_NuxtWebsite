@@ -18,7 +18,7 @@
     <table class="service-type-table">
       <tr>
         <td v-for="(serviceType) of stList" :key="serviceType.id">
-          <service-type-card :id="serviceType.id" :name="serviceType.name" :cover-img="serviceType.cover_img"/>
+          <round-image-card :id="serviceType.id" :title="serviceType.name" :cover-img="serviceType.cover_img" @click.native="$router.push('/service-type/' + serviceType.id)"/>
         </td>
       </tr>
     </table>
@@ -27,12 +27,12 @@
 
 <script>
 // import CustomPage from '~/components/CustomPage.vue'
-import ServiceTypeCard from "~/components/ServiceTypeCard";
+import RoundImageCard from "~/components/RoundImageCard";
 
 export default {
   name: 'ServiceTypesPage',
   components: {
-    ServiceTypeCard
+    RoundImageCard
   },
   // Note: This happens on backend (server) side
   async asyncData({$axios}) {
