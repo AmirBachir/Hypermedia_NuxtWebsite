@@ -46,7 +46,7 @@ p {
 
 .point-card {
   /* background: transparent; */
-  /* width: 15rem; */
+  width: fit-content;
   text-align: center;
   color: #d8eff5;
   border-radius: 20px;

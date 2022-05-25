@@ -1,14 +1,14 @@
 <template>
-  <div class="card" @click="$router.push('/event/' + id)">
-    <p class="date-day">{{ day }}</p>
-    <p class="date-month-year">{{ month }} {{ year }}</p>
+  <div id="card" @click="$router.push('/event/' + id)">
+    <p id="date-day">{{ day }}</p>
+    <p id="date-month-year">{{ month }} {{ year }}</p>
     <img :src="require(`@/assets/${imgName}`)" class="card-img-top" alt="image"/>
-    <div class="card-body" style="margin: 0.5rem">
-      <p class="card-subtitle">{{ time }}</p>
-      <p class="card-text point-of-interest">{{ poi }}</p>
-      <h5 class="card-title">{{ name }}</h5>
-      <p class="card-subtitle">{{ type }}</p>
-      <p class="card-text description">{{ description }}</p>
+    <div id="card-body">
+      <p id="card-subtitle">{{ time }}</p>
+      <p id="card-text point-of-interest">{{ poi }}</p>
+      <h5 id="card-title">{{ name }}</h5>
+      <p id="card-subtitle">{{ type }}</p>
+      <p id="card-text description">{{ description }}</p>
     </div>
   </div>
 </template>
@@ -119,7 +119,7 @@ img {
   max-height: 20vh;
 }
 
-.card {
+#card {
   width: 15rem;
   height: 35rem;
   background: transparent;
@@ -128,7 +128,7 @@ img {
   border-color: #d8eff5;
 }
 
-.card:hover {
+#card:hover {
   cursor: pointer;
   background: #103749;
   -webkit-transition: all 0.5s;
@@ -139,25 +139,29 @@ img {
 
 }
 
-.date-day {
+#date-day {
   margin-top: 2rem;
   margin-left: 1rem;
   font-size: 60px;
   font-weight: 700;
 }
 
-.date-month-year {
+#date-month-year {
   margin-left: 1rem;
   font-size: 24px;
   font-weight: 500;
   text-transform: uppercase;
 }
 
-.point-of-interest {
+#card-body {
+  margin: 0.5rem
+}
+
+#point-of-interest {
   text-transform: uppercase;
 }
 
-.description {
+#description {
   margin-top: 1rem;
 }
 </style>

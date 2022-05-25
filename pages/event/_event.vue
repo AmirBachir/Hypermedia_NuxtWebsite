@@ -2,13 +2,13 @@
   <div>
     <cover-component :title="title" :image="cover_img" crumb="Events" crumbLink="events"/>
     <div class="container">
-      <table class="info">
+      <table id="info-table">
         <tr>
           <td>
             <p>{{ description }}</p>
           </td>
           <td>
-            <div class="info-box">
+            <div id="info-box">
               <b>Information about the event</b>
               <p>{{ type }}</p>
               <br/>
@@ -21,7 +21,7 @@
         </tr>
       </table>
     </div>
-    <table class="image-carousel">
+    <table id="image-carousel">
       <tr>
         <td>
           <img src="~/assets/concert-1.jpeg" alt="">
@@ -86,41 +86,48 @@ export default {
   margin-top: 70px;
 }
 
-.info td {
+#info-table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+#info-table td {
+  display: inline-block;
   width: 50%;
   padding: 40px;
 }
 
-.info-box {
+#info-box {
   display: inline-block;
   background: #d8eff5;
   color: #234c60;
   border-radius: 20px;
   padding: 7% 12% 7% 12%;
-  min-width: 60vh;
+  width: 100%;
+  max-width: 100%;
 }
 
-.info-box p {
+#info-box p {
   text-align: left;
 }
 
-.image-carousel {
+#image-carousel {
   margin-top: 50px;
   display: block;
   overflow-x: auto;
   white-space: nowrap;
 }
 
-.image-carousel tr {
+#image-carousel tr {
   width: 100%;
 }
 
-.image-carousel td {
+#image-carousel td {
   display: inline-block;
   overflow: auto;
 }
 
-.image-carousel img {
+#image-carousel img {
   height: 45vh;
   overflow: auto
 }
@@ -131,6 +138,12 @@ a {
   font-weight: 600;
   text-decoration-line: underline;
   color: #234c60;
+}
+
+@media all and (max-width: 500px) {
+  #info-table td {
+    width: 100%;
+  }
 }
 
 </style>
