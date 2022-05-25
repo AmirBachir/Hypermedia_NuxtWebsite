@@ -72,6 +72,8 @@ export default {
       return result
     },
     filter() {
+      if (this.$route.query.filter === undefined)
+        return 'all'
       return this.$route.query.filter
     }
   },
@@ -107,7 +109,7 @@ button {
   display: inline-block;
   min-width: 20%;
   margin: auto 2% auto auto;
-  padding: 10px;
+  padding: 1% 1.5% 1% 1.5%;
   border-style: solid;
   border-width: 1px;
   border-radius: 30px;
@@ -133,6 +135,7 @@ a {
 #filters {
   position: sticky;
   top: 72px;
+  padding-top: 8px;
   background: #234c60;
   z-index: 1;
   padding-bottom: 20px
