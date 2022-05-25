@@ -1,7 +1,7 @@
 <template>
-  <div class="cover">
-    <img class="bg" :src="require(`@/assets/${image}`)" :alt="title" />
-    <div class="name">
+  <div id="cover">
+    <img id="cover-img" :src="require(`@/assets/${image}`)" :alt="title" />
+    <div id="name">
       <h1 class="display-1">{{ title }}</h1>
       <div v-if="crumb !== ''" class="crumb">
         <nuxt-link :to="'/' + crumbLink">{{ crumb }}</nuxt-link>
@@ -41,39 +41,49 @@ export default {
   font-family: 'Casual';
   src: local('~/assets/Casual-Regular.ttf');
 }
-.crumb{
+
+.crumb {
   text-align: left;
 }
+
 .crumb * {
   text-decoration: none;
-  font-family: 'Inter';
+  font-family: 'Inter', serif;
   font-style: normal;
   font-weight: 300;
   color: #d8eff5;
   font-size: 30px;
 }
 
-.cover {
+#cover {
   position: relative;
   text-align: center;
-}
-
-.bg {
   width: 100%;
-  height: 30em;
-  filter: brightness(100%);
+  min-height: 500px;
 }
 
-.name {
+#cover-img {
   position: absolute;
-  bottom: 2rem;
-  left: 3rem;
+  left:0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(50%);
+  z-index: 0;
+}
+
+#name {
+  position: absolute;
   color: #d8eff5;
   font-family: 'Casual', serif;
   font-style: normal;
   text-shadow: 0 0 50px black;
+  bottom: 0;
+  padding: 2%;
   /* font-weight: 400;
   font-size: 54px;
   line-height: 65px; */
+  z-index: 1;
 }
 </style>
