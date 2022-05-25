@@ -1,11 +1,9 @@
 <template>
   <div>
-    <!-- di tutta questa parte si potrebbe fare un component (si ripete anche nella introductory page di events) -->
-    <intro-pages-cover img-name="poi-intro.png" />
+    <intro-pages-cover img-name="poi-intro.png"/>
     <h1 style="margin-left: 10vw">Points of Interest</h1>
-    <!-- inserire qui una piccola OVERVIEW -->
-    <!-- <div style="text-align: center" id="grid"> -->
-    <div style="text-align: center">
+    <!-- TODO inserire qui una piccola OVERVIEW -->
+    <div style="text-align: center; margin-bottom: 40px">
       <svg
         class="arrow-down"
         width="79"
@@ -17,9 +15,13 @@
       </svg>
     </div>
     <!-- fino a qui -->
-    <div class="grid-container" id="grid">
-      <poi-card v-for="(element, key) of list" :key="key" :poi="element" />
-    </div>
+    <table id="poi-table">
+      <tr>
+        <td v-for="(element, key) of list" :key="key">
+          <poi-card :poi="element"/>
+        </td>
+      </tr>
+    </table>
     <!-- <a href="#grid"> -->
     <div class="button-up" @click="toGrid()">
       <p class="arrow up"></p>
@@ -30,14 +32,15 @@
 
 <script>
 import poiCard from '~/components/PoICard.vue'
+
 export default {
   name: 'PointsOfInterestPage',
   components: {
     poiCard,
   },
-  async asyncData({ $axios }) {
+  async asyncData({$axios}) {
     // const { data } = await $axios.get('http://localhost:3000/api/events/all')
-    const { data } = await $axios.get('/api/points-of-interest')
+    const {data} = await $axios.get('/api/points-of-interest')
     return {
       list: data,
     }
@@ -63,16 +66,26 @@ export default {
 * {
   box-sizing: border-box;
 }
+
 h1 {
   font-family: 'Casual', serif;
   margin-bottom: 3rem;
 }
-.grid-container {
-  grid-template-columns: repeat(4, 1fr);
-  column-gap: 1rem;
-  row-gap: 1rem;
-  margin: 3rem;
-  display: grid;
+
+#poi-table {
+  width: 100%;
+  margin: auto;
+  overflow-x: auto;
+}
+
+#poi-table tr {
+  margin: auto;
+  text-align: center;
+  vertical-align: top;
+}
+
+#poi-table td {
+  display: inline-block;
 }
 
 .button-up {
@@ -86,6 +99,7 @@ h1 {
   text-align: center;
   padding: 2px;
 }
+
 .arrow {
   border: solid black;
   border-width: 0 3px 3px 0;
