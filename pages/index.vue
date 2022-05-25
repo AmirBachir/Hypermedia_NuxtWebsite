@@ -1,6 +1,6 @@
 <template>
   <div class="homepage">
-    <img src="~/assets/homepage-img.jpeg" alt="homepage image" />
+    <img src="~/assets/homepage-img.jpeg" alt="homepage image"/>
     <svg
       class="arrow-down"
       width="79"
@@ -8,32 +8,32 @@
       fill="none"
       xmlns="http://www.w3.org/2000/svg"
     >
-      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5" />
+      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5"/>
     </svg>
-    <br />
-    <table class="brescia-intro">
+    <br/>
+    <table id="brescia-intro">
       <tr>
         <td>
           <h2>Brescia, The Lion Queen of Italy</h2>
           <p>
             Lombardy’s second-largest city (Milan is first) is respected for its
             metallurgy and machine-tooling prowess and for Beretta, its firearms
-            manufacturer. <br />
+            manufacturer. <br/>
             But the city center is a UNESCO World Heritage site in Italy and a
             3,200-year-old history you can experience. Brescia offers tourists
             everything they might want in the quest for dolce vita – food, wine,
             shopping, sites, culture, and antiquity.
           </p>
-          <br />
+          <br/>
           <button>Discover</button>
         </td>
         <td>
-          <img src="~/assets/intro_brescia.png" alt="intro brescia" />
+          <img src="~/assets/intro_brescia.png" alt="intro brescia"/>
         </td>
       </tr>
     </table>
     <h1>What to do in Brescia</h1>
-    <table class="what-to-do">
+    <table id="what-to-do">
       <tr class="container">
         <td v-for="(e,k) of topics" :key="k">
           <topic-card
@@ -71,10 +71,10 @@
     </table>
     <h1>Brescia waits for you!</h1>
     <p>
-      For more information please contact <br /><a
-        href="mailto:hello@brescia.it"
-        >hello@brescia.it</a
-      >
+      For more information please contact <br/><a
+      href="mailto:hello@brescia.it"
+    >hello@brescia.it</a
+    >
     </p>
   </div>
 </template>
@@ -83,8 +83,8 @@
 // import CustomPage from '~/components/CustomPage.vue'
 export default {
   name: 'IndexPage',
-  async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/page-info/index')
+  async asyncData({$axios}) {
+    const {data} = await $axios.get('/api/page-info/index')
     const title = data.title
     const image = data.image
     const description = data.description
@@ -106,19 +106,19 @@ export default {
         {
           title: 'Events',
           img_path: 'brescia_eve.jpg',
-          description:'Enjoy the city with some of the most exciting events on sight.',
+          description: 'Enjoy the city with some of the most exciting events on sight.',
           url: '/events',
         },
         {
           title: 'Itineraries',
           img_path: 'brescia_iti.jpg',
-          description:'Plan your visit with our custom recommendations on tours, walks and what to see.',
+          description: 'Plan your visit with our custom recommendations on tours, walks and what to see.',
           url: '/itineraries',
         },
         {
           title: 'Points of Interest',
           img_path: 'brescia_poi.jpg',
-          description:'Discover all of the magical spots that Brescia has to offer to the curious traveler.',
+          description: 'Discover all of the magical spots that Brescia has to offer to the curious traveler.',
           url: '/points-of-interest-intro',
         },
       ],
@@ -181,18 +181,23 @@ a {
   margin: 50px auto auto;
 }
 
-.brescia-intro td {
+#brescia-intro {
+  overflow-x: auto;
+}
+
+#brescia-intro td {
+  display: inline-block;
   width: 50%;
   padding: 40px;
 }
 
-.brescia-intro td h2 {
+#brescia-intro td h2 {
   font-family: 'Casual', serif;
   text-align: center;
   margin-bottom: 20px;
 }
 
-.brescia-intro td p {
+#brescia-intro td p {
   font-family: Inter, serif;
   font-style: normal;
   font-weight: 100;
@@ -201,26 +206,24 @@ a {
   text-align: justify;
 }
 
-.what-to-do {
+#what-to-do {
   width: 100%;
   margin: auto;
   overflow-x: auto;
 }
 
-.container{
-display: flex;
-flex-direction: row-reverse;
-    align-items: top;
-}
-td{
-  width:100%
-}
-.what-to-do tr {
+#what-to-do tr {
   margin: auto;
   text-align: center;
 }
 
-.what-to-do td {
+#what-to-do td {
   display: inline-block;
+}
+
+@media all and (max-width: 500px) {
+  #brescia-intro td {
+    width: 100%;
+  }
 }
 </style>
