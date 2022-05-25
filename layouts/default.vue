@@ -24,6 +24,7 @@ export default {
   color: #D8EFF5;
 }
 .page{
+  width: 100%;
   padding-top: 5.5em;
 }
 .footer {

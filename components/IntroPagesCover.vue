@@ -28,6 +28,7 @@ div {
 }
 
 #intro-img {
+  object-fit: contain;
   height: 23rem;
   max-width: 100%;
 }
