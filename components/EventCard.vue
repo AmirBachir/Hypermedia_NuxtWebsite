@@ -1,5 +1,5 @@
 <template>
-  <div id="card" @click="$router.push('/event/' + id)">
+  <div class="card" id="card" @click="$router.push('/event/' + id)">
     <p id="date-day">{{ day }}</p>
     <p id="date-month-year">{{ month }} {{ year }}</p>
     <img :src="require(`@/assets/${imgName}`)" class="card-img-top" alt="image"/>
