@@ -1,6 +1,6 @@
 <template>
   <div>
-    <intro-pages-cover img-name="poi-intro.png"/>
+    <intro-pages-cover img-name="poi-intro.png" />
     <h1 style="margin-left: 10vw">Points of Interest</h1>
     <!-- TODO inserire qui una piccola OVERVIEW -->
     <div style="text-align: center; margin-bottom: 40px">
@@ -15,13 +15,19 @@
       </svg>
     </div>
     <!-- fino a qui -->
-    <table id="poi-table">
+    <!-- <table id="poi-table">
       <tr>
         <td v-for="(element, key) of list" :key="key">
           <poi-card :poi="element"/>
         </td>
-      </tr>
-    </table>
+      </tr> 
+      </table>-->
+    <div class="row row-cols-1 row-cols-md-3 ms-2 me-2 g-4">
+      <div v-for="(element, key) of list" :key="key" class="col">
+        <poi-card :poi="element"/>
+      </div>
+    </div>
+
     <!-- <a href="#grid"> -->
     <div class="button-up" @click="toGrid()">
       <p class="arrow up"></p>
@@ -38,9 +44,9 @@ export default {
   components: {
     poiCard,
   },
-  async asyncData({$axios}) {
+  async asyncData({ $axios }) {
     // const { data } = await $axios.get('http://localhost:3000/api/events/all')
-    const {data} = await $axios.get('/api/points-of-interest')
+    const { data } = await $axios.get('/api/points-of-interest')
     return {
       list: data,
     }
@@ -52,12 +58,12 @@ export default {
   },
   methods: {
     toGrid() {
-      const arrow = document.getElementsByClassName("arrow-down")
+      const arrow = document.getElementsByClassName('arrow-down')
       console.log(arrow)
       arrow[0].scrollIntoView({
-        behavior: 'smooth'
+        behavior: 'smooth',
       })
-    }
+    },
   },
 }
 </script>
