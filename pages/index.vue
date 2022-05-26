@@ -195,10 +195,9 @@ export default {
   src: local('~/assets/Casual-Regular.ttf');
 }
 
-img {
-  max-width: 100%;
-  /* height:300px; */
-}
+.homepage>img {
+  width: 100%;
+  }
 
 h1 {
   font-family: 'Casual', serif;
