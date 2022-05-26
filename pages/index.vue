@@ -192,7 +192,8 @@ export default {
 <style scoped>
 @font-face {
   font-family: 'Casual';
-  src: local('~/assets/Casual-Regular.ttf');
+  /* src: local('~/assets/Casual-Regular.ttf'); */
+  src: url('~/assets/Casual-Regular.ttf');
 }
 
 .homepage>img {

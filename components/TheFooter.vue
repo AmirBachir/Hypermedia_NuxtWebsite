@@ -27,8 +27,10 @@
           <!-- Grid column -->
           <div class="col mb-5">
             <!-- Links -->
+            
             <h6 class="fs-5 mb-4 columnTitle">Contacts</h6>
-            <p class="text">about this course</p>
+             <nuxt-link to="/contact-us" class="text"> The team and the teachers</nuxt-link>
+            <!-- <p class="text">about this course</p> -->
           </div>
           <!-- Grid column -->
           <div class="col mb-5">
