@@ -2,7 +2,7 @@
   <div>
     <cover
       :title="name"
-      :image="cover_img"
+      :image="require(`@/assets/${cover_img}`)"
       crumb="Itineraries"
       crumb-link="itineraries"
     />

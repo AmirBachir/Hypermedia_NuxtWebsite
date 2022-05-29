@@ -2,7 +2,7 @@ export default async (models) => {
   // most of them are fake/repeated
   const pointsOfInterest = [
     {
-      name: "Cattedrale di Santa Maria Assunta",
+      name: "Cathedral of Santa Maria Assunta",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
       cover_img: 'Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png',
@@ -10,18 +10,65 @@ export default async (models) => {
       img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
     },
     {
-      name: "Cattedrale di Santa Maria Assunta",
+      name: "Roman Architectural Park",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: 'brescia_ser.jpg',
+      cover_img: 'Roman_Architectural_Park.png',
       img: "cattedrale_di_santa_maria_assunta.png",
       img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
     },
     {
-      name: "Cattedrale di Santa Maria Assunta",
+      name: "Castel of Brescia",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: 'intro_brescia.png',
+      cover_img: 'Brescia_Castle.png',
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
+    },
+    {
+      name: "Santa Giulia Museum",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: 'Santa_Giulia_Museum.png',
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
+    },
+    {
+      name: "Church of San Francesco D'Assisi",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: 'Chiesa_San_Francesco.png',
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
+    },
+    {
+      name: "Domus Arciana",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: 'Domus_Arciana.png',
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
+    },
+    {
+      name: "Querini Library",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: 'Querini_Library.png',
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
+    },
+    {
+      name: "Old Duomo",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: 'Old_duomo.png',
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
+    },{
+      name: "Broletto Palace",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: 'Palazzo_Broletto.png',
       img: "cattedrale_di_santa_maria_assunta.png",
       img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
     },
@@ -29,97 +76,96 @@ export default async (models) => {
       name: "Piazza della Loggia",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      cover_img: "Piazza_della_Loggia.png",
       img: "cattedrale_di_santa_maria_assunta.png",
       img_caption: "img caption",
     },
     {
-      name: "Piazza della Loggia",
+      name: "Carmine Old District",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      cover_img: 'Carmine_old_District.png',
       img: "cattedrale_di_santa_maria_assunta.png",
-      img_caption: "img caption",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
+    },{
+      name: "Piazza Paolo VI",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: 'Piazza_Paolo_VI.png',
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
     },
     {
-      name: "Piazza della Loggia",
+      name: "Piazza della Vittoria",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      cover_img: 'Piazza_della_vittoria.png',
       img: "cattedrale_di_santa_maria_assunta.png",
-      img_caption: "img caption",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
+    },
+    {
+      name: "Via dei Musei",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: 'Via_dei_Musei.png',
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
+    },
+    {
+      name: "Teatro Grande",
+      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
+      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
+      cover_img: 'Teatro_Grande.png',
+      img: "cattedrale_di_santa_maria_assunta.png",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
     },
     {
       name: "Parco dell'Acqua",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      cover_img: "Parco_Dell_Acqua.png",
       img: "cattedrale_di_santa_maria_assunta.png",
       img_caption: "img caption",
     },
     {
-      name: "Parco dell'Acqua",
+      name: "Parco Tarello",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      cover_img: 'Parco_Tarello.png',
       img: "cattedrale_di_santa_maria_assunta.png",
-      img_caption: "img caption",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
     },
     {
-      name: "Parco dell'Acqua",
+      name: "Lago di Garda",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      cover_img: 'Lago_di_Garda.png',
       img: "cattedrale_di_santa_maria_assunta.png",
-      img_caption: "img caption",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
     },
     {
-      name: "Piazza della Loggia",
-      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
-      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",      
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
-      img: "cattedrale_di_santa_maria_assunta.png",
-      img_caption: "img caption",
-    },
-    {
-      name: "Piazza della Loggia",
-      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
-      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",      
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
-      img: "cattedrale_di_santa_maria_assunta.png",
-      img_caption: "img caption",
-    },
-    {
-      name: "Piazza della Loggia",
-      intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
-      details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",      
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
-      img: "cattedrale_di_santa_maria_assunta.png",
-      img_caption: "img caption",
-    },
-    {
-      name: "Parco dell'Acqua",
+      name: "Hiking Path Bosco Incantato", // caricare immagine non sgranata
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      cover_img: 'Lago_di_Garda.png',
       img: "cattedrale_di_santa_maria_assunta.png",
-      img_caption: "img caption",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
     },
     {
-      name: "Parco dell'Acqua",
+      name: "Millemonti",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      cover_img: 'Millemonti.png',
       img: "cattedrale_di_santa_maria_assunta.png",
-      img_caption: "img caption",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
     },
     {
-      name: "Parco dell'Acqua",
+      name: "Roman Theatre",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: "Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png",
+      cover_img: 'Roman_Teatro.png',
       img: "cattedrale_di_santa_maria_assunta.png",
-      img_caption: "img caption",
+      img_caption: "La cupola della Cattedrale di Santa Maria Assunta",
     },
   ]
 
@@ -303,83 +349,83 @@ export default async (models) => {
   ]
   // Just for testing
   const itinerarypoi = [
-    {
-      itineraryId: 1,
-      pointOfInterestId: 1
+     {
+       itineraryId: 1,
+       pointOfInterestId: 1
     },
+  {
+    itineraryId: 1,
+    pointOfInterestId: 2
+   },
+     {
+       itineraryId: 1,
+       pointOfInterestId: 3
+     },
+     {
+       itineraryId: 1,
+       pointOfInterestId: 4
+     },
+     {
+       itineraryId: 1,
+       pointOfInterestId: 5
+     },
+     {
+       itineraryId: 2,
+       pointOfInterestId: 6
+     },
+     {
+       itineraryId: 2,
+       pointOfInterestId: 7
+     },
+     {
+       itineraryId: 2,
+       pointOfInterestId: 8
+     },
+     {
+       itineraryId: 2,
+       pointOfInterestId: 9
+     },
+     {
+       itineraryId: 3,
+       pointOfInterestId: 10
+     },
     {
-      itineraryId: 1,
-      pointOfInterestId: 2
-    },
-    {
-      itineraryId: 1,
-      pointOfInterestId: 3
-    },
-    {
-      itineraryId: 1,
-      pointOfInterestId: 4
-    },
-    {
-      itineraryId: 1,
-      pointOfInterestId: 5
-    },
-    {
-      itineraryId: 2,
-      pointOfInterestId: 6
-    },
-    {
-      itineraryId: 2,
-      pointOfInterestId: 7
-    },
-    {
-      itineraryId: 2,
-      pointOfInterestId: 8
-    },
-    {
-      itineraryId: 2,
-      pointOfInterestId: 9
-    },
-    {
-      itineraryId: 3,
-      pointOfInterestId: 10
-    },
-    {
-      itineraryId: 3,
-      pointOfInterestId: 11
-    },
-    {
-      itineraryId: 3,
-      pointOfInterestId: 12
-    },
-    {
-      itineraryId: 3,
-      pointOfInterestId: 13
-    },
-    {
-      itineraryId: 3,
-      pointOfInterestId: 14
-    },
-    {
-      itineraryId: 3,
-      pointOfInterestId: 15
-    },
-    {
-      itineraryId: 4,
-      pointOfInterestId: 4
-    },
-    {
-      itineraryId: 4,
-      pointOfInterestId: 3
-    },
-    {
-      itineraryId: 4,
-      pointOfInterestId: 2
+       itineraryId: 3,
+       pointOfInterestId: 11
+     },
+     {
+       itineraryId: 3,
+       pointOfInterestId: 12
+     },
+     {
+       itineraryId: 3,
+       pointOfInterestId: 13
+     },
+     {
+       itineraryId: 3,
+       pointOfInterestId: 14
     },
      {
-       itineraryId: 4,
-       pointOfInterestId: 1
+       itineraryId: 3,
+       pointOfInterestId: 15
      },
-  ]
+     {
+       itineraryId: 4,
+       pointOfInterestId: 4
+     },
+     {
+       itineraryId: 4,
+       pointOfInterestId: 3
+     },
+    {
+       itineraryId: 4,
+       pointOfInterestId: 2
+     },
+      {
+        itineraryId: 4,
+      pointOfInterestId: 1
+     },
+   ]
 
   const images = [
     {

@@ -5,7 +5,7 @@
   </div> -->
   <div class="card h-100" @click="$router.push('/points-of-interest/' + poi.id)">
     <nuxt-link :to="'/points-of-interest/' + poi.id">
-      <img img :src="require(`@/assets/` + poi.cover_img)" :alt="poi.name" class="card-img-top img-thumbnail" style="height:200px"/>
+      <img img :src="require(`@/assets/PoI_Cover/` + poi.cover_img)" :alt="poi.name" class="card-img-top img-thumbnail" style="height:200px"/>
       <div class="card-body">
         <h5 class="card-title">{{ poi.name }}</h5>
       </div>

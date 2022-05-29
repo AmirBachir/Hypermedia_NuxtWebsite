@@ -1,6 +1,6 @@
 <template>
   <div>
-    <cover-component :title="title" :image="cover_img" crumb="Events" crumbLink="events"/>
+    <cover-component :title="title" :image="require(`@/assets/${cover_img}`)" crumb="Events" crumbLink="events"/>
     <div class="container">
       <table id="info-table">
         <tr>

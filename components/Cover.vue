@@ -1,6 +1,7 @@
 <template>
   <div id="cover">
-    <img id="cover-img" :src="require(`@/assets/${image}`)" :alt="title" />
+    <!-- <img id="cover-img" :src="require(`@/assets/${image}`)" :alt="title" /> -->
+    <img id="cover-img" :src="image" :alt="title" />
     <div id="name">
       <h1 class="display-1">{{ title }}</h1>
       <div v-if="crumb !== ''" class="crumb">

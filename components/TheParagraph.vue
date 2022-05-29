@@ -1,6 +1,8 @@
 <template>
   <div :class="`row ${left?'reverse':''}`">
-      <div class="elem">
+      <div class="elem"> 
+          <!-- column --> 
+          <!-- dice mattia che magari si visualizza a mezza pagina perchè non usiamo le column dopo aver usato la classe row di bootrastap -->
           <h3>{{title}}</h3>
           <p>{{parag}}</p>
       </div>
