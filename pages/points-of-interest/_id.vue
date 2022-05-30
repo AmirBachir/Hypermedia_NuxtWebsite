@@ -16,7 +16,7 @@
           </div>
           <div class="col image">
             <img
-              :src="require(`@/assets/${img}`)"
+              :src="require(`@/assets/PoI_images/${img}`)"
               alt="point of interest detail"
             />
             <br />
