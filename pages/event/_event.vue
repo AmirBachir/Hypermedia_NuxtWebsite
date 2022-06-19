@@ -21,7 +21,7 @@
         </tr>
       </table>
     </div>
-    <table id="image-carousel">
+    <!-- <table id="image-carousel">
       <tr>
         <td>
           <img src="~/assets/concert-1.jpeg" alt="">
@@ -42,7 +42,9 @@
           <img src="~/assets/brescia_poi.jpg" alt="">
         </td>
       </tr>
-    </table>
+    </table> -->
+    <img class="mid_img" :src="require(`@/assets/Event_image/${event_img}`)" alt="">
+   
     <div class="container">
       <br/><br/><br/><br/>
       <h3>Discover more about this venue:</h3>
@@ -64,7 +66,8 @@ export default {
     return {
       date: data.date,
       cover_img: data.cover_img,
-      time: data.time,
+      event_img:data.event_img,
+      time: data.time.slice(0, -3),
       poi: data.pointOfInterest,
       title: data.title,
       type: data.type,
@@ -144,6 +147,12 @@ a {
   #info-table td {
     width: 100%;
   }
+}
+
+.mid_img {
+
+width: 100%;
+
 }
 
 </style>

@@ -21,6 +21,7 @@ async function initializeDatabaseConnection() {
   const Event = database.define("event", {
     date: DataTypes.DATEONLY,
     cover_img: DataTypes.STRING,
+    event_img: DataTypes.STRING,
     time: DataTypes.TIME,
     poi: DataTypes.STRING,
     title: DataTypes.STRING,
