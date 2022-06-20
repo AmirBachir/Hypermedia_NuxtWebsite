@@ -12,46 +12,46 @@ export default async (models) => {
     {
       name: "Roman Architectural Park",
       intro: "The Roman Brescia Archaeological Park offers one of the most significant and best-preserved routes in Italy. Recognised by UNESCO as a World Heritage Site in 2011, together with the San Salvatore – Santa Giulia monastic complex, the area has undergone an archaeological and architectural recovery enhancing this extraordinary area and making it fully accessible.",
-      details:"The republican sanctuary (first century BCE), the Capitolium (73 CE) with the remains of the imperial age and the nineteenth-century museum additions, the Winged Victory, with part of the bronze collection and, lastly, the Roman theatre (first – third century CE).",
+      details: "The republican sanctuary (first century BCE), the Capitolium (73 CE) with the remains of the imperial age and the nineteenth-century museum additions, the Winged Victory, with part of the bronze collection and, lastly, the Roman theatre (first – third century CE).",
       cover_img: 'Roman_Architectural_Park.png',
       img: "i_RAP.png",
       img_caption: "Interior of the park",
     },
     {
       name: "Brescia Castle",
-      intro:"The imposing castle has undergone many renovations which are still visible to this day. Built in the Middle Ages and surviving the Napoleonic era and the Unification of Italy, the castle has been central to the city’s history up until the start of the 20th century, when it was purchased by the municipality and opened to the public.",
-      details:"Inside, a dense maze of alleys and hidden rooms, together with the oldest and finest vineyard instituted inside a city, make it a fascinating place to explore. The castle also houses the Arm Museum Luigi Marzoli and the Museum of the Risorgimento dedicated to the Unification of Italy.",
+      intro: "The imposing castle has undergone many renovations which are still visible to this day. Built in the Middle Ages and surviving the Napoleonic era and the Unification of Italy, the castle has been central to the city’s history up until the start of the 20th century, when it was purchased by the municipality and opened to the public.",
+      details: "Inside, a dense maze of alleys and hidden rooms, together with the oldest and finest vineyard instituted inside a city, make it a fascinating place to explore. The castle also houses the Arm Museum Luigi Marzoli and the Museum of the Risorgimento dedicated to the Unification of Italy.",
       cover_img: 'Brescia_Castle.png',
       img: "i_BC.png",
       img_caption: "Outside of the Castle",
     },
     {
       name: "Santa Giulia Museum",
-      intro:"Santa Giulia Museum is one of the main tourist and cultural attractions of Brescia. Also known as “City Museum”, its important historic displays and fascinating location make it a unique site. It’s an exceptional example of former monastery turned into a museum. It hosts incredible collections from Prehistory to the present day and temporary exhibitions of international relevance.",
-      details:"Together with the Capitolium archaeological area and the San Salvatore monastery complex, Santa Giulia Museum is a UNESCO World Heritage Site.",
+      intro: "Santa Giulia Museum is one of the main tourist and cultural attractions of Brescia. Also known as “City Museum”, its important historic displays and fascinating location make it a unique site. It’s an exceptional example of former monastery turned into a museum. It hosts incredible collections from Prehistory to the present day and temporary exhibitions of international relevance.",
+      details: "Together with the Capitolium archaeological area and the San Salvatore monastery complex, Santa Giulia Museum is a UNESCO World Heritage Site.",
       cover_img: 'Santa_Giulia_Museum.png',
       img: "i_SGM.png",
       img_caption: "Inside the Museum",
     },
     {
       name: "Church of San Francesco D'Assisi",
-      intro:"",
-      details:"",
+      intro: "Construction ended in 1265, but the church was not frescoed until the early 14th century.",
+      details: "By 1400 the church was enriched with 5 altars, two of which were made by Moretto and Romanino, in the midst of which remnants of medieval frescoes depicting the Last Judgment and the Pieta were found.Later work on the embellishment of the presbytery was completed, and by 1500, at the height of the Renaissance, the chapel of the Immaculate Conception was built in the left aisle.",
       cover_img: 'Chiesa_San_Francesco.png',
       img: "i_CSFA.png",
-      img_caption: "Facade of the church.",
+      img_caption: "Facade of the church",
     },
     {
       name: "Domus Arciana",
-      intro:"",
-      details:"",
+      intro: "The remains of the Domus Ariciana represent the oldest example currently visible inside the Arician archeological site. This important habitation in the area of ​​the 1st century B.C., has also been modified by the structure of the wall around the area of ​​the successive century. At the end of the dry II d.C. At the beginning of the third century A.D.",
+      //details:"",
       cover_img: 'Domus_Arciana.png',
       img: "i_DA.png",
       img_caption: "Inside the Domus Ariciana",
     },
     {
       name: "Querini Library",
-      intro:"The Biblioteca Queriniana was established in 1747 from Vescovo di Brescia, il card. Angelo Maria Querini, il quale, has established the public use destination of the library library and will equip the library from the source of revenue, provided also to the construction of the palazzo that anchors oggi and is the headquarters. It was opened to the public in 1750 and, for some successive decades, it also served as a museum and as the seat of the city's scholarly academy.",
+      intro: "The Biblioteca Queriniana was established in 1747 from Vescovo di Brescia, il card. Angelo Maria Querini, il quale, has established the public use destination of the library library and will equip the library from the source of revenue, provided also to the construction of the palazzo that anchors oggi and is the headquarters. It was opened to the public in 1750 and, for some successive decades, it also served as a museum and as the seat of the city's scholarly academy.",
       //details:"",
       cover_img: 'Querini_Library.png',
       img: "i_QL.png",
@@ -59,105 +59,105 @@ export default async (models) => {
     },
     {
       name: "Old Duomo",
-      intro:'The Duomo Vecchio or Old Cathedral (also called "La Rotonda" because of its round layout) is a Roman Catholic church in Brescia, Italy; the rustic circular Romanesque co-cathedral stands next to the Duomo Nuovo (New Cathedral) of Brescia. It is officially known as the Winter Co-Cathedral of Santa Maria Assunta, while the adjacent main cathedral is known as the Summer Cathedral. It is one of the most important examples of Romanesque round church in Italy.',
-      details:"While some claims for an earlier construction exist, the earliest documents state that construction of the cathedral started about 1100 on the site of a prior church with a basilica layout. It has a circular shape that became rare after the Council of Trent, and is one of the most prominent round churches of the period still remaining.",
+      intro: 'The Duomo Vecchio or Old Cathedral (also called "La Rotonda" because of its round layout) is a Roman Catholic church in Brescia, Italy; the rustic circular Romanesque co-cathedral stands next to the Duomo Nuovo (New Cathedral) of Brescia. It is officially known as the Winter Co-Cathedral of Santa Maria Assunta, while the adjacent main cathedral is known as the Summer Cathedral. It is one of the most important examples of Romanesque round church in Italy.',
+      details: "While some claims for an earlier construction exist, the earliest documents state that construction of the cathedral started about 1100 on the site of a prior church with a basilica layout. It has a circular shape that became rare after the Council of Trent, and is one of the most prominent round churches of the period still remaining.",
       cover_img: 'Old_duomo.png',
       img: "i_OD.png",
       img_caption: "Exterior of the old cathedral",
-    },{
+    }, {
       name: "Palazzo Broletto",
-      intro:"The Broletto or Broletto Palace of Brescia has for centuries housed the civic government offices of this city found in the region of Lombardy, Italy. The term Broletto refers to a buildings equivalent to the town hall or town assembly.",
-      details:'The long stone facade on the south fronts Via Cardinale Querini, and aligns parallel the left of the Cathedral, corresponds to the ancient "Palatium Novum Maius" built in 1223 - 1227. The Tower of the Poncarali in unfinished stone is attached to the facade. Originally 30 meters tall, it was lowered to about 19 metres by Ezzelino III da Romano. The nearly 54 meter Tower of Pègol is still intact, with a small belfry hidden by the Ghibelline crenellations added at the beginning of the 19th century. The clock on the inner wall of the first courtyard came from the nearby former cathedral of San Pietro de Dom, demolished in the 16th century. The balcony overlooking Piazza Paolo VI, called the Loggia delle Grida, can be seen near the tower. It was destroyed by the French forces in 1797 and rebuilt in the 20th century.',
+      intro: "The Broletto or Broletto Palace of Brescia has for centuries housed the civic government offices of this city found in the region of Lombardy, Italy. The term Broletto refers to a buildings equivalent to the town hall or town assembly.",
+      details: 'The long stone facade on the south fronts Via Cardinale Querini, and aligns parallel the left of the Cathedral, corresponds to the ancient "Palatium Novum Maius" built in 1223 - 1227. The Tower of the Poncarali in unfinished stone is attached to the facade. Originally 30 meters tall, it was lowered to about 19 metres by Ezzelino III da Romano. The nearly 54 meter Tower of Pègol is still intact, with a small belfry hidden by the Ghibelline crenellations added at the beginning of the 19th century. The clock on the inner wall of the first courtyard came from the nearby former cathedral of San Pietro de Dom, demolished in the 16th century. The balcony overlooking Piazza Paolo VI, called the Loggia delle Grida, can be seen near the tower. It was destroyed by the French forces in 1797 and rebuilt in the 20th century.',
       cover_img: 'Palazzo_Broletto.png',
       img: "i_PB.png",
       img_caption: "Facade of Palazzo Broletto",
     },
     {
       name: "Piazza della Loggia",
-      intro:'Piazza della Loggia, or simply Piazza Loggia, is one of the main squares of Brescia and the symbol of the Brescian Rinascimento.',
-      details:'Built from the Quattrocento, it presents a shape in the rectangular complex, delimited along its perimeter by a series of historic buildings that shed light on the 50-year-old Palazzo della Loggia, seat of the Brescia Communal Association, which was once the new Pietà hill. . On the eastern side of the piazza, invece, sorgono i portici and the tower with the 15th-century astronomical horology.',
+      intro: 'Piazza della Loggia, or simply Piazza Loggia, is one of the main squares of Brescia and the symbol of the Brescian Rinascimento.',
+      details: 'Built from the Quattrocento, it presents a shape in the rectangular complex, delimited along its perimeter by a series of historic buildings that shed light on the 50-year-old Palazzo della Loggia, seat of the Brescia Communal Association, which was once the new Pietà hill. . On the eastern side of the piazza, invece, sorgono i portici and the tower with the 15th-century astronomical horology.',
       cover_img: "Piazza_della_Loggia.png",
       img: "i_PDL.png",
       img_caption: "Facade of the astronomical clock",
     },
     {
       name: "Carmine Old District",
-      intro:'',
-      details:'',
+      intro: 'This old district sees an alternation of low-income housing, young artisans shops, noble residences, and particularly valuable churches such as S. Maria del Carmine, S. Giovanni, Basilica delle Grazie, and SS. Faustino e Giovita, all containing significant works of art. Animated nightlife.',
+      // details:'',
       cover_img: 'Carmine_old_District.png',
       img: "i_COD.png",
       img_caption: "",
-    },{
+    }, {
       name: "Piazza Paolo VI",
-      intro:'Get to know the Piazza delle Due Cattedrali di Brescia, Piazza Paolo VI is a magnificent example of medieval architecture and represents the heart of the city for the important historical buildings that I saw if affected, a symbol of civil liberty and Brescian religious tradition.',
-      details:'', //da tradurre
+      intro: 'Get to know the Piazza delle Due Cattedrali di Brescia, Piazza Paolo VI is a magnificent example of medieval architecture and represents the heart of the city for the important historical buildings that I saw if affected, a symbol of civil liberty and Brescian religious tradition.',
+      // details:'',
       cover_img: 'Piazza_Paolo_VI.png',
       img: "i_PPVI.png",
       img_caption: "Upper view",
     },
     {
       name: "Piazza della Vittoria",
-      intro:'Designed by Piacentini, it was opened in 1932 according to the new Fascist urban plan. On the north side stands the imposing Post Office. On the west side, 60-metre high, is one of the first Italian skyscrapers. Torre della Rivoluzione is on the east side. Arengario (speaker’s stage) is decorated with bas-reliefs narrating the history of Brescia.',
+      intro: 'Designed by Piacentini, it was opened in 1932 according to the new Fascist urban plan. On the north side stands the imposing Post Office. On the west side, 60-metre high, is one of the first Italian skyscrapers. Torre della Rivoluzione is on the east side. Arengario (speaker’s stage) is decorated with bas-reliefs narrating the history of Brescia.',
       cover_img: 'Piazza_della_vittoria.png',
       img: "i_PDV.png",
       img_caption: "Main view of the piazza",
     },
     {
       name: "Via dei Musei",
-      intro:'Via dei Musei,or rather simply Via Musei, is one of the main streets of the historical center of Brescia, noted mainly for the multitude of monuments and cultural institutions that saw if it affected, in a journey of around 800 metri, from the piazza rinascimentale From the Loggia to the millennial monastery of Santa Giulia, through churches, palazzi of the old nobility and testimony of history. ',
+      intro: 'Via dei Musei,or rather simply Via Musei, is one of the main streets of the historical center of Brescia, noted mainly for the multitude of monuments and cultural institutions that saw if it affected, in a journey of around 800 metri, from the piazza rinascimentale From the Loggia to the millennial monastery of Santa Giulia, through churches, palazzi of the old nobility and testimony of history. ',
       cover_img: 'Via_dei_Musei.png',
       img: "i_VDM.png",
       img_caption: "People walk and marvel in this beautiful street",
     },
     {
       name: "Teatro Grande",
-      intro:'A 300-year long history. This is Brescia’s Teatro Grande, located in the heart of the old centre where the first public theatre of the city was opened in 1664.',
-      details:'Listed as one of the most important Italian theatres and recognised as national monument in 1912, Teatro Grande has a rich season, with performances ranging from opera and ballet to concerts, dance, cultural initiatives, and children programmes.',
+      intro: 'A 300-year long history. This is Brescia’s Teatro Grande, located in the heart of the old centre where the first public theatre of the city was opened in 1664.',
+      details: 'Listed as one of the most important Italian theatres and recognised as national monument in 1912, Teatro Grande has a rich season, with performances ranging from opera and ballet to concerts, dance, cultural initiatives, and children programmes.',
       cover_img: 'Teatro_Grande.png',
       img: "i_TG.png",
       img_caption: "Entrance of the theatre",
     },
     {
       name: "Parco dell'Acqua",
-      intro:'One of the most beautiful parks in the city. Brescia hosts different events for all the family, specially during the summer.',
-      details:'',
+      intro: 'One of the most beautiful parks in the city. It hosts different events for all the family, specially during the summer.',
+      // details:'',
       cover_img: "Parco_Dell_Acqua.png",
       img: "i_PDA.png",
       img_caption: "Another view of the park",
     },
     {
       name: "Parco Tarello",
-      intro:'One of the most beautiful parks in the city. Brescia hosts different events for all the family, specially during the summer.',
-      details:'',
+      intro: 'It was inaugurated in 2007 and built following an international competition won by the project of Studio Global in Lisbon. About twelve thousand were placed among trees, shrubs and perennial plants. It is the second largest park in the city (100,000 m2) and one of the most recent. It is located in Bresciadue, the modern area of ​​the city, and is surrounded by the skyscrapers of the business center.',
+      details: 'The park is named after Camillo Tarello, an agronomist from Brescia in 1500, who, together with Agostino Gallo (also from Brescia), studied the best insertion of leguminous and forage plants in multi-year cycles, and invented the system of crop rotation in agriculture.',
       cover_img: 'Parco_Tarello.png',
       img: "i_PT.png",
       img_caption: "It is possible to view sky scrapers from the park",
     },
     {
       name: "Lago di Garda",
-      intro:'One of the most beautiful lakes in Italy and one of the main lakes in Italy. It hosts different events for all the family, specially during the summer.',
+      intro: 'One of the most beautiful lakes in Italy and one of the main lakes in Italy. It hosts different events for all the family, specially during the summer.',
       cover_img: 'Lago_di_Garda.png',
       img: "i_LDG.png",
       img_caption: "The view of Sirmione Sul Garda",
     },
     {
       name: "Hiking Path Bosco Incantato", // caricare immagine non sgranata
-      intro:'One of the jewels of nature near Brescia, you can go on a unique hiking trip to Bosco Incantato. An experience to remember!',
-      cover_img: 'Lago_di_Garda.png',
+      intro: 'One of the jewels of nature near Brescia, you can go on a unique hiking trip to Bosco Incantato. An experience to remember!',
+      cover_img: 'Lago_di_Garda.png',////
       img: "i_BI.png",
       img_caption: "Some mytical creatures you can find in the hiking path",
     },
     {
       name: "Millemonti",
-      intro:'',
-      details:'',
+      intro: 'Since 2006 MilleMonti is group of people who loves nature, mountain and travelling that together with medium mountain guides and mountain guides offers a lot of experiences on our territory.',
+      details: 'MilleMonti offers experiences to discover nature with green activities such as hiking, snowshoeing, mountain biking, cycling, Nordic walking, food and wine tours and much more. It is possible to choose the ideal excursion for everyone: how many days and according to what you are interested in.',
       cover_img: 'Millemonti.png',
       img: "i_M.png",
-      img_caption: "Vineyard view", 
+      img_caption: "Vineyard view",
     },
     {
       name: "Roman Theatre",
-      intro:'The Roman Theatre of Brescia has been a silent, but stable, witness of the last 2,000 years of the history of Brescia: we talk about 2,000 years because it was built during Augustan age (end of I century BD – beginning of I century AD), it underwent a significant renovation in Flavian age, at the time of building of the Temple Capitolium of Brescia, during Severian age (II-III century AD) it was totally restored. It is supposed that the theatre could host until 15,000 spectators: a very significant number for that time.',
+      intro: 'The Roman Theatre of Brescia has been a silent, but stable, witness of the last 2,000 years of the history of Brescia: we talk about 2,000 years because it was built during Augustan age (end of I century BD – beginning of I century AD), it underwent a significant renovation in Flavian age, at the time of building of the Temple Capitolium of Brescia, during Severian age (II-III century AD) it was totally restored. It is supposed that the theatre could host until 15,000 spectators: a very significant number for that time.',
       cover_img: 'Roman_Teatro.png',
       img: "i_RT.png",
       img_caption: "Estimation of the full splendor of the site",
@@ -169,250 +169,250 @@ export default async (models) => {
       title: 'Guided Visit to Duomo',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'gvtd.jpg',
+      event_img: 'gvtd.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Come discover the marvels of our main Duomo, the Cattedrale di Santa Maria Assunta, one of our official tour guides will explain the history and marvels behind it.',
+      season: 'summer',
+      pointOfInterestId: 1
     },
     {
       title: 'Roman Art Class',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'rac.jpg',
+      event_img: 'rac.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
+      description: 'Come learn with us about roman architecture and art at the Roman Archeological Park, we will have a local teacher of Art History explain interesting facts and a quick exercise.',
       season: 'winter',
       pointOfInterestId: 2
     },
     {
       title: 'Visit of Armory',
       cover_img: 'homepage-img.jpeg',
-      event_img:'voa.jpg',
+      event_img: 'voa.jpg',
       date: '2022-12-05',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Come learn with us about antique armory and the ways of life of the nobility of Brescia at the Castle of Brescia, we will have a local teacher of Art History explain interesting facts and a quick exercise.',
+      season: 'summer',
+      pointOfInterestId: 3
     },
     {
       title: 'Frescoes sightings',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'fs.jpg',
+      event_img: 'fs.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Come discover the roman and medieval frescoes at the Santa Giulia Museum, we will have a local teacher of Art History explain interesting facts about these beautiful works of art.',
+      season: 'summer',
+      pointOfInterestId: 4
     },
     {
       title: 'Understanding Symbolism',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'us.jpg',
+      event_img: 'us.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Come learn with us about antique symbolism in the religious culture at the Church of Francesco D’Assisi we will have a local teacher of Art History explain interesting facts and a quick exercise.',
+      season: 'summer',
+      pointOfInterestId: 5
     },
     {
       title: 'Roman History Class',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'rhc.jpg',
+      event_img: 'rhc.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Come learn with us about roman history and war at the Domus Ariciana, we will have a local teacher of  History explain interesting facts and a quick exercise.',
+      season: 'summer',
+      pointOfInterestId: 6
     },
     {
       title: 'Lettering Workshop',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'lw.jpg',
+      event_img: 'lw.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Come learn with how to do lettering and create your own unique poster, 1800’s style! It will take place at the Querini Library, don’t miss out!',
+      season: 'summer',
+      pointOfInterestId: 7
     },
     {
       title: 'Christmas Choir',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'cc.jpg',
+      event_img: 'cc.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
+      description: 'Come see out local choir group for a special Christmas Moment in a lovely ambience, right by the  Old Duomo, all the earned fees will be donated to a local charity.',
       season: 'winter',
-      pointOfInterestId: 2
+      pointOfInterestId: 8
     },
     {
       title: 'Drawing Workshop',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'dw.jpg',
+      event_img: 'dw.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
+      description: 'Come learn architecture drawing techniques copying the beautiful facades of Palazzo Broletto, it’s a great way to learn and make friends!',
       season: 'winter',
-      pointOfInterestId: 2
-    },{
+      pointOfInterestId: 9
+    }, {
       title: 'Summer Concert',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'sc.jpg',
+      event_img: 'sc.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
-    },{
+      description: 'We are excited to announce our summer concert hel annually in the heart of Brescia. Held at Piazza della Logia in the city center, the best music waits for you!',
+      season: 'summer',
+      pointOfInterestId: 10
+    }, {
       title: 'Vintage Shopping',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'vs.jpg',
+      event_img: 'vs.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
-    },{
+      description: 'Come join us for a Vintage shopping tour at Carmine Old District in the city center, our local guide has some hidden jewels just for you!',
+      season: 'summer',
+      pointOfInterestId: 11
+    }, {
       title: 'Tandem Aperitivo',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'ta.jpg',
+      event_img: 'ta.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
+      description: 'A relaxing moment in the heart of Brescia at Piazza Paolo VI, while you meet new people and learn a few words in a different language.',
       season: 'winter',
-      pointOfInterestId: 2
-    },{
+      pointOfInterestId: 12
+    }, {
       title: 'Sunday Market',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'sm.jpg',
+      event_img: 'sm.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
-    },{
+      description: 'Come discover the italian way of doing groceries! A local Brescian will join you for grocery shopping and explain the main dishes you can prepare with all italian quality goods, at the Piazza della Vittoria.',
+      season: 'summer',
+      pointOfInterestId: 13
+    }, {
       title: 'After "Ape" Party',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'aap.jpg',
+      event_img: 'aap.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'For those who still have energy after a full day in Brescia, we will host an after party cocktail moment at Via dei Musei. Don’t Miss out!',
+      season: 'summer',
+      pointOfInterestId: 14
     },
     {
       title: 'Classical Night',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'cn.jpg',
+      event_img: 'cn.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
+      description: 'You cannot miss our classical concert night at Teatro Grande. Our local orchestra will be playing the most iconic classical songs of our century.',
       season: 'winter',
-      pointOfInterestId: 2
+      pointOfInterestId: 15
     },
     {
       title: 'Botanical Class',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'bc.jpg',
+      event_img: 'bc.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Come learn about local plans and botanicals at Parco dell’Acqua. Our local garden guides and teachers will explain everything you need to know.',
+      season: 'summer',
+      pointOfInterestId: 16
     },
     {
       title: 'Yoga Class',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'yc.jpg',
+      event_img: 'yc.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Come relax and breathe the nature at Parco Tarello. We will be hosting a yoga class that will refresh your lifestyle. The perfect getaway for summer.',
+      season: 'summer',
+      pointOfInterestId: 17
     },
     {
       title: 'Bike by the Lake',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'bbtl.jpg',
+      event_img: 'bbtl.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Come relax and breathe the nature at Lago di Garda. We will be hosting a biking tour that will refresh your lifestyle. The perfect getaway for summer.',
+      season: 'summer',
+      pointOfInterestId: 18
     },
     {
       title: 'Treasure Hunt',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'th.jpg',
+      event_img: 'th.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Bring your kids have fun looking for treasures and hidden misteries at this particular venue at the Bosco Incantato. There will be prizes for the winners!',
+      season: 'summer',
+      pointOfInterestId: 19
     },
     {
       title: 'Vineyard Visit',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'vv.jpg',
+      event_img: 'vv.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Relax and come taste the best wineries from the region of Millemonti near the city of Brescia, you will remember it for a lifetime!',
+      season: 'summer',
+      pointOfInterestId: 20
     },
     {
       title: 'Acoustic Concert',
       date: '2022-12-05',
       cover_img: 'homepage-img.jpeg',
-      event_img:'ac.jpg',
+      event_img: 'ac.jpg',
       time: ' 09:00',
       poi: 'Duomo',
       type: 'Music and entertainment',
-      description: 'The big party is going to be lit, come and enjoy neomelodical singers from Naples fill your ears with pleasurable sounds!',
-      season: 'winter',
-      pointOfInterestId: 2
+      description: 'Come listen to an acoustic guitar concert at Roman Theatre and immerse yourself in the eco and mystical experience of the roman ruins.',
+      season: 'summer',
+      pointOfInterestId: 21
     },
-    
+
 
   ]
   // They are correct, some images from figma are blured
@@ -424,8 +424,8 @@ export default async (models) => {
       cover_img: 'brescia-romana_coverimg.png',
       thumbnail: "brescia-romana_thumbnail.png",
       duration: 90,
-      category:'History & Culture',
-      inout:'Indoors & Outdoors',
+      category: 'History & Culture',
+      inout: 'Indoors & Outdoors',
     },
     {
       name: 'Nature Tour',
@@ -434,8 +434,8 @@ export default async (models) => {
       cover_img: 'nature-tour_coverimg.png',
       thumbnail: "nature-tour_thumbnail.png",
       duration: 360,
-      category:'Nature',
-      inout:'Outdoors',
+      category: 'Nature',
+      inout: 'Outdoors',
     },
     {
       name: 'Monuments of Brescia',
@@ -444,8 +444,8 @@ export default async (models) => {
       cover_img: "monuments-of-brescia_coverimg.png",
       thumbnail: 'monuments-of-brescia_thumbnail.png',
       duration: 360,
-      category:'History & Culture',
-      inout:'Indoors & Outdoors',
+      category: 'History & Culture',
+      inout: 'Indoors & Outdoors',
     },
     {
       name: 'Walking Tour City Center',
@@ -454,89 +454,89 @@ export default async (models) => {
       cover_img: "walking-tour-city-center_coverimg.png",
       thumbnail: 'walking-tour-city-center_thumbnail.png',
       duration: 120,
-      category:'History & Culture',
-      inout:'Outdoors',
+      category: 'History & Culture',
+      inout: 'Outdoors',
     }
   ]
   // Just for testing
   const itinerarypoi = [
-     {
-       itineraryId: 1,
-       pointOfInterestId: 1
-    },
-  {
-    itineraryId: 1,
-    pointOfInterestId: 2
-   },
-     {
-       itineraryId: 1,
-       pointOfInterestId: 3
-     },
-     {
-       itineraryId: 1,
-       pointOfInterestId: 4
-     },
-     {
-       itineraryId: 1,
-       pointOfInterestId: 5
-     },
-     {
-       itineraryId: 2,
-       pointOfInterestId: 6
-     },
-     {
-       itineraryId: 2,
-       pointOfInterestId: 7
-     },
-     {
-       itineraryId: 2,
-       pointOfInterestId: 8
-     },
-     {
-       itineraryId: 2,
-       pointOfInterestId: 9
-     },
-     {
-       itineraryId: 3,
-       pointOfInterestId: 10
-     },
     {
-       itineraryId: 3,
-       pointOfInterestId: 11
-     },
-     {
-       itineraryId: 3,
-       pointOfInterestId: 12
-     },
-     {
-       itineraryId: 3,
-       pointOfInterestId: 13
-     },
-     {
-       itineraryId: 3,
-       pointOfInterestId: 14
-    },
-     {
-       itineraryId: 3,
-       pointOfInterestId: 15
-     },
-     {
-       itineraryId: 4,
-       pointOfInterestId: 4
-     },
-     {
-       itineraryId: 4,
-       pointOfInterestId: 3
-     },
-    {
-       itineraryId: 4,
-       pointOfInterestId: 2
-     },
-      {
-        itineraryId: 4,
+      itineraryId: 1,
       pointOfInterestId: 1
-     },
-   ]
+    },
+    {
+      itineraryId: 1,
+      pointOfInterestId: 2
+    },
+    {
+      itineraryId: 1,
+      pointOfInterestId: 3
+    },
+    {
+      itineraryId: 1,
+      pointOfInterestId: 4
+    },
+    {
+      itineraryId: 1,
+      pointOfInterestId: 5
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 6
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 7
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 8
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 9
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 10
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 11
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 12
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 13
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 14
+    },
+    {
+      itineraryId: 3,
+      pointOfInterestId: 15
+    },
+    {
+      itineraryId: 4,
+      pointOfInterestId: 4
+    },
+    {
+      itineraryId: 4,
+      pointOfInterestId: 3
+    },
+    {
+      itineraryId: 4,
+      pointOfInterestId: 2
+    },
+    {
+      itineraryId: 4,
+      pointOfInterestId: 1
+    },
+  ]
 
   const images = [
     {
