@@ -23,7 +23,7 @@
           <td v-for="event of filteredEvents" :key="event.id">
             <event-card
               :id="event.id"
-              :description="event.description"
+              :intro="event.intro"
               :type="event.type"
               :name="event.title"
               :poi="event.pointOfInterest.name"

@@ -2,13 +2,14 @@
   <div class="card" id="card" @click="$router.push('/event/' + id)">
     <p id="date-day">{{ day }}</p>
     <p id="date-month-year">{{ month }} {{ year }}</p>
-    <img :src="require(`@/assets/${imgName}`)" class="card-img-top" alt="image"/>
+    <img :src="require(`@/assets/Cover_Event/${imgName}`)" class="card-img-top" alt="image"/>
     <div id="card-body">
-      <p id="card-subtitle">{{ time }}</p>
+      <!-- <p id="card-subtitle">{{ time }}</p> -->
       <p id="card-text point-of-interest">{{ poi }}</p>
       <h5 id="card-title">{{ name }}</h5>
-      <p id="card-subtitle">{{ type }}</p>
-      <p id="card-text description">{{ description }}</p>
+      <br>
+      <p id="card-subtitle">{{ eventType }}</p>
+      <p id="card-text intro">{{ intro }}</p>
     </div>
   </div>
 </template>
@@ -45,7 +46,7 @@ export default {
       type: String,
       required: true,
     },
-    description: {
+    intro: {
       type: String,
       required: true,
     },
@@ -88,6 +89,9 @@ export default {
     year() {
       return this.date.split('-')[0]
     },
+eventType() {
+  return this.type.toUpperCase()
+},
   },
 }
 </script>
@@ -161,7 +165,7 @@ img {
   text-transform: uppercase;
 }
 
-#description {
+#intro {
   margin-top: 1rem;
 }
 </style>

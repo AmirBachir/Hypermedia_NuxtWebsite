@@ -1,11 +1,11 @@
 <template>
   <div>
-    <cover-component :title="title" :image="require(`@/assets/${cover_img}`)" crumb="Events" crumbLink="events"/>
+    <cover-component :title="title" :image="require(`@/assets/Cover_Event/${cover_img}`)" crumb="Events" crumbLink="events"/>
     <div class="container">
       <table id="info-table">
         <tr>
           <td>
-            <p>{{ description }}</p>
+            <p class="description">{{ description }}</p>
           </td>
           <td>
             <div id="info-box">
@@ -14,6 +14,10 @@
               <br/>
               <p>Date: {{ date }}</p>
               <p>Time: {{ time }}</p>
+              <p v-if="fee!==0">
+            Fee: €{{ fee }}</p>
+             <p v-else>
+            Fee: free</p>
               <br/>
               <p>Venue: <a :href="'/points-of-interest/' +  poi.id">{{ poi.name }}</a></p>
             </div>
@@ -72,7 +76,8 @@ export default {
       title: data.title,
       type: data.type,
       description: data.description,
-      season: data.season
+      season: data.season,
+      fee: data.fee
     }
   },
   methods: {
@@ -84,6 +89,13 @@ export default {
 </script>
 
 <style scoped>
+.description {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
+  text-align: justify;
+}
 
 .container {
   margin-top: 70px;
@@ -108,6 +120,10 @@ export default {
   padding: 7% 12% 7% 12%;
   width: 100%;
   max-width: 100%;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  font-size: 18px;
 }
 
 #info-box p {
