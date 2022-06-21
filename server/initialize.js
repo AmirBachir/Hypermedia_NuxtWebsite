@@ -44,7 +44,7 @@ export default async (models) => {
     {
       name: "Domus Arciana",
       intro: "The remains of the Domus Ariciana represent the oldest example currently visible inside the Arician archeological site. This important habitation in the area of ​​the 1st century B.C., has also been modified by the structure of the wall around the area of ​​the successive century. At the end of the dry II d.C. At the beginning of the third century A.D.",
-      //details:"",
+      // details:"",
       cover_img: 'Domus_Arciana.png',
       img: "i_DA.png",
       img_caption: "Inside the Domus Ariciana",
@@ -52,7 +52,7 @@ export default async (models) => {
     {
       name: "Querini Library",
       intro: "The Biblioteca Queriniana was established in 1747 from Vescovo di Brescia, il card. Angelo Maria Querini, il quale, has established the public use destination of the library library and will equip the library from the source of revenue, provided also to the construction of the palazzo that anchors oggi and is the headquarters. It was opened to the public in 1750 and, for some successive decades, it also served as a museum and as the seat of the city's scholarly academy.",
-      //details:"",
+      // details:"",
       cover_img: 'Querini_Library.png',
       img: "i_QL.png",
       img_caption: "Details of furniture inside the library",
@@ -143,7 +143,7 @@ export default async (models) => {
     {
       name: "Hiking Path Bosco Incantato", // caricare immagine non sgranata
       intro: 'One of the jewels of nature near Brescia, you can go on a unique hiking trip to Bosco Incantato. An experience to remember!',
-      cover_img: 'Lago_di_Garda.png',////
+      cover_img: 'Lago_di_Garda.png',
       img: "i_BI.png",
       img_caption: "Some mytical creatures you can find in the hiking path",
     },
@@ -591,21 +591,25 @@ export default async (models) => {
       name: 'Farmacia Bravi',
       address: 'Via S. Zeno, 95',
       practicalInfo: 'They are good',
+      serviceTypeId:1
     },
     {
       name: 'Farmacie Comunali Di Brescia Spa',
       address: 'Via Achille Grandi, 18',
       practicalInfo: 'Townhall pharmacies',
+      serviceTypeId:1
     },
     {
       name: 'Castle Pharmacy',
       address: 'Via Galileo Galilei, 85/A',
       practicalInfo: 'It is in a castle!',
+      serviceTypeId:1
     },
     {
       name: 'Farmacia Austoni',
       address: 'Via Cremona, 37',
       practicalInfo: 'Owned by a distinguished gentleman',
+      serviceTypeId:1
     },
   ]
 

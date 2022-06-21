@@ -92,7 +92,7 @@
 
 
     <h1>What to do in Brescia</h1>
-    <table id="what-to-do" class="sticky-top">
+    <table id="what-to-do">
       <tr class="container">
         <td v-for="(e, k) of topics" :key="k">
           <topic-card

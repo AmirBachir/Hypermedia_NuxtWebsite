@@ -169,17 +169,15 @@ async function runMainApi() {
   // Returns only the data about a specific service type
   app.get('/service-type/:id', async (req, res) => {
     const id = req.params.id
-    const result = await models.Event.findOne({
+    const result = await models.Service.findAll({
       where: {
-        id
+        serviceTypeId:id
       },
       include:
         [
-          models.PointOfInterest,
-          models.Image
+          models.ServiceType
         ]
     });
-
     return res.json(result)
   })
 

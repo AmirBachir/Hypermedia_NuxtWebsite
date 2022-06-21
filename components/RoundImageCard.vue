@@ -5,7 +5,7 @@
       <div id="inner-circle"></div>
       <img id="service-img" :src="require(`@/assets/${coverImg}`)" alt="image"/>
     </div>
-    <div id="card-body">
+    <div v-if="title !== undefined" id="card-body">
       <h5 id="card-title">{{ title }}</h5>
       <hr v-if="description !== undefined"/>
       <p id="card-text">{{ description }}</p>
@@ -23,7 +23,7 @@ export default {
     },
     title: {
       type: String,
-      required: true,
+      required: false,
     },
     coverImg: {
       type: String,

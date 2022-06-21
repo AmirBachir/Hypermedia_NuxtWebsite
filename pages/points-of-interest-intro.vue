@@ -78,21 +78,6 @@ h1 {
   margin-bottom: 3rem;
 }
 
-#poi-table {
-  width: 100%;
-  margin: auto;
-  overflow-x: auto;
-}
-
-#poi-table tr {
-  margin: auto;
-  text-align: center;
-  vertical-align: top;
-}
-
-#poi-table td {
-  display: inline-block;
-}
 
 .button-up {
   position: fixed;
