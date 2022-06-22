@@ -42,7 +42,7 @@
                 :name="event.title"
                 :poi="name"
                 :time="'H ' + event.time.slice(0, -3)"
-                :img-name="event.cover_img"
+                :img-name="event.thumbnail"
                 :date="event.date"
               />
             </td>
