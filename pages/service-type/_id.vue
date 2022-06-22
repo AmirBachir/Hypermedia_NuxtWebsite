@@ -95,7 +95,5 @@ h1 {
   text-align:center;
   margin:30px;
 }
-.sub{
-  /* text-decoration-thickness: 300; */
-}
+
 </style>

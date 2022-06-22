@@ -22,6 +22,21 @@
     </div> -->
     <the-paragraph :img="thumbnail" :parag="overview" :title="'Overview'" :imgSize="'overview'"/>
     <stop :list="pois"/>
+    <div class="card">
+      <iframe
+        class="map"
+        frameborder="0"
+        style="border: 0"
+        referrerpolicy="no-referrer-when-downgrade"
+        :src="'https://www.google.com/maps/embed/v1/directions?key=AIzaSyA43xG7rDzZF-wj6BHQXC4XxPqMgk0py9o'+
+        '&origin='+ pois[0].address +
+        '&waypoints=' + wp +
+        '&destination='+ dest +
+        '&mode=walking'"
+  
+        allowfullscreen
+      ></iframe>
+    </div>
   </div>
 </template>
 
@@ -30,6 +45,7 @@ import Stop from '~/components/Stop.vue'
 import TheParagraph from '~/components/TheParagraph.vue'
 export default {
   name: 'ItinerayDetail',
+  // eslint-disable-next-line vue/no-unused-components
   components: { TheParagraph, Stop},
   async asyncData({ route, $axios }) {
     const id = route.params.id
@@ -46,6 +62,21 @@ export default {
       pois: data.pointOfInterests,
     }
   },
+  computed: {
+    wp(){
+      let s=''
+      for(let i=1; i<this.pois.length-1; i++){
+        s = s + this.pois[i].address
+        if(i<this.pois.length-2)
+        s = s + '|'
+      }
+      return s
+    },
+    dest(){
+      return this.pois[this.pois.length-1].address
+    }
+  }
+
 }
 </script>
 
@@ -75,5 +106,8 @@ export default {
 }
 .overview h4{
   margin-bottom:2rem
+}
+.card iframe{
+  height: 50vh;
 }
 </style>

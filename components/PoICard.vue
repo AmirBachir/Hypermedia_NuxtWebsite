@@ -33,6 +33,11 @@ export default {
 .card{
   background-color: #103749;
 }
+@media screen and (min-width: 768px) {
+  .card{
+  max-width:33vw;
+  }
+}
 .card:hover{
   cursor:pointer;
   background-color: #448bab;
