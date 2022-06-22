@@ -44,6 +44,7 @@
                 :time="'H ' + event.time.slice(0, -3)"
                 :img-name="event.thumbnail"
                 :date="event.date"
+                :intro="event.intro"
               />
             </td>
           </transition-group>
