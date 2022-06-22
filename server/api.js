@@ -17,6 +17,12 @@ async function initializeDatabaseConnection() {
     cover_img: DataTypes.STRING,
     img: DataTypes.STRING,
     img_caption: DataTypes.STRING,
+    thumbnail: DataTypes.STRING,
+    address: DataTypes.STRING,
+    first_day: DataTypes.STRING,
+    last_day: DataTypes.STRING,
+    opening_hour: DataTypes.TIME,
+    closing_hour: DataTypes.TIME
   })
   const Event = database.define("event", {
     date: DataTypes.DATEONLY,
@@ -28,7 +34,8 @@ async function initializeDatabaseConnection() {
     type: DataTypes.STRING,
     description: DataTypes.STRING,
     season: DataTypes.STRING,
-    intro: DataTypes.STRING
+    intro: DataTypes.STRING,
+    thumbnail: DataTypes.STRING
   })
   const Itinerary = database.define("itinerary", {
     name: DataTypes.STRING,

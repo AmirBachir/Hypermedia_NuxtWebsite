@@ -2,7 +2,7 @@
   <div class="card" id="card" @click="$router.push('/event/' + id)">
     <p id="date-day">{{ day }}</p>
     <p id="date-month-year">{{ month }} {{ year }}</p>
-    <img :src="require(`@/assets/Cover_Event/${imgName}`)" class="card-img-top" alt="image"/>
+    <img :src="require(`@/assets/Event_thumbnail/${imgName}`)" class="card-img-top" alt="image"/>
     <div id="card-body">
       <!-- <p id="card-subtitle">{{ time }}</p> -->
       <p id="card-text point-of-interest">{{ poi }}</p>

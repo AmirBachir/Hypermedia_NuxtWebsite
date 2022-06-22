@@ -7,7 +7,7 @@
 				<p class="title"><nuxt-link :to="'/points-of-interest/'+ poi.id">{{poi.name}}</nuxt-link></p>
 			</div>
 			<div class="double-arrow"><img src="~/assets/Line 1.png" alt="connection arrow between point of interest name and img"/></div>
-			<div class="stop-img"><nuxt-link :to="'/points-of-interest/'+ poi.id"><img :src="require(`@/assets/poI_Cover/${poi.cover_img}`)" alt="The point of interest:"></nuxt-link></div>
+			<div class="stop-img"><nuxt-link :to="'/points-of-interest/'+ poi.id"><img :src="require(`@/assets/poI_thumbnail/${poi.thumbnail}`)" alt="The point of interest:"></nuxt-link></div>
 		</div>
 	</div>
 </template>
