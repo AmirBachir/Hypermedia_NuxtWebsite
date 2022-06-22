@@ -39,7 +39,7 @@ export default {
 	width:90%;
 	margin:5rem auto;
 	/* border: 1px solid red; */
-	height: 70vh
+	height: 50vh
 }
 .text{
 	width:25%;

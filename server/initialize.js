@@ -262,7 +262,7 @@ export default async (models) => {
       // closing_hour: '',
     },
     {
-      name: "Millemonti",////
+      name: "Millemonti",
       intro: 'Since 2006 MilleMonti is group of people who loves nature, mountain and travelling that together with medium mountain guides and mountain guides offers a lot of experiences on our territory.',
       details: 'MilleMonti offers experiences to discover nature with green activities such as hiking, snowshoeing, mountain biking, cycling, Nordic walking, food and wine tours and much more. It is possible to choose the ideal excursion for everyone: how many days and according to what you are interested in.',
       cover_img: 'Millemonti.png',
