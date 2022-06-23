@@ -20,7 +20,7 @@
     </div>
     <div class="thumbnail"><img :src="require(`@/assets/${thumbnail}`)" alt="itinerary thumbnail"></div>
     </div> -->
-    <the-paragraph :img="thumbnail" :parag="overview" :title="'Overview'" :imgSize="'overview'"/>
+    <the-paragraph :img="require(`@/assets/Itinerary_thumbnail/${thumbnail}`)" :parag="overview" :title="'Overview'" :imgSize="'overview'"/>
     <stop :list="pois"/>
     <div class="card">
       <iframe

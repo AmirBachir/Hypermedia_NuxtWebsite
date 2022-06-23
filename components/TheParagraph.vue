@@ -7,7 +7,7 @@
           <p>{{parag}}</p>
       </div>
       <div :class="imgSize?imgSize:'elem'">
-          <img :src="require(`@/assets/` + img)" :alt="imgName"/>
+          <img :src="img" :alt="imgName"/>
       </div>
   </div>
 </template>
