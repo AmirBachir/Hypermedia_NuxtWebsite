@@ -554,16 +554,6 @@ export default async (models) => {
       inout: 'Indoors & Outdoors',
     },
     {
-      name: 'Nature Tour',
-      short_description: 'Explore nature around our beautiful city.',
-      overview: 'Brescia, close to Lago di Garda and in one of the most beautiful regions of Lombardía, offers a wide selection of outdoor activities immersed in nature. Don’t miss out!',
-      cover_img: 'nature-tour_coverimg.png',
-      thumbnail: "nature-tour_thumbnail.png",
-      duration: 360,
-      category: 'Nature',
-      inout: 'Outdoors',
-    },
-    {
       name: 'Monuments of Brescia',
       short_description: 'Enjoy the historic monuments and landmarks of Brescia.',
       overview: 'Our top pick recommendations on the must-see monuments that you cannot miss while you visit Brescia!',
@@ -582,21 +572,29 @@ export default async (models) => {
       duration: 120,
       category: 'History & Culture',
       inout: 'Outdoors',
-    }
-  ]
-  // Just for testing
-  const itinerarypoi = [
-    {
-      itineraryId: 1,
-      pointOfInterestId: 1
     },
+    {
+      name: 'Nature Tour',
+      short_description: 'Explore nature around our beautiful city.',
+      overview: 'Brescia, close to Lago di Garda and in one of the most beautiful regions of Lombardía, offers a wide selection of outdoor activities immersed in nature. Don’t miss out!',
+      cover_img: 'nature-tour_coverimg.jpg',
+      thumbnail: "nature-tour_thumbnail.png",
+      duration: 360,
+      category: 'Nature',
+      inout: 'Outdoors',
+    },
+    
+    
+  ]
+
+  const itinerarypoi = [
     {
       itineraryId: 1,
       pointOfInterestId: 2
     },
     {
       itineraryId: 1,
-      pointOfInterestId: 3
+      pointOfInterestId: 6
     },
     {
       itineraryId: 1,
@@ -604,15 +602,11 @@ export default async (models) => {
     },
     {
       itineraryId: 1,
-      pointOfInterestId: 5
+      pointOfInterestId: 21
     },
     {
       itineraryId: 2,
-      pointOfInterestId: 6
-    },
-    {
-      itineraryId: 2,
-      pointOfInterestId: 7
+      pointOfInterestId: 1
     },
     {
       itineraryId: 2,
@@ -620,7 +614,23 @@ export default async (models) => {
     },
     {
       itineraryId: 2,
+      pointOfInterestId: 5
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 7
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 3
+    },
+    {
+      itineraryId: 2,
       pointOfInterestId: 9
+    },
+    {
+      itineraryId: 2,
+      pointOfInterestId: 12
     },
     {
       itineraryId: 3,
@@ -643,24 +653,24 @@ export default async (models) => {
       pointOfInterestId: 14
     },
     {
-      itineraryId: 3,
-      pointOfInterestId: 15
+      itineraryId: 4,
+      pointOfInterestId: 16
     },
     {
       itineraryId: 4,
-      pointOfInterestId: 4
+      pointOfInterestId: 17
     },
     {
       itineraryId: 4,
-      pointOfInterestId: 3
+      pointOfInterestId: 18
     },
     {
       itineraryId: 4,
-      pointOfInterestId: 2
+      pointOfInterestId: 19
     },
     {
       itineraryId: 4,
-      pointOfInterestId: 1
+      pointOfInterestId: 20
     },
   ]
 
