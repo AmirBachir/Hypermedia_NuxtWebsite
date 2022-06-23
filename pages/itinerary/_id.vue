@@ -102,11 +102,7 @@ export default {
   margin-left: 3rem;
 } */
 .col{
-  border:1px red solid;
   text-align:center;
-}
-.row{
-  border:1px red solid;
 }
 .overview{
   width:45%;
