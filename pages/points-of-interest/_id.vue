@@ -25,6 +25,29 @@
           </div>
         </div>
       </table>
+      <table>
+        <tr v-if="address!==null">
+          <p id="info">
+            Address 
+            <br>
+            {{address}}
+          </p>
+        </tr>
+        <tr v-if="opening_hours!==null">
+          <p id="info">
+            Opening hours 
+            <br>
+            {{opening_hours}}
+          </p>
+        </tr>
+        <tr v-if="fee!==null">
+          <p id="info">
+            Fee
+            <br>
+            €{{fee}}
+          </p>
+        </tr>
+      </table>
 
       <table class="events-table">
         <tr>
@@ -97,6 +120,9 @@ export default {
       intro: poI.intro,
       details: poI.details,
       id: poI.id,
+      address: poI.address,
+      opening_hours: poI.opening_hours,
+      fee: poI.fee,
       events: poI.events,
       itineraries: poI.itineraries,
     }
@@ -127,7 +153,14 @@ export default {
 .image {
   padding-left: 13%;
 }
-
+#info {
+font-family: 'Inter';
+font-style: normal;
+font-weight: 700;
+font-size: 18px;
+line-height: 22px;
+color: #D8EFF5;
+}
 .events-table {
   width: 100%;
   margin: auto;

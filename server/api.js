@@ -19,10 +19,8 @@ async function initializeDatabaseConnection() {
     img_caption: DataTypes.STRING,
     thumbnail: DataTypes.STRING,
     address: DataTypes.STRING,
-    first_day: DataTypes.STRING,
-    last_day: DataTypes.STRING,
-    opening_hour: DataTypes.TIME,
-    closing_hour: DataTypes.TIME
+    opening_hours: DataTypes.STRING,
+    fee: DataTypes.INTEGER
   })
   const Event = database.define("event", {
     date: DataTypes.DATEONLY,
