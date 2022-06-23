@@ -1,8 +1,9 @@
 <template>
-  <div>
+ <div>
     <div class="title"><h1>How to get to Brescia</h1></div>
-    <div class="row">
-      <div class="elem">
+    <div class="row row-cols-1 row-cols-md-2 g-4">
+      <div class="col d-flex align-items-center">
+        <div class="card">
         <div v-for="(elem, key) in transports" :key="key" class="option">
           <div class="from">
             <p>{{ elem.from }}</p>
@@ -12,8 +13,10 @@
             <div class="details">{{ m.details }}</div>
           </div>
         </div>
+        </div>
       </div>
-      <div class="elem">
+      <div class="col d-flex align-items-center justify-content-center" style="min-height:300px; max-height:500px">
+        <div class="card h-100">
         <iframe
           class="map"
           frameborder="0"
@@ -24,8 +27,10 @@
         >
         </iframe>
       </div>
+      </div>
     </div>
   </div>
+
 </template>
 
 <script>
@@ -82,6 +87,13 @@ export default {
 </script>
 
 <style scoped>
+
+*{
+  box-sizing: border-box;
+}
+/* body{
+  width:100%
+} */
 .title {
   text-align: center;
 }
@@ -104,13 +116,28 @@ export default {
   font-style: normal;
   font-weight: 700;
 }
-.row {
+
+.card{
+  background:none;
+  border:none;
+  width:100%;
+  padding:20px;
+}
+iframe{
+  height:100%;
+  width:100%;
+  max-width:100%;
+}
+.row{
+  margin:0
+}
+/* .row {
   display: flex;
   justify-content: space-between; 
   margin: 4vw 0;
   padding: 0 1vw 0 3vw;
   max-width: 1300px;
-  /* border: 2px solid red */
+  border: 2px solid red
 }
 .elem{
   width:47%;
@@ -119,5 +146,5 @@ export default {
 .map {
   width: 100%;
   height:80%;
-}
+} */
 </style>

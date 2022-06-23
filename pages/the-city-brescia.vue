@@ -61,7 +61,9 @@ export default {
 </script>
 
 <style scoped>
-
+*{
+  box-sizing: border-box;
+}
 h1 {
   font-family: "Casual", serif;
   margin-bottom:3rem;

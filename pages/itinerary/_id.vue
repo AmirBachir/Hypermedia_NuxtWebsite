@@ -6,12 +6,13 @@
       crumb="Itineraries"
       crumb-link="itineraries"
     />
-    <div class="add-info">
-      <div v-if="duration" class="info">
-        Duration: {{ duration / 60 }} hours
+    <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-between" style="margin:0">
+      <div v-if="duration" class="col d-flex justify-content-center">
+        <div><p class="text-muted"> Duration </p></div> 
+        <div><p>  {{ duration / 60 }} hours </p></div>
       </div>
-      <div v-if="category" class="info">Category: {{ category }}</div>
-      <div v-if="inout" class="info">Environment: {{inout}}</div>
+      <div v-if="category" class="col d-flex justify-content-center"><div><p class="text-muted">Category</p></div> <div><p>{{category }}</p></div></div>
+      <div v-if="inout" class="col d-flex justify-content-center"><div><p class="text-muted">Environment</p></div><div><p>{{inout}}</p></div></div>
     </div>
     <!-- <div class="container">
     <div class="overview">
@@ -81,13 +82,13 @@ export default {
 </script>
 
 <style scoped>
-.add-info {
+/* .add-info {
   display: flex;
-  align-items: center;
+  align-items: normal;
   width: 80%;
   margin: 5rem auto;
-}
-.info {
+} */
+/* .info {
   width: 100%;
   font-family: 'Inter';
   font-style: normal;
@@ -99,6 +100,13 @@ export default {
 }
 .info + .info {
   margin-left: 3rem;
+} */
+.col{
+  border:1px red solid;
+  text-align:center;
+}
+.row{
+  border:1px red solid;
 }
 .overview{
   width:45%;
@@ -107,7 +115,16 @@ export default {
 .overview h4{
   margin-bottom:2rem
 }
+.card{
+  margin: 20px 30px 0px 30px
+}
 .card iframe{
-  height: 50vh;
+  height: 70vh;
+}
+p{
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  margin:0.5rem;
 }
 </style>
