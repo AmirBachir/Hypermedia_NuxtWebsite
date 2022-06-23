@@ -18,7 +18,7 @@
     <table class="service-type-table">
       <tr>
         <td v-for="(serviceType) of stList" :key="serviceType.id">
-          <round-image-card :id="serviceType.id" :title="serviceType.name" :cover-img="serviceType.cover_img" @click.native="$router.push('/service-type/' + serviceType.id)"/>
+          <round-image-card :id="serviceType.id" :title="serviceType.name" :cover-img="require(`@/assets/Service_Types/${serviceType.cover_img}`)" @click.native="$router.push('/service-type/' + serviceType.id)"/>
         </td>
       </tr>
     </table>

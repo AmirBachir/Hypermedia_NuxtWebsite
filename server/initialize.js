@@ -688,42 +688,74 @@ export default async (models) => {
 
   const serviceTypes = [
     {
-      name: 'pharmacies',
+      name: 'Pharmacies',
       cover_img: 'pharmacy.png',
     },
     {
-      name: 'banks',
+      name: 'Banks',
       cover_img: 'bank.png',
     },
     {
-      name: 'restaurants',
+      name: 'Sanitary Services',
       cover_img: 'sanitary.png',
-    }
+    },
+    {
+      name: 'Assistance',
+      cover_img: 'a.png',
+    },
+    {
+      name: 'Tourist Services',
+      cover_img: 'tse.png',
+    },
+    {
+      name: 'Restaurants',
+      cover_img: 'r.png',
+    },
+    {
+      name: 'Government ofiices',
+      cover_img: 'go.png',
+    },
+    {
+      name: 'Sponsors',
+      cover_img: 's.png',
+    },
+    {
+      name: 'Train Station',
+      cover_img: 'tst.png',
+    },
+    {
+      name: 'Transalation Services',
+      cover_img: 'tser.png',
+    },
+    {
+      name: 'Tabacchi',
+      cover_img: 't.png',
+    },
   ]
 
   const services = [
     {
       name: 'Farmacia Bravi',
       address: 'Via S. Zeno, 95',
-      practicalInfo: 'They are good',
+      opening_hours:'10:00 - 20:00 Mon - Sat',
       serviceTypeId: 1
     },
     {
       name: 'Farmacie Comunali Di Brescia Spa',
       address: 'Via Achille Grandi, 18',
-      practicalInfo: 'Townhall pharmacies',
+      opening_hours:'10:00 - 20:00 Mon - Sun',
       serviceTypeId: 1
     },
     {
       name: 'Castle Pharmacy',
       address: 'Via Galileo Galilei, 85/A',
-      practicalInfo: 'It is in a castle!',
+      opening_hours:'8:00 - 13:00, 16:00 - 19:00 Mon - Sun',
       serviceTypeId: 1
     },
     {
       name: 'Farmacia Austoni',
       address: 'Via Cremona, 37',
-      practicalInfo: 'Owned by a distinguished gentleman',
+      opening_hours:'7:30 - 18:00 Mon - Sat',
       serviceTypeId: 1
     },
   ]

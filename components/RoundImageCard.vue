@@ -3,7 +3,7 @@
     <div id="cover-container">
       <div id="outer-circle"></div>
       <div id="inner-circle"></div>
-      <img id="service-img" :src="require(`@/assets/${coverImg}`)" alt="image"/>
+      <img id="service-img" :src="coverImg" alt="image"/>
     </div>
     <div v-if="title !== undefined" id="card-body">
       <h5 id="card-title">{{ title }}</h5>
