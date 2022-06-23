@@ -8,7 +8,7 @@
     </div>
     <div class="col d-flex align-items-center justify-content-center">
       <div class="card">
-        <img :src="require(`@/assets/` + img)" :alt="imgName" />
+        <img :src="img" :alt="imgName"/>
       </div>
     </div>
   </div>

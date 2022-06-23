@@ -2,7 +2,7 @@
   <div>
     <cover
       :title="name"
-      :image="require(`@/assets/${cover_img}`)"
+      :image="require(`@/assets/Itinerary_Cover/${cover_img}`)"
       crumb="Itineraries"
       crumb-link="itineraries"
     />
@@ -21,7 +21,7 @@
     </div>
     <div class="thumbnail"><img :src="require(`@/assets/${thumbnail}`)" alt="itinerary thumbnail"></div>
     </div> -->
-    <the-paragraph :img="thumbnail" :parag="overview" :title="'Overview'" :imgSize="'overview'"/>
+    <the-paragraph :img="require(`@/assets/Itinerary_thumbnail/${thumbnail}`)" :parag="overview" :title="'Overview'" :imgSize="'overview'"/>
     <stop :list="pois"/>
     <div class="card">
       <iframe

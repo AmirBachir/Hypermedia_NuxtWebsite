@@ -21,7 +21,7 @@
       </svg>
     </div>
     <!-- fino a qui --> 
-    <the-parag  v-for="(elem,key) in info" :key="key" :img="elem.img" :left="key%2" :parag="elem.parag"  :title="elem.title" />
+    <the-parag  v-for="(elem,key) in info" :key="key" :img="require(`@/assets/${elem.img}`)" :left="key%2" :parag="elem.parag"  :title="elem.title" />
     <!-- here goes the map with the transport info -->
     <the-map />
   </div>

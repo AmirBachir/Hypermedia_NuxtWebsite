@@ -9,7 +9,8 @@
       </div>
       <div class="col">
         <div class="card">
-        <round-image-card :id="typeId" :coverImg="typeCoverImg"></round-image-card>
+        <!-- <round-image-card :id="typeId" :coverImg="typeCoverImg"></round-image-card> -->
+        <img :src="require(`@/assets/Service_Types/${typeCoverImg}`)" alt="Service Icon" />
         </div>
       </div>
     </div>
@@ -39,12 +40,12 @@
 </template>
 
 <script>
-import RoundImageCard from '~/components/RoundImageCard.vue'
+// import RoundImageCard from '~/components/RoundImageCard.vue'
 export default {
   name: 'serviceTypePage',
-  components: {
-    RoundImageCard
-  },
+  // components: {
+  //   RoundImageCard
+  // },
   async asyncData({ route, $axios }) {
     const {id}  = route.params
     const { data } = await $axios.get('/api/service-type/' + id)
