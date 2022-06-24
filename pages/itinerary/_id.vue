@@ -8,11 +8,17 @@
     />
     <div class="row row-cols-1 row-cols-md-3 g-4 justify-content-between" style="margin:0">
       <div v-if="duration" class="col d-flex justify-content-center">
-        <div><p class="text-muted"> Duration </p></div> 
-        <div><p>  {{ duration / 60 }} hours </p></div>
+        <div><p class="text-muted"> Duration </p></div>
+        <div><p> {{ duration / 60 }} hours </p></div>
       </div>
-      <div v-if="category" class="col d-flex justify-content-center"><div><p class="text-muted">Category</p></div> <div><p>{{category }}</p></div></div>
-      <div v-if="inout" class="col d-flex justify-content-center"><div><p class="text-muted">Environment</p></div><div><p>{{inout}}</p></div></div>
+      <div v-if="category" class="col d-flex justify-content-center">
+        <div><p class="text-muted">Category</p></div>
+        <div><p>{{ category }}</p></div>
+      </div>
+      <div v-if="inout" class="col d-flex justify-content-center">
+        <div><p class="text-muted">Environment</p></div>
+        <div><p>{{ inout }}</p></div>
+      </div>
     </div>
     <!-- <div class="container">
     <div class="overview">
@@ -21,7 +27,8 @@
     </div>
     <div class="thumbnail"><img :src="require(`@/assets/${thumbnail}`)" alt="itinerary thumbnail"></div>
     </div> -->
-    <the-paragraph :img="require(`@/assets/Itinerary_thumbnail/${thumbnail}`)" :parag="overview" :title="'Overview'" :imgSize="'overview'"/>
+    <the-paragraph :img="require(`@/assets/Itinerary_thumbnail/${thumbnail}`)" :parag="overview" :title="'Overview'"
+                   :imgSize="'overview'"/>
     <stop :list="pois"/>
     <div class="card">
       <iframe
@@ -34,7 +41,7 @@
         '&waypoints=' + wp +
         '&destination='+ dest +
         '&mode=walking'"
-  
+
         allowfullscreen
       ></iframe>
     </div>
@@ -44,13 +51,14 @@
 <script>
 import Stop from '~/components/Stop.vue'
 import TheParagraph from '~/components/TheParagraph.vue'
+
 export default {
   name: 'ItinerayDetail',
   // eslint-disable-next-line vue/no-unused-components
-  components: { TheParagraph, Stop},
-  async asyncData({ route, $axios }) {
+  components: {TheParagraph, Stop},
+  async asyncData({route, $axios}) {
     const id = route.params.id
-    const { data } = await $axios.get('/api/itinerary/' + id)
+    const {data} = await $axios.get('/api/itinerary/' + id)
     return {
       name: data.name,
       cover_img: data.cover_img,
@@ -64,17 +72,17 @@ export default {
     }
   },
   computed: {
-    wp(){
-      let s=''
-      for(let i=1; i<this.pois.length-1; i++){
-        s = s + this.pois[i].address+' brescia'
-        if(i<this.pois.length-2)
-        s = s + '|'
+    wp() {
+      let s = ''
+      for (let i = 1; i < this.pois.length - 1; i++) {
+        s = s + this.pois[i].address + ' brescia'
+        if (i < this.pois.length - 2)
+          s = s + '|'
       }
       return s
     },
-    dest(){
-      return this.pois[this.pois.length-1].address+' brescia'
+    dest() {
+      return this.pois[this.pois.length - 1].address + ' brescia'
     }
   }
 
@@ -101,26 +109,36 @@ export default {
 .info + .info {
   margin-left: 3rem;
 } */
-.col{
-  text-align:center;
+.col {
+  text-align: center;
 }
-.overview{
-  width:45%;
+
+.overview {
+  width: 45%;
   margin-left: 5vw;
 }
-.overview h4{
-  margin-bottom:2rem
+
+.overview h4 {
+  margin-bottom: 2rem
 }
-.card{
+
+.card {
   margin: 20px 30px 0px 30px
 }
-.card iframe{
+
+.card iframe {
   height: 70vh;
 }
-p{
-  font-family: 'Inter';
+
+.text-muted {
+  font-weight: 100;
+  color: #d8eff5 !important;
+}
+
+p {
+  font-family: 'Inter', serif;
   font-style: normal;
   font-weight: 700;
-  margin:0.5rem;
+  margin: 0.5rem;
 }
 </style>

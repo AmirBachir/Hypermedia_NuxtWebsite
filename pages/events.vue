@@ -7,15 +7,8 @@
       <button @click="setFilter('winter')" :class="filter==='winter'?'selected':''">Winter events</button>
       <button @click="setFilter('summer')" :class="filter==='summer'?'selected':''">Summer events</button>
     </div>
-    <svg
-      class="arrow-down"
-      width="79"
-      height="34"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5"/>
-    </svg>
+
+    <hr>
 
     <table class="events-table">
       <tr>
