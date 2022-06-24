@@ -6,6 +6,7 @@
         <div class="card">
         <div v-for="(elem, key) in transports" :key="key" class="option">
           <div class="from">
+            <hr>
             <p>{{ elem.from }}</p>
           </div>
           <div v-for="(m, k) in elem.by" :key="k">
@@ -91,6 +92,10 @@ export default {
 *{
   box-sizing: border-box;
 }
+
+h1 {
+  font-family: Casual, serif;
+}
 /* body{
   width:100%
 } */
@@ -101,20 +106,21 @@ export default {
     margin-bottom:2rem;
 }
 .from {
-  font-family: 'Inter';
+  font-family: 'Inter',serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 700;
   font-size: 21px;
 }
 .mean {
-  font-family: 'Inter';
+  margin-top: 15px;
+  font-family: 'Inter',serif;
   font-style: normal;
   font-weight: 700;
 }
 .details {
-  font-family: 'Inter';
+  font-family: 'Inter',serif;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 300;
 }
 
 .card{
@@ -133,7 +139,7 @@ iframe{
 }
 /* .row {
   display: flex;
-  justify-content: space-between; 
+  justify-content: space-between;
   margin: 4vw 0;
   padding: 0 1vw 0 3vw;
   max-width: 1300px;
