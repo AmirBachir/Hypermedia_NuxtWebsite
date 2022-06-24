@@ -5,7 +5,7 @@ export default async (models) => {
       name: "Cattedrale di Santa Maria Assunta",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
       details: "The original church here was probably built in Romanesque style. During the rule of the Visconti in the 14th century, a larger church was constructed in the Lombard Gothic style. In the 16th century it was rebuilt, and at this time semi-circular arches replaced the earlier pointed arches. In the same century the orientation of the church was reversed, making the façade front onto the piazza. At the end of the 19th century a further reconstruction reverted the church structure to that of the 16th century. In 1969–70, the bell tower was demolished because of its instability.",
-      cover_img: 'Duomo_vecchio_e_duomo_nuovo_notturna_Brescia.png',
+      cover_img: 'csmac.jpg',
       img: "cattedrale_di_santa_maria_assunta.png",
       img_caption: "Interior of the Church",
       thumbnail: 'cdsmat.jpg',
@@ -215,7 +215,7 @@ export default async (models) => {
     {
       name: "Hiking Path Bosco Incantato", // caricare immagine non sgranata
       intro: 'One of the jewels of nature near Brescia, you can go on a unique hiking trip to Bosco Incantato. An experience to remember!',
-      cover_img: 'hpbic.jpg',
+      cover_img: 'boscoincantato.png',
       img: "i_BI.png",
       img_caption: "Some mytical creatures you can find in the hiking path",
       thumbnail: 'hpbit.jpg',
@@ -758,6 +758,115 @@ export default async (models) => {
       opening_hours:'7:30 - 18:00 Mon - Sat',
       serviceTypeId: 1
     },
+    {
+      name: 'Intesa San Paolo',
+      address: 'Piazza della Logia 2',
+      opening_hours:'7:30 - 16:00 Mon - Fri',
+      serviceTypeId: 2
+    },
+    {
+      name: 'Credit Agricole',
+      address: 'Via Garibaldi 33',
+      opening_hours:'7:30 - 18:00 Mon - Sat',
+      serviceTypeId: 2
+    },
+    {
+      name: 'BNP Paribas',
+      address: 'Viale Tunisia 45',
+      opening_hours:'7:30 - 17:00 Mon - Sat',
+      serviceTypeId: 2
+    },
+    {
+      name: 'Intesa San Paolo',
+      address: 'Piazza del Duomo 9',
+      opening_hours:'7:30 - 16:00 Mon - Fri',
+      serviceTypeId: 2
+    },
+    {
+      name: 'Crosse Rossa',
+      address: 'Via degli Angeli 24',
+      opening_hours:'24/7',
+      serviceTypeId: 3
+    },
+{
+      name: 'Ospedale San Filippo',
+      address: 'Viale dei Cappuccini 76',
+      opening_hours:'24/7',
+      serviceTypeId: 3
+    },
+    {
+      name: 'Comune di Brescia',
+      address: 'Piazza del Duomo 2',
+      opening_hours:'7:30 - 18:00 Mon - Sat',
+      serviceTypeId: 4
+    },
+    {
+      name: 'Info for Tourists Office',
+      address: 'Via dei Musei 8',
+      opening_hours:'10:00 - 14:00 Mon - Sat',
+      serviceTypeId: 5
+    },
+    {
+      name: 'Enrico VIII',
+      address: 'Via della Spiga 3',
+      opening_hours:'12:00 - 23:00 Mon - Sun',
+      serviceTypeId: 6
+    },
+    {
+      name: 'Al Frate',
+      address: '',
+      opening_hours:'12:00 - 23:00 Fri - Sun',
+      serviceTypeId: 6
+    },
+    {
+      name: 'Nduja Gastronomia',
+      address: 'Piazza della Loggia 7',
+      opening_hours:'11:00 - 15:00 Mon - Sun',
+      serviceTypeId: 6
+    },
+    {
+      name: 'Main Registrar Comune di Brescia',
+      address: 'Viale degli Dei',
+      opening_hours:'10:00 - 16:00 Mon - Fri',
+      serviceTypeId: 7
+    },
+    {
+      name: 'Main Registrar Comune di Brescia',
+      address: 'Viale degli Dei',
+      opening_hours:'10:00 - 16:00 Mon - Fri',
+      serviceTypeId: 8
+    },
+    {
+      name: 'Central station',
+      address: 'Viale della Stazione, 36, ',
+      opening_hours:'24/7',
+      serviceTypeId: 9
+    },
+    {
+      name: 'Office of Culture and Foreign Languages',
+      address: 'Via dei Poligloti',
+      opening_hours:'11:00 - 17:00 Mon - Fri',
+      serviceTypeId: 10
+    },
+    {
+      name: 'Tabacchi Rughero Bonggi',
+      address: 'Via Lombardia 13',
+      opening_hours:'9:00 - 19:00 Mon - Sat',
+      serviceTypeId: 11
+    },
+    {
+      name: 'Tabacchi e Caffè Dei Fiori',
+      address: 'Via Pezzotti 12',
+      opening_hours:'8:00 - 20:00 Mon - Sat',
+      serviceTypeId: 11
+    },
+    {
+      name: 'Tabacchi 24 automatico ore',
+      address: 'Piazza del Duomo 33',
+      opening_hours:'24/7',
+      serviceTypeId: 11
+    },
+    
   ]
 
   await models.PointOfInterest.bulkCreate(pointsOfInterest)
