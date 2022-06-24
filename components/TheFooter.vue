@@ -29,7 +29,10 @@
             <!-- Links -->
             
             <h6 class="fs-5 mb-4 columnTitle">Contacts</h6>
-             <nuxt-link to="/contact-us" class="text"> The team and the teachers</nuxt-link>
+             <nuxt-link to="/contact-us" class="text"> The team and the teachers</nuxt-link> 
+             <p><a href="mailto:hello@brescia.it">hello@brescia.it</a> </p>
+
+             
             <!-- <p class="text">about this course</p> -->
           </div>
           <!-- Grid column -->

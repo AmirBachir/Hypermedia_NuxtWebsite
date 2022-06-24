@@ -52,7 +52,7 @@ a{
   color: inherit;
 }
 img {
-  /* object-fit: cover; */
+  object-fit: cover;
   /* display: inline-block; */
   /* max-width: 500px; */
   /* width: 100%;

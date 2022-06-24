@@ -2,7 +2,6 @@
   <div class="container">
     <intro-pages-cover img-name="service-type-intro.png" />
     <h1>Service Types</h1>
-    <p>&lt; Back</p>
     <svg
       class="arrow-down"
       width="79"

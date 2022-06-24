@@ -54,6 +54,11 @@ export default {
   font-weight: 300;
   color: #d8eff5;
   font-size: 30px;
+  border-bottom: solid 1px rgba(216, 239, 245, 0.5);
+}
+
+.crumb:hover * {
+  border-bottom: solid 2px rgba(216, 239, 245, 1);
 }
 
 #cover {

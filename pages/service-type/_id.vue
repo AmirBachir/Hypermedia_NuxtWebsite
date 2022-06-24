@@ -28,7 +28,8 @@
     <div class="row row-cols-1 row-cols-md-3 ms-2 me-2 g-4 list">
       <div v-for="(e, key) of l" :key="key" class="col">
         <div class="card h-100">
-          <h4 style="text-decoration:underline">{{e.name}}</h4>
+          <h4 style="font-weight: 700">{{e.name}}</h4>
+          <hr>
           <h6 class="sub text-muted fw-bold">Opening hours</h6>
           <!-- <p>{{e.openHours}}</p> --><p>needs to be set in the initialize</p>
           <h6 class="sub text-muted fw-bold">Address</h6>
@@ -75,7 +76,7 @@ h1 {
   border: none;
 }
 .cover *{
-  margin:auto;  
+  margin:auto;
 }
 .cover a{
   text-decoration: inherit;
