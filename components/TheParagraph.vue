@@ -4,6 +4,9 @@
       <div class="card">
         <h3>{{ title }}</h3>
         <p>{{ parag }}</p>
+        <div v-if="left!=''" class="text-center">
+          <a href="https://www.comune.brescia.it/servizi/arteculturaeturismo/BergamoBrescia2023/Pagine/Elemento-grafico-a-libero-utilizzo.aspx" target="_blank" class="btn">Learn more</a>
+        </div>
       </div>
     </div>
     <div class="col d-flex align-items-center justify-content-center">
@@ -40,6 +43,7 @@ export default {
       required: false,
       default: '',
     },
+    
   },
   data() {
     return {
@@ -97,5 +101,30 @@ export default {
 }
 img{
     width:100%;
+}
+.btn {
+  /* display: block;
+  margin: auto; */
+  padding: 10px;
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 50%;
+  background: #234c60;
+  color: #d8eff5;
+  border-color: #d8eff5;
+}
+
+.btn:hover {
+  background: #d8eff5;
+  color: #234c60;
+  -webkit-transition: all 0.5s;
+  -moz-transition: all 0.5s;
+  -o-transition: all 0.5s;
+  -ms-transition: all 0.5s;
+  transition: all 0.5s;
+}
+
+a {
+  color: #d8eff5;
 }
 </style>

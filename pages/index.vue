@@ -11,57 +11,6 @@
       <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5" />
     </svg>
     <br />
-    <!-- <table id="brescia-intro">
-      <tr>
-        <td>
-          <h2>Brescia, The Lion Queen of Italy</h2>
-          <p>
-            Lombardy’s second-largest city (Milan is first) is respected for its
-            metallurgy and machine-tooling prowess and for Beretta, its firearms
-            manufacturer. <br/>
-            But the city center is a UNESCO World Heritage site in Italy and a
-            3,200-year-old history you can experience. Brescia offers tourists
-            everything they might want in the quest for dolce vita – food, wine,
-            shopping, sites, culture, and antiquity.
-          </p>
-          <br/>
-          <button>Discover</button>
-        </td>
-        <td>
-          <img src="~/assets/intro_brescia.png" alt="intro brescia"/>
-        </td>
-      </tr>
-    </table> -->
-    <!-- <div class="row row-cols-1 row-cols-md-2 g-4">
-      <div class="col">
-        <div class="card h-100">
-          <div class="card-body">
-            <h3 class="card-title">Brescia, The Lion Queen of Italy</h3>
-            <p class="card-text">
-              Lombardy’s second-largest city (Milan is first) is respected for
-              its metallurgy and machine-tooling prowess and for Beretta, its
-              firearms manufacturer. <br />
-              But the city center is a UNESCO World Heritage site in Italy and a
-              3,200-year-old history you can experience. Brescia offers tourists
-              everything they might want in the quest for dolce vita – food,
-              wine, shopping, sites, culture, and antiquity.
-            </p>
-            <a href="/the-city-brescia" class="btn">Discover</a>
-          </div>
-        </div>
-      </div>
-      <div class="col" style="height:300px">
-        <div class="card h-100" >
-          <img
-            src="~/assets/intro_brescia.png"
-            class="card-img-top"
-            alt="intro brescia"
-            style="height:inherit"
-          />
-        </div>
-      </div>
-    </div> -->
-
     <div class="container">
       <div class="row">
         <div class="col-sm-6 ">
