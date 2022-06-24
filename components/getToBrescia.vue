@@ -41,7 +41,7 @@ export default {
     return {
       transports: [
         {
-          from: 'From Milano',
+          from: 'Milano',
           by: [
             {
               by: 'Train',
@@ -52,7 +52,7 @@ export default {
           ],
         },
         {
-          from: 'From Milano Malpensa',
+          from: 'Milano Malpensa',
           by: [
             {
               by: 'Bus',

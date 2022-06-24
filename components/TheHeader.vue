@@ -35,7 +35,6 @@
               <li><nuxt-link class="dropdown-item" to="/events?filter=all">All events</nuxt-link></li>
               <li><hr class="dropdown-divider" /></li>
               <li><nuxt-link class="dropdown-item" to="/events?filter=summer">Summer events</nuxt-link></li>
-              <!-- <li><a href="events?filter=summer">Summer events"</a></li> -->
               <li><hr class="dropdown-divider" /></li>
               <li><nuxt-link class="dropdown-item" to="/events?filter=winter">Winter Events</nuxt-link></li>
             </ul>
@@ -52,12 +51,26 @@
 <script>
 export default {
   name: 'TheHeader',
-
+  mounted(){
+    this.addListeners()
+  },
+  methods: {
+    toggleCollapse(){
+      const togglerIcon = document.querySelector('.navbar-toggler')
+      togglerIcon.classList.add("collapsed")
+      const content = document.querySelector('#navbarSupportedContent')
+      content.classList.remove('show')
+    },
+    addListeners(){
+    const navItems = document.querySelectorAll('.nav-item')
+    const f = this.toggleCollapse;
+    navItems.forEach((i)=>{i.addEventListener('click', ()=>{f()})})
+    },
+  }
 }
 </script>
 
 <style scoped>
-/* @import url('https://fonts.googleapis.com/css2?family=Inter:wght@701&display=swap'); */
 @font-face {
   font-family: "Casual";
   src: local("~/assets/Casual-Regular.ttf");
@@ -131,11 +144,6 @@ export default {
   transform: rotate(45deg);
   margin-bottom: -8px;
 }
-
-
-
-
-
 
 /*Button collapse toggle*/
 .navbar-toggler {
