@@ -1,11 +1,11 @@
 <template>
   <div class="pointofinterest">
-    <cover :title="name" :image="require(`@/assets/Poi_Cover/${cover_img}`)" crumb="Points of Interest"
+    <cover :title="name" :image="require(`@/assets/PoI_Cover/${cover_img}`)" crumb="Points of Interest"
            crumbLink="points-of-interest-intro"/>
     <div class="container">
       <table class="poi-intro">
         <tr>
-          <td class="text">
+          <td id="text">
             <p>
               {{ intro }}
               <br/>
@@ -31,22 +31,22 @@
       <br>
       <table>
         <tr v-if="address!==null">
-          <p id="info">
-            Address
+          <p id="text">
+            <field id="info">Address</field>
             <br>
             {{ address }}
           </p>
         </tr>
         <tr v-if="opening_hours!==null">
-          <p id="info">
-            Opening hours
+          <p id="text">
+            <field id="info">Opening hours</field> 
             <br>
             {{ opening_hours }}
           </p>
         </tr>
         <tr v-if="fee!==null">
-          <p id="info">
-            Fee
+          <p id="text">
+            <field id="info">Fee</field> 
             <br>
             €{{ fee }}
           </p>
@@ -88,8 +88,8 @@
           <transition-group name="fade">
             <td v-for="itinerary of itineraries" :key="itinerary.id">
               <round-image-card
-                :title="itinerary.name"
                 :id="itinerary.id"
+                :title="itinerary.name"
                 :description="itinerary.short_description"
                 :cover-img="require(`@/assets/Itinerary_thumbnail/${itinerary.thumbnail}`)"
                 @click.native="$router.push('/itinerary/' + itinerary.id)"
@@ -152,7 +152,7 @@ export default {
   width: 50%;
 }
 
-.text {
+#text {
   /* padding-left: 3%; */
   /* padding-right: 10%; */
   font-family: 'Inter', serif;

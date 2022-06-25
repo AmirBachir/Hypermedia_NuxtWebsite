@@ -56,7 +56,8 @@ async function initializeDatabaseConnection() {
   const Service = database.define("service", {
     name: DataTypes.STRING,
     address: DataTypes.STRING,
-    opening_hours: DataTypes.STRING
+    opening_hours: DataTypes.STRING,
+    phone_number: DataTypes.INTEGER
   })
 
   const ItineraryPoi = database.define("itinerary_Poi")

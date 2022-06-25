@@ -11,7 +11,7 @@
       <div class="double-arrow"><img src="~/assets/Line 1.png"
                                      alt="connection arrow between point of interest name and img"/></div>
       <div class="stop-img">
-        <nuxt-link :to="'/points-of-interest/'+ poi.id"><img :src="require(`@/assets/poI_thumbnail/${poi.thumbnail}`)"
+        <nuxt-link :to="'/points-of-interest/'+ poi.id"><img :src="require(`@/assets/PoI_thumbnail/${poi.thumbnail}`)"
                                                              alt="The point of interest:"></nuxt-link>
       </div>
     </div>

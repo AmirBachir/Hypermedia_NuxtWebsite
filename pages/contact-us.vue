@@ -87,7 +87,7 @@
           </p>
         </td>
         <td>
-          <img src="~/assets/giulio_abbo.png" alt="Giulio Antonio Abbo image" />
+          <img src="~/assets/Giulio_Abbo.png" alt="Giulio Antonio Abbo image" />
           <br />
           <h4> Giulio Antonio Abbo</h4>
           <p>
