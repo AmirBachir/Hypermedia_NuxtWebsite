@@ -47,7 +47,7 @@
             EIT Digital HCID <br />
             Codice persona: 10659997 <br />
             <a href="mailto:gabriele.carollo@mail.polimi.it">gabriele.carollo@mail.polimi.it</a>
-            
+
           </p>
         </td>
       </tr>
@@ -92,7 +92,7 @@
           </p>
         </td>
         <td>
-          <img src="~/assets/Giulio_Abbo.png" alt="Giulio Antonio Abbo image" />
+          <img src="~/assets/giulio_abbo.png" alt="Giulio Antonio Abbo image" />
           <br />
           <h4> Giulio Antonio Abbo</h4>
           <p>
@@ -102,7 +102,7 @@
           </p>
         </td>
       </tr>
-      
+
     </table>
   </div>
 </template>
