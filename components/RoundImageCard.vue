@@ -115,7 +115,7 @@ hr {
 }
 
 #card-body {
-  min-height: 200px;
+  min-height: 100px;
   max-height: 500px;
   margin: 1rem 0 1rem 0;
 }

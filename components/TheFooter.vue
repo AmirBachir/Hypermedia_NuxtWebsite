@@ -9,6 +9,9 @@
           <div class="col mb-5">
             <!-- Links -->
             <h6 class="fs-5 mb-4 columnTitle">Useful links</h6>
+             <p>
+              <nuxt-link to="/itineraries" class="text">itineraries</nuxt-link>
+            </p>
             <p>
               <nuxt-link to="/points-of-interest-intro" class="text">Points of interest</nuxt-link>
             </p>
@@ -16,10 +19,7 @@
               <nuxt-link to="/events" class="text">Events</nuxt-link>
             </p>
             <p>
-              <nuxt-link to="itineraries" class="text">Itineraries</nuxt-link>
-            </p>
-            <p>
-              <nuxt-link to="/service-types" class="text">Service types</nuxt-link>
+              <nuxt-link to="/service-types" class="text">Services</nuxt-link>
             </p>
           </div>
           <!-- Grid column -->
@@ -106,6 +106,13 @@ export default {
   color: #234c60;
 }
 
+a {
+font-family: 'Inter';
+  font-style: normal;
+  font-weight: 300;
+  color: #234c60;
+  text-decoration: none;
+}
 .text {
   font-family: 'Inter';
   font-style: normal;

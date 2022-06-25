@@ -544,7 +544,7 @@ export default async (models) => {
   // They are correct, some images from figma are blured
   const itineraries = [
     {
-      name: 'Brescia Romana',
+      name: 'Roman Brescia',
       short_description: 'Discover over 800 years of history preserved up until the contemporary era.',
       overview: 'Brixia was one of the most important Roman cities of the Italic Peninsula, and the Roman heritage of the city is well documented and remains one of the well preserved groups of public and private historical landmarks of Italy. The itinerary is made up of 3 individual modules of about 1 hour each, lasting approximately 3 hours in total. It is possible, of course, to adapt the itinerary to one’s own preferences.',
       cover_img: 'brescia-romana_coverimg.png',
@@ -712,7 +712,7 @@ export default async (models) => {
       cover_img: 'r.png',
     },
     {
-      name: 'Government ofiices',
+      name: 'Government offices',
       cover_img: 'go.png',
     },
     {
@@ -738,132 +738,154 @@ export default async (models) => {
       name: 'Farmacia Bravi',
       address: 'Via S. Zeno, 95',
       opening_hours:'10:00 - 20:00 Mon - Sat',
+      phone_number: '3331234565',
       serviceTypeId: 1
     },
     {
       name: 'Farmacie Comunali Di Brescia Spa',
       address: 'Via Achille Grandi, 18',
       opening_hours:'10:00 - 20:00 Mon - Sun',
+      phone_number: '3391334565',
       serviceTypeId: 1
     },
     {
       name: 'Castle Pharmacy',
       address: 'Via Galileo Galilei, 85/A',
       opening_hours:'8:00 - 13:00, 16:00 - 19:00 Mon - Sun',
+      phone_number: '3331222565',
       serviceTypeId: 1
     },
     {
       name: 'Farmacia Austoni',
       address: 'Via Cremona, 37',
       opening_hours:'7:30 - 18:00 Mon - Sat',
+      phone_number: '3331555565',
       serviceTypeId: 1
     },
     {
       name: 'Intesa San Paolo',
       address: 'Piazza della Logia 2',
       opening_hours:'7:30 - 16:00 Mon - Fri',
+      phone_number: '333120005',
       serviceTypeId: 2
     },
     {
       name: 'Credit Agricole',
       address: 'Via Garibaldi 33',
       opening_hours:'7:30 - 18:00 Mon - Sat',
+      phone_number: '3331134565',
       serviceTypeId: 2
     },
     {
       name: 'BNP Paribas',
       address: 'Viale Tunisia 45',
       opening_hours:'7:30 - 17:00 Mon - Sat',
+      phone_number: '3330204565',
       serviceTypeId: 2
     },
     {
       name: 'Intesa San Paolo',
       address: 'Piazza del Duomo 9',
       opening_hours:'7:30 - 16:00 Mon - Fri',
+      phone_number: '3338834565',
       serviceTypeId: 2
     },
     {
       name: 'Crosse Rossa',
       address: 'Via degli Angeli 24',
       opening_hours:'24/7',
+      phone_number: '3631234565',
       serviceTypeId: 3
     },
 {
       name: 'Ospedale San Filippo',
       address: 'Viale dei Cappuccini 76',
       opening_hours:'24/7',
+      phone_number: '3531234565',
       serviceTypeId: 3
     },
     {
       name: 'Comune di Brescia',
       address: 'Piazza del Duomo 2',
       opening_hours:'7:30 - 18:00 Mon - Sat',
+      phone_number: '3337734565',
       serviceTypeId: 4
     },
     {
       name: 'Info for Tourists Office',
       address: 'Via dei Musei 8',
       opening_hours:'10:00 - 14:00 Mon - Sat',
+      phone_number: '3339934565',
       serviceTypeId: 5
     },
     {
       name: 'Enrico VIII',
       address: 'Via della Spiga 3',
       opening_hours:'12:00 - 23:00 Mon - Sun',
+      phone_number: '3394234565',
       serviceTypeId: 6
     },
     {
       name: 'Al Frate',
       address: '',
       opening_hours:'12:00 - 23:00 Fri - Sun',
+      phone_number: '3331394565',
       serviceTypeId: 6
     },
     {
       name: 'Nduja Gastronomia',
       address: 'Piazza della Loggia 7',
       opening_hours:'11:00 - 15:00 Mon - Sun',
+      phone_number: '3330234565',
       serviceTypeId: 6
     },
     {
       name: 'Main Registrar Comune di Brescia',
       address: 'Viale degli Dei',
       opening_hours:'10:00 - 16:00 Mon - Fri',
+      phone_number: '3338023456',
       serviceTypeId: 7
     },
     {
       name: 'Main Registrar Comune di Brescia',
       address: 'Viale degli Dei',
       opening_hours:'10:00 - 16:00 Mon - Fri',
+      phone_number: '3391234565',
       serviceTypeId: 8
     },
     {
       name: 'Central station',
       address: 'Viale della Stazione, 36, ',
       opening_hours:'24/7',
+      phone_number: '3431234565',
       serviceTypeId: 9
     },
     {
       name: 'Office of Culture and Foreign Languages',
       address: 'Via dei Poligloti',
       opening_hours:'11:00 - 17:00 Mon - Fri',
+      phone_number: '3331234599',
       serviceTypeId: 10
     },
     {
       name: 'Tabacchi Rughero Bonggi',
       address: 'Via Lombardia 13',
       opening_hours:'9:00 - 19:00 Mon - Sat',
+      phone_number: '3331245565',
       serviceTypeId: 11
     },
     {
       name: 'Tabacchi e Caffè Dei Fiori',
       address: 'Via Pezzotti 12',
       opening_hours:'8:00 - 20:00 Mon - Sat',
+      phone_number: '3331255565',
       serviceTypeId: 11
     },
     {
       name: 'Tabacchi 24 automatico ore',
       address: 'Piazza del Duomo 33',
       opening_hours:'24/7',
+      phone_number: '3331234765',
       serviceTypeId: 11
     },
     
