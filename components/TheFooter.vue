@@ -10,7 +10,7 @@
             <!-- Links -->
             <h6 class="fs-5 mb-4 columnTitle">Useful links</h6>
              <p>
-              <nuxt-link to="/itineraries" class="text">itineraries</nuxt-link>
+              <nuxt-link to="/itineraries" class="text">Itineraries</nuxt-link>
             </p>
             <p>
               <nuxt-link to="/points-of-interest-intro" class="text">Points of interest</nuxt-link>
@@ -27,12 +27,12 @@
           <!-- Grid column -->
           <div class="col mb-5">
             <!-- Links -->
-            
+
             <h6 class="fs-5 mb-4 columnTitle">Contacts</h6>
-             <nuxt-link to="/contact-us" class="text"> The team and the teachers</nuxt-link> 
+             <nuxt-link to="/contact-us" class="text"> The team and the teachers</nuxt-link>
              <p><a href="mailto:hello@brescia.it">hello@brescia.it</a> </p>
 
-             
+
             <!-- <p class="text">about this course</p> -->
           </div>
           <!-- Grid column -->
