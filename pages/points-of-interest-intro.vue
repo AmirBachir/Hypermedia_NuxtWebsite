@@ -1,7 +1,8 @@
 <template>
   <div>
+    <div class="container">
     <intro-pages-cover img-name="poi-intro.png" />
-    <h1 style="margin-left: 10vw">Points of Interest</h1>
+    <h1 >Points of Interest</h1>
     <!-- TODO inserire qui una piccola OVERVIEW -->
     <div style="text-align: center; margin-bottom: 40px">
       <svg
@@ -13,6 +14,12 @@
       >
         <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5" />
       </svg>
+      <br>
+      <br>
+      <h3>Amazing Views</h3>
+    <p id="intro">Discover all of the incredible historical sites, monuments, nature and piazzas that Brescia has to offer.</p>
+    <br/><br/>
+
     </div>
     <!-- fino a qui -->
     <!-- <table id="poi-table">
@@ -33,6 +40,7 @@
       <p class="arrow up"></p>
     </div>
     <!-- </a> -->
+  </div>
   </div>
 </template>
 
@@ -69,6 +77,8 @@ export default {
 </script>
 
 <style scoped>
+
+
 * {
   box-sizing: border-box;
 }
@@ -76,8 +86,12 @@ export default {
 h1 {
   font-family: 'Casual', serif;
   margin-bottom: 3rem;
+  text-align: left;
 }
 
+h3 {
+  text-align: left;
+}
 
 .button-up {
   position: fixed;
@@ -101,5 +115,12 @@ h1 {
 .up {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
+}
+#intro {
+  font-family: Inter, serif;
+  font-weight: 100;
+  width: 100%;
+  max-width: 600px;
+   text-align: left;
 }
 </style>

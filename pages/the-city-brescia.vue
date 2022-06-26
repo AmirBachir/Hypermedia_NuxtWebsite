@@ -63,6 +63,7 @@ export default {
 <style scoped>
 *{
   box-sizing: border-box;
+  text-align: justify;
 }
 h1 {
   font-family: "Casual", serif;

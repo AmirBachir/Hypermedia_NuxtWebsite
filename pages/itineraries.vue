@@ -100,6 +100,7 @@ h1 {
   font-weight: 100;
   width: 100%;
   max-width: 600px;
+  text-align: justify;
 }
 
 a {
