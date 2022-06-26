@@ -2,6 +2,10 @@
   <div class="container">
     <intro-pages-cover img-name="events-intro.png"/>
     <h1>Events</h1>
+<br/><br/>
+    <h3>Amazing Experiences</h3>
+    <p id="intro">Discover all of the incredible experiences and moments that Brescia has to offer.</p>
+    <br/>
     <div id="filters">
       <button @click="setFilter('all')" :class="filter==='all'?'selected':''">All events</button>
       <button @click="setFilter('winter')" :class="filter==='winter'?'selected':''">Winter events</button>
@@ -110,7 +114,13 @@ button {
   color: #d8eff5;
   border-color: #d8eff5;
 }
-
+#intro {
+  font-family: Inter, serif;
+  font-weight: 100;
+  width: 100%;
+  max-width: 500px;
+  text-align: justify;
+}
 button:hover {
   background: #d8eff5;
   color: #234c60;
