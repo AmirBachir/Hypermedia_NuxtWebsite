@@ -15,7 +15,7 @@
           <h4> Andrea Alesani</h4>
           <p>
             EIT Digital HCID <br />
-            Codice persona:  <br />
+            Codice persona: 10615882 <br />
             <a href="mailto:andrea.alesani@mail.polimi.it">andrea.alesani@mail.polimi.it</a>
           </p>
         </td>
