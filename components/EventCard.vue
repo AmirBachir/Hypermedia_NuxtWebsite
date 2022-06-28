@@ -125,7 +125,7 @@ img {
 
 #card {
   width: 15rem;
-  height: 30rem;
+  height: 32.5rem;
   background: transparent;
   margin: 0 0 0.6rem 0.6rem;
   border-width: 1px;
