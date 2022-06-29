@@ -10,106 +10,100 @@
       </tr>
       <tr class="team_members">
         <td>
-          <img src="~/assets/Andrea.png" alt="Andrea Alesani image" />
-          <br />
-          <h4> Andrea Alesani</h4>
-          <p>
-            EIT Digital HCID <br />
-            Codice persona:  <br />
-            <a href="mailto:andrea.alesani@mail.polimi.it">andrea.alesani@mail.polimi.it</a>
-          </p>
+          <person-component
+            codice="10615882"
+            info="EIT Digital HCID"
+            mail="andrea.alesani@mail.polimi.it"
+            img="Andrea.png"
+            name="Andrea Alesani"
+          />
         </td>
         <td>
-          <img src="~/assets/Monica.png" alt="Monica Arriaga image" />
-          <br />
-          <h4> Monica Arriaga</h4>
-          <p>
-            Integrated product design <br />
-            Codice persona: 10752329 <br />
-            <a href="mailto:monica.arriaga@mail.polimi.it">monica.arriaga@mail.polimi.it</a>
-          </p>
+          <person-component
+            codice="10752329"
+            info=" Integrated Product Design"
+            mail="monica.arriaga@mail.polimi.it"
+            img="Monica.png"
+            name="Monica Arriaga"
+          />
         </td>
         <td>
-          <img src="~/assets/foto amir.png" alt="Amir Bachir image" />
-          <br />
-          <h4> Amir Bachir</h4>
-          <p>
-            EIT Digital HCID <br />
-            Codice persona: 10659740 <br />
-            <a href="mailto:amir.bachir@mail.polimi.it">amir.bachir@mail.polimi.it</a>
-          </p>
+          <person-component
+            codice="10659740"
+            info="EIT Digital HCID"
+            mail="amir.bachir@mail.polimi.it"
+            img="foto amir.png"
+            name="Amir Bachir"
+          />
         </td>
         <td>
-          <img src="~/assets/foto_GAB.jpg" alt="Gabriele Carollo image" />
-          <br />
-          <h4> Gabriele Carollo</h4>
-           <p>
-            EIT Digital HCID <br />
-            Codice persona: 10659997 <br />
-            <a href="mailto:gabriele.carollo@mail.polimi.it">gabriele.carollo@mail.polimi.it</a>
-
-          </p>
+          <person-component
+            codice="10659997"
+            info="EIT Digital HCID"
+            mail="gabriele.carollo@mail.polimi.it"
+            img="foto_GAB.jpg"
+            name="Gabriele Carollo"
+          />
         </td>
       </tr>
       <tr>
         <h2>The teachers</h2>
       </tr>
       <tr>
-<td>
-          <img src="~/assets/prof_garzotto.png" alt="Franca Garzotto image" />
-          <br />
-          <h4> Franca Garzotto</h4>
-          <p>
-          Professor<br />
-          <a href="mailto:franca.garzotto@polimi.it">franca.garzotto@polimi.it</a>
-          </p>
-        </td>
         <td>
-          <img src="~/assets/Luke.png" alt="Lukas Moskwa image" />
-          <br />
-          <h4> Lukas Moskwa</h4>
-          <p>
-            Teaching assistant<br />
-            <a href="mailto:lukas.moskwa@polimi.it">lukas.moskwa@polimi.it</a>
-          </p>
+          <person-component
+            info="Professor"
+            mail="franca.garzotto@polimi.it"
+            img="prof_garzotto.png"
+            name="Franca Garzotto"
+          />
         </td>
-        <td>
-          <img src="~/assets/alberto_patti.png" alt="Alberto Patti image" />
-          <br />
-          <h4> Alberto Patti </h4>
-          <p>
-            Teaching assistant<br />
-                <a href="mailto:alberto.patti@polimi.it">alberto.patti@polimi.it</a>
-          </p>
-        </td>
-        <td>
-          <img src="~/assets/mattia_gianotti.png" alt="Mattia Gianotti image" />
-          <br />
-          <h4> Mattia Gianotti</h4>
-          <p>
-            Project tutor<br />
-            <a href="mailto:mattia.gianotti@polimi.it">mattia.gianotti@polimi.it</a>
-          </p>
-        </td>
-        <td>
-          <img src="~/assets/giulio_abbo.png" alt="Giulio Antonio Abbo image" />
-          <br />
-          <h4> Giulio Antonio Abbo</h4>
-          <p>
-            Project tutor<br />
-          <a href="mailto:giulioantonio.abbo@polimi.it">giulioantonio.abbo@polimi.it</a>
 
-          </p>
+        <td>
+          <person-component
+            info="Teaching assistant"
+            mail="lukas.moskwa@polimi.it"
+            img="Luke.png"
+            name="Lukas Moskwa"
+          />
+        </td>
+        <td>
+          <person-component
+            info="Teaching assistant"
+            mail="alberto.patti@polimi.it"
+            img="alberto_patti.png"
+            name="Alberto Patti"
+          />
+        </td>
+        <td>
+          <person-component
+            info="Project tutor"
+            mail="mattia.gianotti@polimi.it"
+            img="mattia_gianotti.png"
+            name="Mattia Gianotti"
+          />
+        </td>
+        <td>
+          <person-component
+            info="Project tutor"
+            mail="giulioantonio.abbo@polimi.it"
+            img="Giulio_Abbo.png"
+            name="Giulio Antonio Abbo"
+          />
         </td>
       </tr>
-
     </table>
   </div>
 </template>
 
 <script>
+import PersonComponent from '~/components/Person.vue'
+
 export default {
   name: 'ContactUsPage',
+  components: {
+    PersonComponent,
+  },
 }
 </script>
 
@@ -126,45 +120,27 @@ h2 {
   font-family: 'Casual', serif;
   text-align: left;
 }
-h4{
-  text-align: left;
-}
-img {
-  /* max-height: 25vh; */
-  padding: 10px;
-  height: 25vh;
-}
+
 table {
   width: 100%;
   /* margin: auto; */
   overflow-x: auto;
   margin-top: 3rem;
 }
-a{font-family: 'Inter';
-  font-style: normal;
-  font-weight: 300;
-color: #D8EFF5;
-  /* text-decoration: none; */
-  }
 
 tr {
   /* margin: auto; */
   text-align: center;
   vertical-align: top;
 }
-
+/* #face {
+  min-width: 10 rem ;
+} */
 td {
   display: inline-block;
-  padding: 1.2vw;
+  padding: 1.3vw;
   text-align: left;
+  margin-right: 2rem;
 }
-p{
-  font-family: 'Inter';
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-line-height: 22px;
 
-color: #D8EFF5;
-}
 </style>
