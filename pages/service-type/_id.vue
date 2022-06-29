@@ -1,10 +1,12 @@
 <template>
   <div>
-    <div class="row row-cols-1 row-cols-md-2 ms-2 me-2 g-4 cover" style="margin-top:0">
+    <div class="row row-cols-1 row-cols-md-2 ms-10 me-10 g-4 cover" style="margin:0px 10em 0px 10em">
       <div class="col title">
         <div class="card h-100">
-        <h1>{{type}}</h1>
+        <h1 class="display-1">{{type}}</h1>
+        <div class="crumb">
         <nuxt-link to="/service-types">Service types</nuxt-link>
+        </div>
         </div>
       </div>
       <div class="col">
@@ -28,11 +30,11 @@
     <div class="row row-cols-1 row-cols-md-3 ms-2 me-2 g-4 list">
       <div v-for="(e, key) of l" :key="key" class="col">
         <div class="card h-100">
-          <h4 style="font-weight: 700">{{e.name}}</h4>
+          <h4 style="font-weight: 700; text-align:center">{{e.name}}</h4>
           <hr>
-          <h6 class="sub text-muted fw-bold">Opening hours</h6>
-          <!-- <p>{{e.openHours}}</p> --><p>needs to be set in the initialize</p>
-          <h6 class="sub text-muted fw-bold">Address</h6>
+          <h6 class="sub fw-bold">Opening hours</h6>
+          <p>{{e.opening_hours}}</p>
+          <h6 class="sub fw-bold">Address</h6>
           <p>{{e.address}}</p>
         </div>
       </div>
@@ -66,7 +68,28 @@ export default {
 * {
   box-sizing: border-box;
 }
+@font-face {
+  font-family: 'Casual';
+  src: local('~/assets/Casual-Regular.ttf');
+}
 
+.crumb {
+  text-align: left;
+}
+
+.crumb * {
+  text-decoration: none;
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #d8eff5;
+  font-size: 30px;
+  border-bottom: solid 1px rgba(216, 239, 245, 0.5);
+}
+
+.crumb:hover * {
+  border-bottom: solid 2px rgba(216, 239, 245, 1);
+}
 h1 {
   font-family: 'Casual', serif;
   margin-bottom: 3rem;
@@ -78,14 +101,14 @@ h1 {
 .cover *{
   margin:auto;
 }
-.cover a{
+/* .cover a{
   text-decoration: inherit;
   color: inherit;
   margin-top: 10px;
 }
 .cover a:hover{
   text-decoration:underline;
-}
+} */
 .list .card{
   padding:1rem;
   border-radius: .25rem;
@@ -97,5 +120,12 @@ h1 {
   text-align:center;
   margin:30px;
 }
-
+@media all and (max-width:768px){
+  .title{
+    margin-bottom:30px;
+  }
+  .cover{
+    margin:0px !important;
+  }
+}
 </style>

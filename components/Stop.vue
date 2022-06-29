@@ -1,35 +1,39 @@
 <template>
-  <!-- si potrebbe aggiungere un riassunto all'inizio delle varie tappe -->
-  <div class="v-list">
-    <div v-for="(poi,k) in list" :key="k" class="stop">
-      <div class="text">
-        <p class="stp">Stop <span>{{ k + 1 }}</span></p>
-        <p class="title">
-          <nuxt-link :to="'/points-of-interest/'+ poi.id">{{ poi.name }}</nuxt-link>
-        </p>
+      <div class="card mb-3" style="max-width: 1000px; margin:auto;">
+      <nuxt-link :to="'/points-of-interest/'+ poi.id" class="row align-items-center g-0">
+        <div class="col-md-3">
+          <div class="card-body">
+          <p class="stp">Stop <span>{{k + 1 }}</span></p>
+          <h5 class="card-title">
+            {{ poi.name }}
+          </h5>
+          </div>
+        </div>
+        <div class="col-md-2">
+          <div class="double-arrow"><img src="~/assets/Line 1.png"
+                                      alt="connection arrow between point of interest name and img" class="img-fluid"/></div>
+        </div>
+        <div class="col-md-7 p-3">
+          <img :src="require(`@/assets/PoI_thumbnail/${poi.thumbnail}`)" alt="The point of interest:" class="img-fluid rounded">
+        </div>
+      </nuxt-link>
       </div>
-      <div class="double-arrow"><img src="~/assets/Line 1.png"
-                                     alt="connection arrow between point of interest name and img"/></div>
-      <div class="stop-img">
-        <nuxt-link :to="'/points-of-interest/'+ poi.id"><img :src="require(`@/assets/PoI_thumbnail/${poi.thumbnail}`)"
-                                                             alt="The point of interest:"></nuxt-link>
-      </div>
-    </div>
-  </div>
 </template>
 
 <script>
 export default {
   name: 'TheStop',
   props: {
-    list: {
-      type: Array,
+    poi: {
+      type: Object,
       required: true
+    },
+    k: {
+      type: Number,
+      required: true,
+
     }
   },
-  mounted() {
-    console.log(this.list)
-  }
 }
 </script>
 
@@ -38,79 +42,36 @@ export default {
 * {
   box-sizing: border-box;
 }
-
-.stop {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 90%;
-  margin: 5rem auto;
-  /* border: 1px solid red; */
-  height: 50vh
+.card, .card *{
+  background: none;
+  color:rgb(216, 239, 245);
+  text-decoration:none;
+}
+.card{
+  padding:0.2rem;
+  border-color: rgb(216, 239, 245);
+}
+.card:hover{
+  cursor:pointer;
+  background-color: rgba(16, 55, 73, 0.7);
+}
+.card:hover .card-title{
+  font-weight: bold;
 }
 
-.text {
-  width: 25%;
-  font-family: Inter, serif;
-  font-weight: 100;
-  /* border: 1px solid yellow */
-}
-
-.stp {
-  font-size: 1.1rem;
-  text-decoration: underline;
-}
-
-.title {
-  font-weight: 400;
-  font-size: 1.2rem;
-}
-
-.double-arrow {
-  /* padding:1%; */
-  width: 18%;
-  /* border: 1px solid green; */
-
-
-}
-
-.double-arrow img {
-  width: 100%;
-  /* border: 1px solid violet; */
-  height: 100%
-  /* margin:auto 0; */
-}
-
-.stop-img {
-  width: 50%;
-  /* border: 1px solid blue; */
-  height: inherit;
-}
-
-.stop-img img {
-  width: 100%;
-  /* border: 1px solid salmon; */
-  height: 100%;
-  object-fit: cover;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #59FFF5;
-}
-
-@media all and (max-width: 500px) {
-  .double-arrow {
+@media all and (max-width: 768px) {
+.col-md-2{
     display: none;
   }
   .stop {
     height: 30vh;
     width: 100%;
     margin-right: 0;
+  }
+}
+@media all and (max-width: 800px) {
+  .card{
+    max-width: 75vw !important;
   }
 }
 </style>

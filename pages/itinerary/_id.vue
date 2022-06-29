@@ -20,16 +20,12 @@
         <div><p>{{ inout }}</p></div>
       </div>
     </div>
-    <!-- <div class="container">
-    <div class="overview">
-      <h4>Overview</h4>
-      <p>{{overview}}</p>
-    </div>
-    <div class="thumbnail"><img :src="require(`@/assets/${thumbnail}`)" alt="itinerary thumbnail"></div>
-    </div> -->
     <the-paragraph :img="require(`@/assets/Itinerary_thumbnail/${thumbnail}`)" :parag="overview" :title="'Overview'"
                    :imgSize="'overview'"/>
-    <stop :list="pois"/>
+    <div class="v-list">
+      <stop v-for="(poi,k) in pois" :key="k" :k="k" :poi="poi">
+      </stop>
+    </div>
     <div class="card">
       <iframe
         class="map"
@@ -90,29 +86,6 @@ export default {
 </script>
 
 <style scoped>
-/* .add-info {
-  display: flex;
-  align-items: normal;
-  width: 80%;
-  margin: 5rem auto;
-} */
-/* .info {
-  width: 100%;
-  font-family: 'Inter';
-  font-style: normal;
-  font-weight: 700;
-  font-size: 24px;
-  line-height: 29px;
-  text-align: center;
-  color: #d8eff5;
-}
-.info + .info {
-  margin-left: 3rem;
-} */
-.col {
-  text-align: center;
-}
-
 .overview {
   width: 45%;
   margin-left: 5vw;

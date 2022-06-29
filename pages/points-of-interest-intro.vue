@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="container">
+    <!-- <cover :image="'poi-intro.png'" :title="'Points of Interest'"> </cover> -->
     <intro-pages-cover img-name="poi-intro.png" />
     <h1 >Points of Interest</h1>
     <!-- TODO inserire qui una piccola OVERVIEW -->
@@ -46,11 +47,12 @@
 
 <script>
 import poiCard from '~/components/PoICard.vue'
-
+// import cover from '~/components/Cover.vue'
 export default {
   name: 'PointsOfInterestPage',
   components: {
     poiCard,
+    // cover,
   },
   async asyncData({ $axios }) {
     // const { data } = await $axios.get('http://localhost:3000/api/events/all')
@@ -94,6 +96,7 @@ h3 {
 }
 
 .button-up {
+  cursor:pointer;
   position: fixed;
   bottom: 10px;
   right: 7px;

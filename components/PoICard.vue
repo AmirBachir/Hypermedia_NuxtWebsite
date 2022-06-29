@@ -31,7 +31,9 @@ export default {
   box-sizing: border-box;
 }
 .card{
-  background-color: #103749;
+  background-color: transparent;
+  border: 1px solid #d8eff5;
+  border-radius: 0.25rem;
 }
 @media screen and (min-width: 768px) {
   .card{
@@ -40,8 +42,8 @@ export default {
 }
 .card:hover{
   cursor:pointer;
-  background-color: #448bab;
-  color: #d8eff5;
+  background-color: #d8eff5;
+  color:#234C60;
 }
 .img-thumbnail{
   background: none;
@@ -62,6 +64,7 @@ img {
   border-radius: 20px; */
   /* margin: 0.5rem 0 0 0; */
   /* padding-bottom: 0.4rem; */
+  padding:0px;
 }
 
 p {
