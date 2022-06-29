@@ -54,7 +54,7 @@ color: #D8EFF5;
   /* text-decoration: none; */
   }img {
   /* max-height: 25vh; */
-  padding: 10px;
+  /* padding: 10px; */
   height: 25vh; 
   /* ++width: 22vh; */
 }
