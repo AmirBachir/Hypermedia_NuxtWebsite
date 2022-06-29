@@ -47,11 +47,12 @@ It is navigation bar that contains the links to all the main sections of the web
 #### TheParagraph
 This component used in the city of brescia page includes information and images about Brescia and his history.
 #### TopicCard
-This component is used inside the homepage as preview of the sections: service types, itineraries, points of interest and events. It includes the title an image and a short description of the realted content.
-### Routing
-### Mixins
+This component is used inside the homepage as preview of the sections: service types, itineraries, points of interest and events. It includes the title an image and a short description of the related content.
+### Routing 
+Using Nuxt.js it was not necessary to set the routing of pages manually, indeed Nuxt generates the routes configuration based on the files inside the pages folder.
+### Server
+The server side rendiring approach (SSR) has been chosen. In this way all the pages are rendered in the server and then sent to the browser when requested. Furthermore SSR grants better SEO optimization.
+### Database
+The content of the website is contained in a Postgres Database. The queries to handle the requests are executed through Sequelize.
 
 ## Relevance to best practices
-
-
-
