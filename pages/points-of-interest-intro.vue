@@ -75,6 +75,10 @@ export default {
       })
     },
   },
+  mounted(){
+    const menuItems = document.querySelectorAll('.nav-link')
+    menuItems[3].classList.add('current-topic')
+  },
 }
 </script>
 

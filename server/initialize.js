@@ -1,6 +1,6 @@
 export default async (models) => {
   // most of them are fake/repeated
-  const pointsOfInterest = [
+  const pointsOfInterest = [  
     {
       name: "Cattedrale di Santa Maria Assunta",
       intro: "Easily identifiable thanks to its sleek bell tower, it was built back in the 6th and 7th centuries and rebuilt in the 15th century. It contains one of the most charming and best preserved painting cycles in Camonica Valley, with frescoes made by Giovanni Pietro da Cemmo and his school from 1491 to 1493. The façade is in Late Baroque style (1776).",
@@ -23,7 +23,7 @@ export default async (models) => {
       thumbnail: 'rapt.jpg',
       address: 'Via dei Musei, 55',
       opening_hours:'Monday - Saturday 10:00 - 18:00',
-      //fee:,
+      // fee:,
     },
     {
       name: "Brescia Castle",
@@ -59,7 +59,7 @@ export default async (models) => {
       thumbnail: 'cosfdat.jpg',
       address: "Via S. Francesco D'Assisi, 1",
       opening_hours:'Tuesday - Sunday: 10:00 - 18:00',
-      //fee:,
+      // fee:,
     },
     {
       name: "Domus Ariciana",
@@ -117,8 +117,8 @@ export default async (models) => {
       img_caption: "Facade of the astronomical clock",
       thumbnail: 'pdlt.jpg',
       address: 'Piazza della Loggia',
-      //opening_hours:'',
-      //fee:,
+      // opening_hours:'',
+      // fee:,
     },
     {
       name: "Carmine Old District",
@@ -130,7 +130,7 @@ export default async (models) => {
       thumbnail: 'codt.jpg',
       address: 'Contrada del Carmine',
       // opening_hours:'',
-      //fee:,
+      // fee:,
     }, {
       name: "Piazza Paolo VI",
       intro: 'Get to know the Piazza delle Due Cattedrali di Brescia, Piazza Paolo VI is a magnificent example of medieval architecture and represents the heart of the city for the important historical buildings that I saw if affected, a symbol of civil liberty and Brescian religious tradition.',
@@ -141,7 +141,7 @@ export default async (models) => {
       thumbnail: 'ppvit.jpg',
       address: 'Piazza Paolo VI',
       // opening_hours:'',
-      //fee:,
+      // fee:,
     },
     {
       name: "Piazza della Vittoria",
@@ -152,7 +152,7 @@ export default async (models) => {
       thumbnail: 'pdvt.jpg',
        address: 'Piazza della Vittoria',
       // opening_hours:'',
-      //fee:,
+      // fee:,
     },
     {
       name: "Via dei Musei",
@@ -163,7 +163,7 @@ export default async (models) => {
       thumbnail: 'vdmt.jpg',
        address: 'Via dei Musei',
       // opening_hours:'',
-      //fee:,
+      // fee:,
     },
     {
       name: "Teatro Grande",
@@ -187,7 +187,7 @@ export default async (models) => {
       thumbnail: 'pdat.jpg',
       address: 'Largo Torrelunga, 7',
       opening_hours:'Tuesday - Sunday: 18:00 - 22:00',
-      //fee:,
+      // fee:,
     },
     {
       name: "Parco Tarello",
@@ -199,7 +199,7 @@ export default async (models) => {
       thumbnail: 'ptt.jpg',
       address: 'Via Cefalonia, 55',
       opening_hours:'Tuesday - Sunday: 18:00 - 22:00',
-      //fee:,
+      // fee:,
     },
     {
       name: "Lago di Garda",
@@ -209,8 +209,8 @@ export default async (models) => {
       img_caption: "The view of Sirmione Sul Garda",
       thumbnail: 'ldgt.jpg',
       address: 'Lago di Garda',
-      //opening_hours:'',
-      //fee:,
+      // opening_hours:'',
+      // fee:,
     },
     {
       name: "Hiking Path Bosco Incantato", // caricare immagine non sgranata
@@ -220,8 +220,8 @@ export default async (models) => {
       img_caption: "Some mytical creatures you can find in the hiking path",
       thumbnail: 'hpbit.jpg',
       address: 'Via Monte Guglielmo',
-      //opening_hours:'',
-      //fee:,
+      // opening_hours:'',
+      // fee:,
     },
     {
       name: "Millemonti",
@@ -232,8 +232,8 @@ export default async (models) => {
       img_caption: "Vineyard view",
       thumbnail: 'mt.jpg',
       address: 'Via Cassala, 20',
-      //opening_hours:'',
-      //fee:,
+      // opening_hours:'',
+      // fee:,
     },
     {
       name: "Roman Theatre",

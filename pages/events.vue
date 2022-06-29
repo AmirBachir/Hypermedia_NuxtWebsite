@@ -58,6 +58,10 @@ export default {
       eventList: [],
     }
   },
+  mounted(){
+    const menuItems = document.querySelectorAll('.nav-link')
+    menuItems[4].classList.add('current-topic')
+  },
   computed: {
     filteredEvents() {
       let result

@@ -56,6 +56,20 @@ export default {
   components:{
     theParag,
     theMap
+  },
+  mounted(){
+    const menuItems = document.querySelectorAll('.nav-link')
+    menuItems[1].classList.add('current-topic')
+    // console.log(menuItems)
+    // let item
+    // let i
+    // for(i=0; i<menuItems.length; i++){
+    //   if (menuItems[i].innerHTML==='The City of Brescia'){
+    //     item = menuItems[i]
+    //   }
+    // }
+    // const item = Array.from(menuItems).filter(i=>{return i.innerHTML==='The City of Brescia'})
+    // console.log(item)
   }
 }
 </script>

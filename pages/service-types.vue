@@ -45,6 +45,10 @@ export default {
       stList: []
     }
   },
+  mounted(){
+    const menuItems = document.querySelectorAll('.nav-link')
+    menuItems[5].classList.add('current-topic')
+  },
 }
 
 </script>

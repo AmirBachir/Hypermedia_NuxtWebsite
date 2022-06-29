@@ -14,7 +14,7 @@
       <div id="navbarSupportedContent" class="collapse navbar-collapse">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <nuxt-link class="nav-link active" aria-current="page" to="/">Home</nuxt-link>
+            <nuxt-link class="nav-link" to="/">Home</nuxt-link>
           </li>
           <li class="nav-item"><nuxt-link class="nav-link" to="/the-city-brescia">The City of Brescia</nuxt-link></li>
           <li class="nav-item"><nuxt-link class="nav-link" to="/itineraries">Itineraries</nuxt-link></li>
@@ -40,7 +40,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" aria-current="page" to="/service-types">Services</nuxt-link>
+            <nuxt-link class="nav-link" to="/service-types">Services</nuxt-link>
           </li>
         </ul>
       </div>
@@ -74,6 +74,9 @@ export default {
 @font-face {
   font-family: "Casual";
   src: local("~/assets/Casual-Regular.ttf");
+}
+.current-topic{
+  border-bottom:1px solid rgb(216, 239, 245) !important;;
 }
 .navbar {
   background-color: #234c60;
@@ -223,8 +226,5 @@ export default {
 .navbar-toggler.collapsed .toggler-icon {
   background-color: #D8EFF5;
 }
-
-
-
 
 </style>
