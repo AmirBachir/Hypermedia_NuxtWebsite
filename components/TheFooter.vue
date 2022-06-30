@@ -9,7 +9,7 @@
           <div class="col mb-5">
             <!-- Links -->
             <h6 class="fs-5 mb-4 columnTitle">Useful links</h6>
-             <p>
+            <p>
               <nuxt-link to="/itineraries" class="text">Itineraries</nuxt-link>
             </p>
             <p>
@@ -22,47 +22,37 @@
               <nuxt-link to="/service-types" class="text">Services</nuxt-link>
             </p>
           </div>
-          <!-- Grid column -->
 
           <!-- Grid column -->
           <div class="col mb-5">
-            <!-- Links -->
-
             <h6 class="fs-5 mb-4 columnTitle">Contacts</h6>
-             <nuxt-link to="/contact-us" class="text"> The team and the teachers</nuxt-link>
-             <p><a href="mailto:hello@brescia.it">hello@brescia.it</a> </p>
-
-
-            <!-- <p class="text">about this course</p> -->
+            <nuxt-link to="/contact-us" class="text"> The team and the teachers</nuxt-link>
+            <p><a href="mailto:hello@brescia.it">Write us an email</a></p>
           </div>
+
           <!-- Grid column -->
           <div class="col mb-5">
-            <h6 class="fs-5 mb-2 columnTitle">Institutions</h6>
-            <div class="row">
-              <div class="col mb-2">
-                <a href="https://www.comune.brescia.it/Pagine/default.aspx">
+            <h6 class="fs-5 columnTitle">Institutions</h6>
+            <div class="row mt-1">
+              <a class="logo-link" href="https://www.comune.brescia.it/Pagine/default.aspx" target="_blank">
                 <img
                   src="../assets/comune-di-brescia-vector-logo-removebg 1.png"
                   class="logo"
                   alt="comune di Brescia logo"
                 />
-                </a>
-              </div>
-              <div class="col mb-2">
-                <a href="https://i3lab.polimi.it/">
-                <img src="../assets/i3lab 1.png" class="logo" alt="image" />
-                </a>
-              </div>
-              <div class="col mb-2">
-              <a href="https://www.polimi.it/">
-              <img
-                src="../assets/Logo_Politecnico_Milano 2.png"
-                class="logo"
-                alt="image"
-              />
               </a>
-              </div>
-              <!-- loghi-->
+
+              <a class="logo-link" href="https://i3lab.polimi.it/" target="_blank">
+                <img src="../assets/i3lab 1.png" class="logo" alt="image"/>
+              </a>
+
+              <a class="logo-link" href="https://www.polimi.it/" target="_blank">
+                <img
+                  src="../assets/Logo_Politecnico_Milano 2.png"
+                  class="logo"
+                  alt="image"
+                />
+              </a>
             </div>
           </div>
         </div>
@@ -94,35 +84,59 @@ export default {
 
 * {
   position: relative;
-  left: 0px;
+  left: 0;
   background-color: #d8eff5;
-  margin-top: 2rem;
+  margin-top: 30px;
 }
 
 .columnTitle {
-  font-family: 'Inter';
+  font-family: 'Inter', serif;
   font-style: normal;
   font-weight: 500;
   color: #234c60;
 }
 
 a {
-font-family: 'Inter';
-  font-style: normal;
-  font-weight: 300;
-  color: #234c60;
-  text-decoration: none;
-}
-.text {
-  font-family: 'Inter';
+  font-family: 'Inter', serif;
   font-style: normal;
   font-weight: 300;
   color: #234c60;
   text-decoration: none;
 }
 
+.text {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #234c60;
+  text-decoration: none;
+}
+
+.logo-link {
+  width: 60px;
+  margin: 8px 5px 5px;
+  padding: 0;
+}
+
 .logo {
-  object-fit: cover;
-  max-height: 20vh;
+  width: 50px;
+  height: 50px;
+  margin: 0;
+  object-fit: contain;
+}
+
+@media all and (max-width: 500px) {
+  .logo-link {
+    width: 100%;
+    margin-left: 0;
+    margin-bottom: 10px;
+  }
+
+  .logo {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    object-fit: contain;
+  }
 }
 </style>
