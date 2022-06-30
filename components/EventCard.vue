@@ -5,11 +5,13 @@
     <img :src="require(`@/assets/Event_thumbnail/${imgName}`)" class="card-img-top" alt="image"/>
     <div id="card-body">
       <!-- <p id="card-subtitle">{{ time }}</p> -->
-      <p id="card-text point-of-interest">{{ poi }}</p>
-      <h5 id="card-title">{{ name }}</h5>
-      <br>
+      <p id="point-of-interest">{{ poi }}</p>
+      <div id="title-container">
+        <h5 id="card-title" style="">{{ name }}</h5>
+      </div>
+      <hr>
       <p id="card-subtitle">{{ eventType }}</p>
-      <p id="card-text intro">{{ intro }}</p>
+      <p id="intro">{{ intro }}</p>
     </div>
   </div>
 </template>
@@ -89,24 +91,14 @@ export default {
     year() {
       return this.date.split('-')[0]
     },
-eventType() {
-  return this.type.toUpperCase()
-},
+    eventType() {
+      return this.type.toUpperCase()
+    },
   },
 }
 </script>
 
 <style scoped>
-h5 {
-  font-family: 'Inter', serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 28px;
-  line-height: 29px;
-  text-align: left;
-  margin-top: 0.3rem;
-  color: #d8eff5;
-}
 
 p {
   font-family: 'Inter', serif;
@@ -158,14 +150,41 @@ img {
 }
 
 #card-body {
-  margin: 0.5rem
+  margin: 0.5rem;
+  text-align: center;
+}
+
+#title-container {
+  height: 60px;
+  display: table;
+  width: 100%;
+}
+
+#card-title {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 29px;
+  margin-top: 0.3rem;
+  color: #d8eff5;
+  display: table-cell;
+  vertical-align: middle;
+  text-align: center;
+}
+
+#card-subtitle {
+  font-weight: 500;
+  text-align: center;
 }
 
 #point-of-interest {
-  text-transform: uppercase;
+  font-size: small;
+  text-align: center;
 }
 
 #intro {
   margin-top: 1rem;
+  text-align: center !important;
 }
 </style>
