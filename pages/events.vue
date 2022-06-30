@@ -145,7 +145,8 @@ a {
   padding-top: 8px;
   background: #234c60;
   z-index: 1;
-  padding-bottom: 20px
+  padding-bottom: 20px;
+  text-align: center;
 }
 
 .selected {
