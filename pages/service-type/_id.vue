@@ -3,9 +3,9 @@
     <div class="row row-cols-1 row-cols-md-2 ms-10 me-10 g-4 cover" style="margin:0px 10em 0px 10em">
       <div class="col title">
         <div class="card h-100">
-        <h1 class="display-1">{{type}}</h1>
+        <h1 class="display-2">{{type}}</h1>
         <div class="crumb">
-        <nuxt-link to="/service-types">Service types</nuxt-link>
+        <nuxt-link to="/service-types">Services</nuxt-link>
         </div>
         </div>
       </div>
@@ -36,6 +36,8 @@
           <p>{{e.opening_hours}}</p>
           <h6 class="sub fw-bold">Address</h6>
           <p>{{e.address}}</p>
+          <h6 class="sub fw-bold">Phone</h6>
+          <p>+39 {{e.phone_number}}</p>
         </div>
       </div>
     </div>
@@ -83,7 +85,7 @@ export default {
   font-style: normal;
   font-weight: 300;
   color: #d8eff5;
-  font-size: 30px;
+  font-size: 26px;
   border-bottom: solid 1px rgba(216, 239, 245, 0.5);
 }
 
