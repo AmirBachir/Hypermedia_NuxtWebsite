@@ -1,47 +1,40 @@
 <template>
   <div>
     <div class="container">
-    <!-- <cover :image="'poi-intro.png'" :title="'Points of Interest'"> </cover> -->
-    <intro-pages-cover img-name="poi-intro.png" />
-    <h1 >Points of Interest</h1>
-    <!-- TODO inserire qui una piccola OVERVIEW -->
-    <div style="text-align: center; margin-bottom: 40px">
-      <svg
-        class="arrow-down"
-        width="79"
-        height="34"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5" />
-      </svg>
-      <br>
-      <br>
-      <h3>Amazing Views</h3>
-    <p id="intro">Discover all of the incredible historical sites, monuments, nature and piazzas that Brescia has to offer.</p>
-    <br/><br/>
+      <!-- <cover :image="'poi-intro.png'" :title="'Points of Interest'"> </cover> -->
+      <intro-pages-cover img-name="poi-intro.png"/>
+      <h1>Points of Interest</h1>
+      <!-- TODO inserire qui una piccola OVERVIEW -->
+      <arrow-down id="arrow-down" @click.native="toGrid"/>
+      <div style="text-align: center; margin-bottom: 40px">
+        <br>
+        <br>
+        <h3>Amazing Views</h3>
+        <p id="intro">Discover all of the incredible historical sites, monuments, nature and piazzas that Brescia has to
+          offer.</p>
+        <br/><br/>
 
-    </div>
-    <!-- fino a qui -->
-    <!-- <table id="poi-table">
-      <tr>
-        <td v-for="(element, key) of list" :key="key">
-          <poi-card :poi="element"/>
-        </td>
-      </tr> 
-      </table>-->
-    <div class="row row-cols-1 row-cols-md-3 ms-2 me-2 g-4">
-      <div v-for="(element, key) of list" :key="key" class="col">
-        <poi-card :poi="element"/>
       </div>
-    </div>
+      <!-- fino a qui -->
+      <!-- <table id="poi-table">
+        <tr>
+          <td v-for="(element, key) of list" :key="key">
+            <poi-card :poi="element"/>
+          </td>
+        </tr>
+        </table>-->
+      <div class="row row-cols-1 row-cols-md-3 ms-2 me-2 g-4">
+        <div v-for="(element, key) of list" :key="key" class="col">
+          <poi-card :poi="element"/>
+        </div>
+      </div>
 
-    <!-- <a href="#grid"> -->
-    <div class="button-up" @click="toGrid()">
-      <p class="arrow up"></p>
+      <!-- <a href="#grid"> -->
+      <div class="button-up" @click="toGrid()">
+        <p class="arrow up"></p>
+      </div>
+      <!-- </a> -->
     </div>
-    <!-- </a> -->
-  </div>
   </div>
 </template>
 
@@ -54,9 +47,9 @@ export default {
     poiCard,
     // cover,
   },
-  async asyncData({ $axios }) {
+  async asyncData({$axios}) {
     // const { data } = await $axios.get('http://localhost:3000/api/events/all')
-    const { data } = await $axios.get('/api/points-of-interest')
+    const {data} = await $axios.get('/api/points-of-interest')
     return {
       list: data,
     }
@@ -68,14 +61,14 @@ export default {
   },
   methods: {
     toGrid() {
-      const arrow = document.getElementsByClassName('arrow-down')
+      const arrow = document.getElementById('arrow-down')
       console.log(arrow)
-      arrow[0].scrollIntoView({
+      arrow.scrollIntoView({
         behavior: 'smooth',
       })
     },
   },
-  mounted(){
+  mounted() {
     const menuItems = document.querySelectorAll('.nav-link')
     menuItems[3].classList.add('current-topic')
   },
@@ -100,7 +93,7 @@ h3 {
 }
 
 .button-up {
-  cursor:pointer;
+  cursor: pointer;
   position: fixed;
   bottom: 10px;
   right: 7px;
@@ -119,15 +112,17 @@ h3 {
   padding: 3px;
   margin: 0;
 }
+
 .up {
   transform: rotate(-135deg);
   -webkit-transform: rotate(-135deg);
 }
+
 #intro {
   font-family: Inter, serif;
   font-weight: 100;
   width: 100%;
   max-width: 600px;
-   text-align: left;
+  text-align: left;
 }
 </style>

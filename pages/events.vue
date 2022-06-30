@@ -2,7 +2,8 @@
   <div class="container">
     <intro-pages-cover img-name="events-intro.png"/>
     <h1>Events</h1>
-<br/><br/>
+    <arrow-down id="arrow-down" @click.native="toContent"/>
+    <br><br>
     <h3>Amazing Experiences</h3>
     <p id="intro">Discover all of the incredible experiences and moments that Brescia has to offer.</p>
     <br/>
@@ -58,7 +59,8 @@ export default {
       eventList: [],
     }
   },
-  mounted(){
+
+  mounted() {
     const menuItems = document.querySelectorAll('.nav-link')
     menuItems[4].classList.add('current-topic')
   },
@@ -81,7 +83,15 @@ export default {
   methods: {
     setFilter(f) {
       this.$router.push({path: '/events', query: {filter: f}})
-    }
+    },
+    toContent() {
+      const arrow = document.getElementById('arrow-down')
+      console.log('toContent called')
+      console.log(arrow)
+      arrow.scrollIntoView({
+        behavior: 'smooth',
+      })
+    },
   }
 }
 </script>
@@ -118,6 +128,7 @@ button {
   color: #d8eff5;
   border-color: #d8eff5;
 }
+
 #intro {
   font-family: Inter, serif;
   font-weight: 100;
@@ -125,6 +136,7 @@ button {
   max-width: 500px;
   text-align: justify;
 }
+
 button:hover {
   background: #d8eff5;
   color: #234c60;
@@ -157,11 +169,6 @@ a {
   -o-transition: all 0.5s;
   -ms-transition: all 0.5s;
   transition: all 0.5s;
-}
-
-.arrow-down {
-  display: block;
-  margin: 50px auto 50px;
 }
 
 .events-table {

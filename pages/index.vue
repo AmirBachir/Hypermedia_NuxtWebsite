@@ -1,43 +1,35 @@
 <template>
   <div class="homepage">
-    <img src="~/assets/homepage-img.jpeg" alt="homepage image" />
-    <svg
-      class="arrow-down"
-      width="79"
-      height="34"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5" />
-    </svg>
-    <br />
+    <img src="~/assets/homepage-img.jpeg" alt="homepage image"/>
+    <arrow-down id="arrow-down" @click.native="toContent"/>
+    <br>
+    <br>
     <div class="container">
       <div class="row">
         <div class="col-sm-6 ">
-            <h3 class="">Brescia, The Lion Queen of Italy</h3>
-            <p class="">
-              Lombardy’s second-largest city (Milan is first) is respected for
-              its metallurgy and machine-tooling prowess and for Beretta, its
-              firearms manufacturer. <br />
-              But the city center is a UNESCO World Heritage site in Italy and a
-              3,200-year-old history you can experience. Brescia offers tourists
-              everything they might want in the quest for dolce vita – food,
-              wine, shopping, sites, culture, and antiquity.
-            </p>
-            <div class="text-center">
+          <h3 class="">Brescia, The Lion Queen of Italy</h3>
+          <p class="">
+            Lombardy’s second-largest city (Milan is first) is respected for
+            its metallurgy and machine-tooling prowess and for Beretta, its
+            firearms manufacturer. <br/>
+            But the city center is a UNESCO World Heritage site in Italy and a
+            3,200-year-old history you can experience. Brescia offers tourists
+            everything they might want in the quest for dolce vita – food,
+            wine, shopping, sites, culture, and antiquity.
+          </p>
+          <div class="text-center">
             <a href="/the-city-brescia" class="btn">Discover</a>
-            </div>
           </div>
+        </div>
         <div class="col-sm-6 text-center">
-            <img
-              src="~/assets/intro_brescia.png"
-              class=""
-              alt="intro brescia"
-              style="height:400px"/>
+          <img
+            src="~/assets/intro_brescia.png"
+            class=""
+            alt="intro brescia"
+            style="height:400px"/>
         </div>
       </div>
     </div>
-
 
 
     <h1>What to do in Brescia</h1>
@@ -79,10 +71,10 @@
     </table>
     <h1>Brescia waits for you!</h1>
     <p>
-      For more information please contact <br /><a
-        href="mailto:hello@brescia.it"
-        >hello@brescia.it</a
-      >
+      For more information please contact <br/><a
+      href="mailto:hello@brescia.it"
+    >hello@brescia.it</a
+    >
     </p>
   </div>
 </template>
@@ -91,8 +83,8 @@
 
 export default {
   name: 'IndexPage',
-  async asyncData({ $axios }) {
-    const { data } = await $axios.get('/api/page-info/index')
+  async asyncData({$axios}) {
+    const {data} = await $axios.get('/api/page-info/index')
     const title = data.title
     const image = data.image
     const description = data.description
@@ -135,6 +127,16 @@ export default {
       ],
     }
   },
+
+  methods: {
+    toContent() {
+      const arrow = document.getElementById('arrow-down')
+      console.log(arrow)
+      arrow.scrollIntoView({
+        behavior: 'smooth',
+      })
+    },
+  }
 }
 </script>
 
@@ -145,9 +147,9 @@ export default {
   src: url('~/assets/Casual-Regular.ttf');
 }
 
-.homepage>img {
+.homepage > img {
   width: 100%;
-  }
+}
 
 h1 {
   font-family: 'Casual', serif;
@@ -156,7 +158,7 @@ h1 {
   margin-bottom: 50px;
 }
 
-.row p{
+.row p {
   text-align: left;
 }
 
@@ -192,7 +194,7 @@ a {
   color: #d8eff5;
 }
 
-.arrow-down {
+#arrow-down {
   display: block;
   margin: 50px auto auto;
 }

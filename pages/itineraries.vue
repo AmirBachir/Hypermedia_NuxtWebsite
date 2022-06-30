@@ -3,15 +3,7 @@
     <intro-pages-cover img-name="itineraries-intro.png"/>
     <h1>Itineraries</h1>
     <!-- <p>&lt; Back</p> -->
-    <svg
-      id="arrow-down"
-      width="79"
-      height="34"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5"/>
-    </svg>
+    <arrow-down id="arrow-down" @click.native="toContent"/>
     <h3>A good place to start</h3>
     <p id="intro">Unsure about what to see first? Here are some itinerary and visit recommendations curated specially
       by our local guides. There is something for everyone at Brescia!</p>
@@ -62,7 +54,18 @@ export default {
       stList: []
     }
   },
-  mounted(){
+
+  methods: {
+    toContent() {
+      const arrow = document.getElementById('arrow-down')
+      console.log(arrow)
+      arrow.scrollIntoView({
+        behavior: 'smooth',
+      })
+    },
+  },
+
+  mounted() {
     const menuItems = document.querySelectorAll('.nav-link')
     menuItems[2].classList.add('current-topic')
   },

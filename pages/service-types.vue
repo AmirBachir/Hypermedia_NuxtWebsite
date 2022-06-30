@@ -1,23 +1,17 @@
 <template>
   <div class="container">
-    <intro-pages-cover img-name="service-type-intro.png" />
+    <intro-pages-cover img-name="service-type-intro.png"/>
     <h1>Service Types</h1>
-    <svg
-      class="arrow-down"
-      width="79"
-      height="34"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5"/>
-    </svg>
+    <arrow-down id="arrow-down" @click.native="toContent"/>
     <h3>All in one place</h3>
     <p>Brescia is happy to welcome all of its visitors with all the available services. Enjoy!</p>
-    <br /><br />
+    <br/><br/>
     <table class="service-type-table">
       <tr>
         <td v-for="(serviceType) of stList" :key="serviceType.id">
-          <round-image-card :id="serviceType.id" :title="serviceType.name" :cover-img="require(`@/assets/Service_Types/${serviceType.cover_img}`)" @click.native="$router.push('/service-type/' + serviceType.id)"/>
+          <round-image-card :id="serviceType.id" :title="serviceType.name"
+                            :cover-img="require(`@/assets/Service_Types/${serviceType.cover_img}`)"
+                            @click.native="$router.push('/service-type/' + serviceType.id)"/>
         </td>
       </tr>
     </table>
@@ -45,7 +39,18 @@ export default {
       stList: []
     }
   },
-  mounted(){
+
+  methods: {
+    toContent() {
+      const arrow = document.getElementById('arrow-down')
+      console.log(arrow)
+      arrow.scrollIntoView({
+        behavior: 'smooth',
+      })
+    },
+  },
+
+  mounted() {
     const menuItems = document.querySelectorAll('.nav-link')
     menuItems[5].classList.add('current-topic')
   },
@@ -102,7 +107,7 @@ a {
   color: #d8eff5;
 }
 
-.arrow-down {
+#arrow-down {
   display: block;
   margin: 50px auto 50px;
 }
