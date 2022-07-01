@@ -5,7 +5,7 @@
         <div class="card h-100">
         <h1 class="display-2">{{type}}</h1>
         <div class="crumb">
-        <nuxt-link to="/service-types">Services</nuxt-link>
+        <nuxt-link to="/service-types">Service Types</nuxt-link>
         </div>
         </div>
       </div>
