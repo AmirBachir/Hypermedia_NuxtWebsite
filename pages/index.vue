@@ -1,6 +1,6 @@
 <template>
   <div class="homepage">
-    <img src="~/assets/homepage-img.jpeg" alt="homepage image"/>
+    <nuxt-img src="/homepage-img.jpeg" alt="homepage image" format="webp"/>
     <arrow-down id="arrow-down" @click.native="toContent"/>
     <br>
     <br>

@@ -40,12 +40,13 @@ export default {
   buildModules: [
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
-    '@nuxtjs/google-fonts'
+    '@nuxtjs/google-fonts',
+    '@nuxt/image'
   ],
 
   googleFonts: {
     families: {
-      Inter: [300, 500, 700],
+      Inter: [300, 500, 700]
     }
   },
 
@@ -53,6 +54,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxt/image'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
