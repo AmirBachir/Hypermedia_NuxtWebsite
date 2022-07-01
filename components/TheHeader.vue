@@ -140,7 +140,6 @@ export default {
   position: relative;
   top:-6px;
   left: 50%;
-  transform: translate(-50%, 0);
   width: 12px;
   height: 12px;
   background-color: #D8EFF5;

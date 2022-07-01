@@ -1,7 +1,6 @@
-
 <template>
   <div class="container">
-    <intro-pages-cover img-name="contact-us.png" />
+    <intro-pages-cover img-name="contact-us.png"/>
     <h1>Contact us</h1>
 
     <table>
@@ -11,6 +10,7 @@
       <tr class="team_members">
         <td>
           <person-component
+            class="person-component"
             codice="10615882"
             info="EIT Digital HCID"
             mail="andrea.alesani@mail.polimi.it"
@@ -20,6 +20,7 @@
         </td>
         <td>
           <person-component
+            class="person-component"
             codice="10752329"
             info=" Integrated Product Design"
             mail="monica.arriaga@mail.polimi.it"
@@ -29,6 +30,7 @@
         </td>
         <td>
           <person-component
+            class="person-component"
             codice="10659740"
             info="EIT Digital HCID"
             mail="amir.bachir@mail.polimi.it"
@@ -38,6 +40,7 @@
         </td>
         <td>
           <person-component
+            class="person-component"
             codice="10659997"
             info="EIT Digital HCID"
             mail="gabriele.carollo@mail.polimi.it"
@@ -52,6 +55,7 @@
       <tr>
         <td>
           <person-component
+            class="person-component"
             info="Professor"
             mail="franca.garzotto@polimi.it"
             img="prof_garzotto.png"
@@ -61,6 +65,7 @@
 
         <td>
           <person-component
+            class="person-component"
             info="Teaching assistant"
             mail="lukas.moskwa@polimi.it"
             img="Luke.png"
@@ -69,6 +74,7 @@
         </td>
         <td>
           <person-component
+            class="person-component"
             info="Teaching assistant"
             mail="alberto.patti@polimi.it"
             img="alberto_patti.png"
@@ -77,6 +83,7 @@
         </td>
         <td>
           <person-component
+            class="person-component"
             info="Project tutor"
             mail="mattia.gianotti@polimi.it"
             img="mattia_gianotti.png"
@@ -85,6 +92,7 @@
         </td>
         <td>
           <person-component
+            class="person-component"
             info="Project tutor"
             mail="giulioantonio.abbo@polimi.it"
             img="Giulio_Abbo.png"
@@ -112,6 +120,7 @@ export default {
   font-family: 'Casual';
   src: local('~/assets/Casual-Regular.ttf');
 }
+
 h1 {
   font-family: 'Casual', serif;
 }
@@ -133,6 +142,7 @@ tr {
   text-align: center;
   vertical-align: top;
 }
+
 /* #face {
   min-width: 10 rem ;
 } */
@@ -141,6 +151,18 @@ td {
   padding: 1.3vw;
   text-align: left;
   margin-right: 2rem;
+}
+
+person-component {
+  text-align: center;
+}
+
+@media all and (max-width: 500px) {
+  .person-component {
+    text-align: center;
+    margin-top: 10px;
+    margin-bottom: 20px;
+  }
 }
 
 </style>

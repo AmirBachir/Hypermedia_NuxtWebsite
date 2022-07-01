@@ -1,14 +1,15 @@
 <template>
-<div>
+  <div>
     <img :src="require(`@/assets/${img}`)" :alt="name + ' image'"/>
-          <br />
-          <h4> {{name}}</h4>
-          <p>
-           {{info}} <br />
-            <codice v-if="codice!==undefined">Codice persona: {{codice}} <br /> </codice>
-            <a :href="'mailto:' + mail">{{mail}}</a>
-          </p>
-</div>
+    <br/>
+    <h4> {{ name }}</h4>
+    <div>
+      {{ info }}
+      <br>
+      <div v-if="codice!==undefined">Codice persona: {{ codice }} <br/></div>
+      <a :href="'mailto:' + mail">{{ mail }}</a>
+    </div>
+  </div>
 </template>
 <script>
 export default {
@@ -30,7 +31,7 @@ export default {
       type: String,
       required: false,
     },
-     mail: {
+    mail: {
       type: String,
       required: true,
     },
@@ -39,26 +40,28 @@ export default {
 </script>
 
 <style scoped>
-p{
-  font-family: 'Inter';
-font-style: normal;
-font-weight: 300;
-font-size: 15px;
-line-height: 22px;
-color: #D8EFF5;
-}
-a{font-family: 'Inter';
+p {
+  font-family: 'Inter', serif;
   font-style: normal;
   font-weight: 300;
-color: #D8EFF5;
+  font-size: 15px;
+  line-height: 22px;
+  color: #D8EFF5;
+}
+
+a {
+  font-family: 'Inter', serif;
+  font-style: normal;
+  font-weight: 300;
+  color: #D8EFF5;
   /* text-decoration: none; */
-  }img {
+}
+
+img {
   /* max-height: 25vh; */
   /* padding: 10px; */
-  height: 25vh; 
+  height: 25vh;
   /* ++width: 22vh; */
 }
-h4{
-  text-align: left;
-}
+
 </style>
