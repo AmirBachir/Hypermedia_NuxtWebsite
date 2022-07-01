@@ -34,7 +34,7 @@
 
     <h1>What to do in Brescia</h1>
     <table id="what-to-do">
-      <tr class="container">
+      <tr>
         <td v-for="(e, k) of topics" :key="k">
           <topic-card
             :title="e.title"
@@ -43,30 +43,6 @@
             :url="e.url"
           />
         </td>
-        <!-- <td>
-          <topic-card
-            title="Itineraries"
-            img-path="brescia_iti.jpg"
-            description="Plan your visit with our custom recommendations on tours, walks and what to see."
-            url="/itineraries"
-          />
-        </td>
-        <td>
-          <topic-card
-            title="Events"
-            img-path="brescia_eve.jpg"
-            description="Enjoy the city with some of the most exciting events on sight."
-            url="/events"
-          />
-        </td>
-        <td>
-          <topic-card
-            title="Service types"
-            img-path="brescia_ser.jpg"
-            description="Some key services you can access from the city center."
-            url="/service-type"
-          />
-        </td> -->
       </tr>
     </table>
     <h1>Brescia waits for you!</h1>
@@ -234,6 +210,7 @@ a {
 #what-to-do tr {
   margin: auto;
   text-align: center;
+  vertical-align: top;
 }
 
 #what-to-do td {

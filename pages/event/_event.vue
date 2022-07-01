@@ -48,7 +48,7 @@
       </tr>
     </table> -->
     <img class="mid_img" :src="require(`@/assets/Event_image/${event_img}`)" alt="">
-   
+
     <div class="container">
       <br/><br/><br/><br/>
       <h3>Discover more about this venue:</h3>
@@ -90,7 +90,7 @@ export default {
 
 <style scoped>
 .description {
-  font-family: 'Inter';
+  font-family: 'Inter', serif;
   font-style: normal;
   font-weight: 300;
   font-size: 18px;
