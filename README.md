@@ -56,3 +56,8 @@ The server side rendiring approach (SSR) has been chosen. In this way all the pa
 The content of the website is contained in a Postgres Database. The queries to handle the requests are executed through Sequelize.
 
 ## Relevance to best practices
+Nuxt.js allows a smart development of the web application by exploiting the functionalities that it provides. In this way, following the best practices of the framework is possible to achive very good results and avoid some pains to the developers.   
+In the case of this project some of the followed best practice that had a positive impact in development of the project are:
+1. *Reuse of components*: Nuxt permits to create single file components, they once have been created, can be used in every page of the website. This permitted us to save many lines of code just by calling the components when needed.
+2. *Layout configuration*: Nuxt permits to create customized layouts that can be used in a website for each page or just for some of them avoiding the replication of code, just by calling the layout file. In our case all the pages have been designed with the same layout (the default layout).
+3. *SEO optimization*: Nuxt permitted us an easy configuration of the metadata locally within each file, dinamically overwriting the global metadata in the nuxt.confing.js file. This resulted in good SEO optimization scores according to Lighthouse.
