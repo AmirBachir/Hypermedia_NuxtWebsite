@@ -37,7 +37,6 @@
 </template>
 
 <script>
-// import CustomPage from '~/components/CustomPage.vue'
 import EventCard from '~/components/EventCard'
 
 export default {

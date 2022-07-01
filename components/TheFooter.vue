@@ -19,15 +19,15 @@
               <nuxt-link to="/events" class="text">Events</nuxt-link>
             </p>
             <p>
-              <nuxt-link to="/service-types" class="text">Services</nuxt-link>
+              <nuxt-link to="/service-types" class="text">Service Types</nuxt-link>
             </p>
           </div>
 
           <!-- Grid column -->
           <div class="col mb-5">
             <h6 class="fs-5 mb-4 columnTitle">Contacts</h6>
-            <nuxt-link to="/contact-us" class="text"> The team and the teachers</nuxt-link>
-            <p><a href="mailto:hello@brescia.it">Write us an email</a></p>
+            <nuxt-link to="/contact-us" class="text">Contact us</nuxt-link>
+            <p><a href="mailto:hello@brescia.it">Request information</a></p>
           </div>
 
           <!-- Grid column -->

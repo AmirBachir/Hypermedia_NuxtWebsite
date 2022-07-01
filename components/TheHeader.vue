@@ -1,6 +1,6 @@
 <template>
 <!-- Evidenziare il bottone corrispondente alla pagina attiva -->
-  <nav class="navbar fixed-top navbar-expand-lg" style="margin-top=0px">
+  <nav class="navbar fixed-top navbar-expand-lg" style="margin-top:0px">
     <div class="container-fluid align-middle">
       <nuxt-link class="navbar-brand" to="/">Brescia</nuxt-link>
       <button
@@ -40,7 +40,7 @@
             </ul>
           </li>
           <li class="nav-item">
-            <nuxt-link class="nav-link" to="/service-types">Services</nuxt-link>
+            <nuxt-link class="nav-link" to="/service-types">Service Types</nuxt-link>
           </li>
         </ul>
       </div>

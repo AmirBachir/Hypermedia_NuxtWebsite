@@ -19,7 +19,6 @@
 </template>
 
 <script>
-// import CustomPage from '~/components/CustomPage.vue'
 import RoundImageCard from "~/components/RoundImageCard";
 
 export default {
