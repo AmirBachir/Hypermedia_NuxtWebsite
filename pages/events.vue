@@ -152,7 +152,7 @@ a {
 
 #filters {
   position: sticky;
-  top: 72px;
+  top: 70px;
   padding-top: 8px;
   background: #234c60;
   z-index: 1;
