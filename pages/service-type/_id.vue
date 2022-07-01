@@ -16,17 +16,7 @@
         </div>
       </div>
     </div>
-    <div class="arrow-down">
-    <svg
-        class="arrow-down"
-        width="79"
-        height="34"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path d="M2 3L39.5 30L77 3" stroke="#D8EFF5" stroke-width="5"/>
-    </svg>
-    </div>
+    <arrow-down id="arrow-down" @click.native="toContent"/>
     <div class="row row-cols-1 row-cols-md-3 ms-2 me-2 g-4 list">
       <div v-for="(e, key) of l" :key="key" class="col">
         <div class="card h-100">
@@ -62,6 +52,16 @@ export default {
       l: list,
     }
   },
+  methods: {
+    toContent() {
+      const arrow = document.getElementById('arrow-down')
+      console.log('toContent called')
+      console.log(arrow)
+      arrow.scrollIntoView({
+        behavior: 'smooth',
+      })
+    },
+  }
 }
 </script>
 
