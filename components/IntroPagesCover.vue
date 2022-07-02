@@ -3,7 +3,7 @@
     <img
       id="intro-img"
       :src="require(`@/assets/${imgName}`)"
-      alt=""
+      alt= "cover image"
     />
   </div>
 </template>

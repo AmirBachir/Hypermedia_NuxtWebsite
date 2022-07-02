@@ -47,7 +47,7 @@
         </td>
       </tr>
     </table> -->
-    <img class="mid_img" :src="require(`@/assets/Event_image/${event_img}`)" alt="">
+    <img class="mid_img" :src="require(`@/assets/Event_image/${event_img}`)" :alt="title+ ' image'">
 
     <div class="container">
       <br/><br/><br/><br/>

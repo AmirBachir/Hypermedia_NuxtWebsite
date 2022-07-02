@@ -19,7 +19,7 @@
             <figure>
               <img
                 :src="require(`@/assets/PoI_images/${img}`)"
-                alt="point of interest detail"
+                :alt="name+ ' detail'"
               />
               <br/>
               <br/>

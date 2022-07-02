@@ -14,7 +14,7 @@
                                       alt="connection arrow between point of interest name and img" class="img-fluid"/></div>
         </div>
         <div class="col-md-7 p-3">
-          <img :src="require(`@/assets/PoI_thumbnail/${poi.thumbnail}`)" alt="The point of interest:" class="img-fluid rounded">
+          <img :src="require(`@/assets/PoI_thumbnail/${poi.thumbnail}`)" :alt="'The point of interest: '+ poi.name + ' image'" class="img-fluid rounded">
         </div>
       </nuxt-link>
       </div>

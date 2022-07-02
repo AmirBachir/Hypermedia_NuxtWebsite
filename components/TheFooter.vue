@@ -43,14 +43,14 @@
               </a>
 
               <a class="logo-link" href="https://i3lab.polimi.it/" target="_blank">
-                <img src="../assets/i3lab 1.png" class="logo" alt="image"/>
+                <img src="../assets/i3lab 1.png" class="logo" alt="I3Lab logo"/>
               </a>
 
               <a class="logo-link" href="https://www.polimi.it/" target="_blank">
                 <img
                   src="../assets/Logo_Politecnico_Milano 2.png"
                   class="logo"
-                  alt="image"
+                  alt="Polimi logo"
                 />
               </a>
             </div>

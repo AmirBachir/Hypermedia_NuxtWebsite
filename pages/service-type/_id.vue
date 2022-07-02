@@ -12,7 +12,7 @@
       <div class="col">
         <div class="card">
         <!-- <round-image-card :id="typeId" :coverImg="typeCoverImg"></round-image-card> -->
-        <img :src="require(`@/assets/Service_Types/${typeCoverImg}`)" alt="Service Icon" />
+        <img :src="require(`@/assets/Service_Types/${typeCoverImg}`)" :alt="type+ ' Icon'" />
         </div>
       </div>
     </div>

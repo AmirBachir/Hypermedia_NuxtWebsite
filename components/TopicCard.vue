@@ -3,7 +3,7 @@
     <div class="container"><img
       :src="require(`@/assets/${imgPath}`)"
       class="card-img-top circular-border"
-      alt="image"
+      :alt="title + ' image'"
     />
     </div>
     <div class="card-body">
