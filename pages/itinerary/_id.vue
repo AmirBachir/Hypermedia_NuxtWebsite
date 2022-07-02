@@ -52,6 +52,18 @@ export default {
   name: 'ItinerayDetail',
   // eslint-disable-next-line vue/no-unused-components
   components: {TheParagraph, Stop},
+   head() {
+    return {
+      title: this.name,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains all the details about the itineray '+ this.name
+        }
+      ]
+    }
+  },
   async asyncData({route, $axios}) {
     const id = route.params.id
     const {data} = await $axios.get('/api/itinerary/' + id)
@@ -60,7 +72,6 @@ export default {
       cover_img: data.cover_img,
       overview: data.overview,
       thumbnail: data.thumbnail,
-      title: data.title,
       inout: data.inout,
       category: data.category,
       duration: data.duration,

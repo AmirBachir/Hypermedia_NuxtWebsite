@@ -23,6 +23,18 @@ import RoundImageCard from "~/components/RoundImageCard";
 
 export default {
   name: 'ServiceTypesPage',
+  head() {
+    return {
+      title: 'Service types',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains the main service types that you can need during your visit'
+        }
+      ]
+    }
+  },
   components: {
     RoundImageCard
   },

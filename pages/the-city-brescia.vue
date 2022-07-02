@@ -44,6 +44,18 @@ export default {
       ]
     }
   },
+  head() {
+    return {
+      title: 'The city of Brescia',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains an overview description of Brescia, his history and practical information'
+        }
+      ]
+    }
+  },
   components: {
     theParag,
     theMap

@@ -115,6 +115,18 @@ export default {
     EventCard,
     RoundImageCard,
   },
+   head() {
+    return {
+      title: this.name,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains all the details about the point of interest '+ this.name
+        }
+      ]
+    }
+  },
   async asyncData({route, $axios}) {
     const {id} = route.params
     const {data} = await $axios.get('/api/points-of-interest/' + id)

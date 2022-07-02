@@ -39,6 +39,18 @@ import RoundImageCard from "~/components/RoundImageCard";
 
 export default {
   name: 'ItinerariesPage',
+   head() {
+    return {
+      title: 'Itineraries',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains the itineries to experience Brescia at best'
+        }
+      ]
+    }
+  },
   components: {
     RoundImageCard
   },

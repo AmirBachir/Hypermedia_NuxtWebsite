@@ -64,6 +64,18 @@ import CoverComponent from "~/components/Cover";
 export default {
   name: "EventPage",
   components: {CoverComponent},
+  head() {
+    return {
+      title: this.title,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains all the details about the event '+ this.title
+        }
+      ]
+    }
+  },
   async asyncData({route, $axios}) {
     const id = route.params.event
     const {data} = await $axios.get('/api/event/' + id)

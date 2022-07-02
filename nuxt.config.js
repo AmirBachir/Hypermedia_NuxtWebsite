@@ -8,14 +8,14 @@ export default {
     }
   ],
   head: {
-    title: 'Art Town',
+    title: 'Brescia Art Town',
     htmlAttrs: {
       lang: 'en',
     },
     meta: [
       { charset: 'utf-8' },
       { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
+      { hid: 'description', name: 'description', content: 'This website has been designed as a tourism landing page for the city of Brescia. It includes all the information that a potential tourist would need to visit Brescia. It is proposed also for citizen of Brescia that want to check what are the next programmed events in the city.' },
       { name: 'format-detection', content: 'telephone=no' },
     ],
     link: [

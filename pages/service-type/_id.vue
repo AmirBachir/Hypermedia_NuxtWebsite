@@ -41,6 +41,18 @@ export default {
   // components: {
   //   RoundImageCard
   // },
+   head() {
+    return {
+      title: this.type,
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains all the information about the '+ this.type +' in Brescia'
+        }
+      ]
+    }
+  },
   async asyncData({ route, $axios }) {
     const {id}  = route.params
     const { data } = await $axios.get('/api/service-type/' + id)

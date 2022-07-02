@@ -43,6 +43,18 @@ import poiCard from '~/components/PoICard.vue'
 // import cover from '~/components/Cover.vue'
 export default {
   name: 'PointsOfInterestPage',
+  head() {
+    return {
+      title: 'Points of Interest',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains all the most attractive points of interest in Brescia'
+        }
+      ]
+    }
+  },
   components: {
     poiCard,
     // cover,

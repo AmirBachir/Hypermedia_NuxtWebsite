@@ -41,6 +41,18 @@ import EventCard from '~/components/EventCard'
 
 export default {
   name: 'EventsPage',
+   head() {
+    return {
+      title: 'Events',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains all the available events in Brescia for this year'
+        }
+      ]
+    }
+  },
   components: {
     EventCard,
   },

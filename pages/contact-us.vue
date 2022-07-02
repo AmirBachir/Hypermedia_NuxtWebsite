@@ -109,6 +109,18 @@ import PersonComponent from '~/components/Person.vue'
 
 export default {
   name: 'ContactUsPage',
+  head() {
+    return {
+      title: 'Contact us',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains the contact information about the team which worked on this project and their teachers'
+        }
+      ]
+    }
+  },
   components: {
     PersonComponent,
   },

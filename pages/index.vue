@@ -59,6 +59,18 @@
 
 export default {
   name: 'IndexPage',
+   head() {
+    return {
+      title: 'Home',
+      meta: [
+        {
+          hid: 'description',
+          name: 'description',
+          content: 'this page contains the overview of the website'
+        }
+      ]
+    }
+  },
   async asyncData({$axios}) {
     const {data} = await $axios.get('/api/page-info/index')
     const title = data.title
