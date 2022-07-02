@@ -7,10 +7,16 @@ Design and implementation of a website for the tourist office of the city of Bre
 **Amir Bachir Kaddis Beshay** | 10659740 | Human Computer Interaction and Design  
 **Gabriele Carollo** | 10659997 | Human Computer Interaction and Design  
 ### Contributions
-All the member contributed equally in the initial phase of the project in which, the joint work of all the team members was necessary to create the content design in the large and in the small and the abstract pages.
-Then according to each member competences the work was distributed as follow. 
+All the members contributed equally in the initial phase of the project in which the joint work of all the team members was necessary to create the content design in the large and in the small and the abstract pages.
+Then, according to each member competences, the work was distributed as follows. 
 #### Monica Arriaga Rivera
 #### Andrea Alesani
+He was mostly involved in:
+* Homepage
+* Event kind of topic page
+* Events introductory page
+* Vue components used across the website (such as RoundImageCard, Cover, etc...)
+* CSS for mobile and reactive pages
 #### Amir Bachir Kaddis Beshay
 #### Gabriele Carollo
 He was mostly involved in:
@@ -28,7 +34,7 @@ A component-based approach has been used in the development of the website to gr
 This component is used as the cover for the kind of topic pages, it contains the cover image, the title and an orientation link.
 #### EventCard
 This component is a card that represents the preview of the event, it encloses all the relevant information about an event.
-#### getToBrescia
+#### GetToBrescia
 This component includes all the relevant information that are needed to get to Brescia by train, car or bus form Milan and Bergamo Orio Al Serio.
 #### IntroPagesCover
 This component is used as the cover for the introductory pages, it contains the cover image and the title of the page.
