@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="row row-cols-1 row-cols-md-2 ms-10 me-10 g-4 cover" style="margin:0px 10em 0px 10em">
+    <div class="row row-cols-1 row-cols-lg-2 ms-10 me-10 g-4 cover" style="margin:0px 10em 0px 10em">
       <div class="col title">
         <div class="card h-100">
         <h1 class="display-2">{{type}}</h1>
@@ -134,7 +134,7 @@ h1 {
   text-align:center;
   margin:30px;
 }
-@media all and (max-width:768px){
+@media all and (max-width:992px){
   .title{
     margin-bottom:30px;
   }

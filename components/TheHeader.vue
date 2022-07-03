@@ -1,10 +1,10 @@
 <template>
 <!-- Evidenziare il bottone corrispondente alla pagina attiva -->
-  <nav class="navbar fixed-top navbar-expand-lg" style="margin-top:0px">
+  <nav class="navbar fixed-top navbar-expand-xl" style="margin-top:0px">
     <div class="container-fluid align-middle">
       <nuxt-link class="navbar-brand" to="/">Brescia</nuxt-link>
       <button
-      class="navbar-toggler collapsed d-flex d-lg-none flex-column justify-content-around" type="button" data-bs-toggle="collapse"
+      class="navbar-toggler collapsed d-flex d-xl-none flex-column justify-content-around" type="button" data-bs-toggle="collapse"
       data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
       aria-expanded="false" aria-label="Toggle navigation">
         <span class="toggler-icon top-bar"></span>
