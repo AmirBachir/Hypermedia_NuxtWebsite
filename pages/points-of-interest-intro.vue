@@ -1,11 +1,9 @@
 <template>
   <div>
     <div class="container">
-      <!-- <cover :image="'poi-intro.png'" :title="'Points of Interest'"> </cover> -->
       <intro-pages-cover img-name="poi-intro.png"/>
       <h1>Points of Interest</h1>
-      <!-- TODO inserire qui una piccola OVERVIEW -->
-      <arrow-down id="arrow-down" @click.native="toGrid"/>
+      <arrow-down id="arrow-down" @click.native="toContent"/>
       <div style="text-align: center; margin-bottom: 40px">
         <br>
         <br>
@@ -13,34 +11,22 @@
         <p id="intro">Discover all of the incredible historical sites, monuments, nature and piazzas that Brescia has to
           offer.</p>
         <br/><br/>
-
       </div>
-      <!-- fino a qui -->
-      <!-- <table id="poi-table">
-        <tr>
-          <td v-for="(element, key) of list" :key="key">
-            <poi-card :poi="element"/>
-          </td>
-        </tr>
-        </table>-->
+      <div class="button-up" @click="toContent()">
+        <p class="arrow up"></p>
+      </div>
       <div class="row row-cols-1 row-cols-md-3 ms-2 me-2 g-4">
         <div v-for="(element, key) of list" :key="key" class="col">
           <poi-card :poi="element"/>
         </div>
       </div>
-
-      <!-- <a href="#grid"> -->
-      <div class="button-up" @click="toGrid()">
-        <p class="arrow up"></p>
-      </div>
-      <!-- </a> -->
     </div>
   </div>
 </template>
 
 <script>
 import poiCard from '~/components/PoICard.vue'
-// import cover from '~/components/Cover.vue'
+
 export default {
   name: 'PointsOfInterestPage',
   head() {
@@ -57,10 +43,8 @@ export default {
   },
   components: {
     poiCard,
-    // cover,
   },
   async asyncData({$axios}) {
-    // const { data } = await $axios.get('http://localhost:3000/api/events/all')
     const {data} = await $axios.get('/api/points-of-interest')
     return {
       list: data,
@@ -72,7 +56,7 @@ export default {
     }
   },
   methods: {
-    toGrid() {
+    toContent() {
       const arrow = document.getElementById('arrow-down')
       console.log(arrow)
       arrow.scrollIntoView({
@@ -106,9 +90,12 @@ h3 {
 
 .button-up {
   cursor: pointer;
-  position: fixed;
-  bottom: 10px;
-  right: 7px;
+  position: sticky;
+  top: 94%;
+  left: 100%;
+  margin-top: 800px;
+  margin-bottom: -800px;
+  margin-right: -4.5%;
   width: 2rem;
   background-color: #d8eff5;
   border: white solid 2px;
@@ -136,5 +123,12 @@ h3 {
   width: 100%;
   max-width: 600px;
   text-align: left;
+}
+
+@media all and (max-width: 500px) {
+  .button-up {
+    margin-right: -2.5%;
+    width: 1.5rem;
+  }
 }
 </style>
