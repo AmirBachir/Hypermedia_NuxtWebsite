@@ -30,6 +30,8 @@ He was mostly involved in:
 ## Project documentation
 ### Components
 A component-based approach has been used in the development of the website to grant modularity and reuse of code. Below are listed all the components used and their related functionalities.
+#### ArrowDown
+This component represent an arrow button that once pressed makes scroll the page to it.
 #### Cover
 This component is used as the cover for the kind of topic pages, it contains the cover image, the title and an orientation link.
 #### EventCard
