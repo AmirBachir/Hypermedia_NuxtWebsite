@@ -80,6 +80,19 @@ export default {
       let result
       if (this.filter !== 'all' && this.filter !== undefined) {
         result = this.eventList.filter((event) => event.season === this.filter)
+        console.log(result)
+        result.sort(function(a,b){
+          const d1 = new Date(a.date)
+          const d2 = new Date(b.date)
+          if (d1 < d2)
+            return -1
+          else if (d1 > d2)
+            return 1
+          else
+            return 0
+        });
+        console.log(result[0].date)
+        console.log(new Date(result[0].date))
       } else {
         result = this.eventList
       }
