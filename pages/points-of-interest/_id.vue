@@ -92,7 +92,7 @@
                 :title="itinerary.name"
                 :description="itinerary.short_description"
                 :cover-img="require(`@/assets/Itinerary_thumbnail/${itinerary.thumbnail}`)"
-                @click.native="$router.push('/itinerary/' + itinerary.id)"
+                :url="'/itinerary/' + itinerary.id"
               />
             </td
             >

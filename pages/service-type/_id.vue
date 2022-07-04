@@ -1,9 +1,9 @@
 <template>
   <div>
     <div class="row row-cols-1 row-cols-lg-2 ms-10 me-10 g-4 cover" style="margin:0px 10em 0px 10em">
-      <div class="col title">
+      <div class="col title" style="text-align: center">
         <div class="card h-100">
-        <h1 class="display-2">{{type}}</h1>
+        <h1 class="display-3">{{type}}</h1>
         <div class="crumb">
         <nuxt-link to="/service-types">Service Types</nuxt-link>
         </div>

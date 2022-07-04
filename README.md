@@ -10,9 +10,11 @@ Design and implementation of a website for the tourist office of the city of Bre
 All the members contributed equally in the initial phase of the project in which the joint work of all the team members was necessary to create the content design in the large and in the small and the abstract pages.
 Then, according to each member competences, the work was distributed as follows. 
 #### Monica Arriaga Rivera
+She was mostly involved in:
 * UX/UI design
 * Low fidelity witeframes 
 * High fidelity wireframes
+* Report
 #### Andrea Alesani
 He was mostly involved in:
 * Homepage

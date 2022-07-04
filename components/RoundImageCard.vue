@@ -1,4 +1,5 @@
 <template>
+<a :href="url">
   <div class="card">
     <div id="cover-container">
       <div id="outer-circle"></div>
@@ -11,6 +12,7 @@
       <p id="card-text">{{ description }}</p>
     </div>
   </div>
+</a>
 </template>
 
 <script>
@@ -32,13 +34,19 @@ export default {
     description: {
       type: String,
       required: false
+    },
+    url: {
+      type: String,
+      required: true
     }
   },
 }
 </script>
 
 <style scoped>
-
+a{
+  text-decoration: none;
+}
 h5 {
   font-family: 'Inter', serif;
   font-style: normal;

@@ -1,5 +1,6 @@
 <template>
-  <div class="card" id="card" @click="$router.push('/event/' + id)">
+<a :href="'/event/' + id">
+  <div class="card" id="card">
     <p id="date-day">{{ day }}</p>
     <p id="date-month-year">{{ month }} {{ year }}</p>
     <img :src="require(`@/assets/Event_thumbnail/${imgName}`)" class="card-img-top" :alt="name+' image'"/>
@@ -14,6 +15,7 @@
       <p id="intro">{{ intro }}</p>
     </div>
   </div>
+  </a>
 </template>
 
 <script>
@@ -99,7 +101,9 @@ export default {
 </script>
 
 <style scoped>
-
+a{
+  text-decoration: none;
+}
 p {
   font-family: 'Inter', serif;
   font-style: normal;
