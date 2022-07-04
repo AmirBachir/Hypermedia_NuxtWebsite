@@ -95,14 +95,6 @@ export default {
     setFilter(f) {
       this.$router.push({path: '/events', query: {filter: f}})
     },
-    toContent() {
-      const arrow = document.getElementById('arrow-down')
-      console.log('toContent called')
-      console.log(arrow)
-      arrow.scrollIntoView({
-        behavior: 'smooth',
-      })
-    },
   }
 }
 </script>

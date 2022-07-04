@@ -116,15 +116,7 @@ export default {
     }
   },
 
-  methods: {
-    toContent() {
-      const arrow = document.getElementById('arrow-down')
-      console.log(arrow)
-      arrow.scrollIntoView({
-        behavior: 'smooth',
-      })
-    },
-  }
+  methods: {}
 }
 </script>
 

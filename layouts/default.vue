@@ -9,6 +9,10 @@
 <script>
 import TheHeader from '~/components/TheHeader.vue'
 import TheFooter from '~/components/TheFooter.vue'
+import Vue from "vue";
+import global from '~/mixins/global.js'
+Vue.mixin(global);
+
 export default {
   name: 'DefaultLayout',
   components: {
