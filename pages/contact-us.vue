@@ -95,7 +95,7 @@
             class="person-component"
             info="Project tutor"
             mail="giulioantonio.abbo@polimi.it"
-            img="Giulio_Abbo.png"
+            img="giulio_abbo.png"
             name="Giulio Antonio Abbo"
           />
         </td>
