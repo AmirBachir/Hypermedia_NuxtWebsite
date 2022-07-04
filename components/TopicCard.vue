@@ -1,5 +1,6 @@
 <template>
-  <div class="card" @click="$router.push(url)">
+<a :href="url">
+  <div class="card">
     <div class="container"><img
       :src="require(`@/assets/${imgPath}`)"
       class="card-img-top circular-border"
@@ -11,6 +12,7 @@
       <p class="card-text">{{ description }}</p>
     </div>
   </div>
+</a>
 </template>
 
 <script>
@@ -39,7 +41,9 @@ export default {
 </script>
 
 <style scoped>
-
+a{
+  text-decoration: none;
+}
 .circular-border {
   margin: 0.5rem auto auto;
   border-radius: 50%;
