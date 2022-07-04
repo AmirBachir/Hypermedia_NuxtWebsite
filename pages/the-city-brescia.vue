@@ -1,14 +1,13 @@
 <template>
   <div>
-    <!-- di tutta questa parte si potrebbe fare un component (si ripete anche nella introductory page di events) -->
     <div style="text-align: end">
-      <img
+      <nuxt-img
         class="intro-img"
-        src="~/assets/thecityofbrescia-coverimage.png"
-        alt="The city of Brescia cover image">
+        src="/thecityofbrescia-coverimage.png"
+        alt="The city of Brescia cover image"
+        format="webp" />
     </div>
     <h1>The city of Brescia</h1>
-    <!-- inserire qui una piccola OVERVIEW -->
     <arrow-down id="arrow-down" @click.native="toContent"/>
     <the-parag v-for="(elem,key) in info" :key="key" :img="require(`@/assets/${elem.img}`)" :left="key%2"
                :parag="elem.parag" :title="elem.title"/>

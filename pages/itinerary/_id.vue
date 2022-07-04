@@ -28,6 +28,7 @@
     </div>
     <div class="card">
       <iframe
+        title="Map of the selected itinerary"
         class="map"
         frameborder="0"
         style="border: 0"

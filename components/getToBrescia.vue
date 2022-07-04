@@ -19,6 +19,7 @@
       <div class="col d-flex align-items-center justify-content-center" style="min-height:300px; max-height:500px">
         <div class="card h-100">
         <iframe
+          title="Map of Brescia"
           class="map"
           frameborder="0"
           style="border: 0"
