@@ -37,6 +37,8 @@ He was mostly involved in:
 ## Project documentation
 ### Components
 A component-based approach has been used in the development of the website to grant modularity and reuse of code. Below are listed all the components used and their related functionalities.
+#### ArrowDown
+This component represent an arrow button that once pressed makes scroll the page to it.
 #### Cover
 This component is used as the cover for the kind of topic pages, it contains the cover image, the title and an orientation link.
 #### EventCard
@@ -73,4 +75,5 @@ Nuxt.js allows a smart development of the web application by exploiting the func
 In the case of this project some of the followed best practice that had a positive impact in development of the project are:
 1. *Reuse of components*: Nuxt permits to create single file components, they once have been created, can be used in every page of the website. This permitted us to save many lines of code just by calling the components when needed.
 2. *Layout configuration*: Nuxt permits to create customized layouts that can be used in a website for each page or just for some of them avoiding the replication of code, just by calling the layout file. In our case all the pages have been designed with the same layout (the default layout).
-3. *SEO optimization*: Nuxt permitted us an easy configuration of the metadata locally within each file, dinamically overwriting the global metadata in the nuxt.confing.js file. This resulted in good SEO optimization scores according to Lighthouse.
+3. *Mixin*: through mixins in Nuxt is possible to reuse methods in several components or pages just by writing them once. In our case the mixin was used for the toContent method that was requested in several pages.
+4. *SEO optimization*: Nuxt permitted us an easy configuration of the metadata locally within each file, dinamically overwriting the global metadata in the nuxt.confing.js file. This resulted in good SEO optimization scores according to Lighthouse.
