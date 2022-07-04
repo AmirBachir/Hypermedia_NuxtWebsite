@@ -114,7 +114,7 @@ export default {
 .dropdown-divider{
   margin:0;
 }
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 1200px) {
   .translate-middle-x {
     transform: translateX(-0%)!important;
   }

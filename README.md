@@ -10,6 +10,7 @@ Design and implementation of a website for the tourist office of the city of Bre
 All the members contributed equally in the initial phase of the project in which the joint work of all the team members was necessary to create the content design in the large and in the small and the abstract pages.
 Then, according to each member competences, the work was distributed as follows. 
 #### Monica Arriaga Rivera
+* 
 #### Andrea Alesani
 He was mostly involved in:
 * Homepage
@@ -18,6 +19,12 @@ He was mostly involved in:
 * Vue components used across the website (such as RoundImageCard, Cover, etc...)
 * CSS for mobile and reactive pages
 #### Amir Bachir Kaddis Beshay
+He was mostly involved in:
+* The City of Brescia (about us) single topic page
+* Points of Interest introductory page
+* Itinerary kind of topic page
+* Service type kind of topic page
+* Vue components like: TheHeader, getToBrescia, PoICard, TheParagraph, Stop 
 #### Gabriele Carollo
 He was mostly involved in:
 * Point of interest kind of topic page
