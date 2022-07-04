@@ -161,7 +161,7 @@ tr {
 td {
   display: inline-block;
   padding: 1.3vw;
-  text-align: left;
+  /* text-align: left; */
   margin-right: 2rem;
 }
 
