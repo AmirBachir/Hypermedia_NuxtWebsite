@@ -71,7 +71,7 @@ This component is used inside the homepage as preview of the sections: service t
 ### Routing 
 Using Nuxt.js it was not necessary to set the routing of pages manually, indeed Nuxt generates the routes configuration based on the files inside the pages folder.
 ### Server
-The server side rendiring approach (SSR) has been chosen. In this way all the pages are rendered in the server and then sent to the browser when requested. Furthermore SSR grants better SEO optimization.
+The server side rendiring approach (SSR) has been chosen because it is reasonable to imagine that many events during the year can be added or removed from the website content, so the necessity to rebuild every time the website is avoided. In this way all the pages are rendered in the server and then sent to the browser when requested. Furthermore SSR grants better SEO optimization.
 ### Database
 The content of the website is contained in a Postgres Database. The queries to handle the requests are executed through Sequelize.
 
