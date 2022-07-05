@@ -58,7 +58,10 @@ export default {
 
   computed: {
     day() {
-      return this.date.split('-')[2].replace("0", "")
+      let day = this.date.split('-')[2]
+      if (day[0] === '0')
+        day = day.split("0")[1]
+      return day
     },
     month() {
       switch (this.date.split('-')[1]) {

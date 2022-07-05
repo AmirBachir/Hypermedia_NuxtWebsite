@@ -41,7 +41,7 @@ import EventCard from '~/components/EventCard'
 
 export default {
   name: 'EventsPage',
-   head() {
+  head() {
     return {
       title: 'Events',
       meta: [
@@ -61,7 +61,16 @@ export default {
     // const { data } = await $axios.get('http://localhost:3000/api/events/all')
     const {data} = await $axios.get('/api/events')
     return {
-      eventList: data,
+      eventList: data.sort(function (a, b) {
+        const d1 = new Date(a.date)
+        const d2 = new Date(b.date)
+        if (d1 < d2)
+          return -1
+        else if (d1 > d2)
+          return 1
+        else
+          return 0
+      }),
     }
   },
   data() {

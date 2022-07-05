@@ -47,6 +47,11 @@ export default {
 a{
   text-decoration: none;
 }
+
+a:hover {
+  color: #d8eff5;
+}
+
 h5 {
   font-family: 'Inter', serif;
   font-style: normal;
